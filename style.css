@@ -10,11 +10,11 @@ body {
 }
 
 a:link {
-	color: plum;
+	color: mediumorchid;
 }
 
 a:visited {
-	color: mediumorchid;
+	color: plum;
 }
 
 header {
