@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_parabs.future__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_parabs.future__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_parabs</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool.html#"><span class="id" title="library">pool</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.ivar_4.html#"><span class="id" title="library">ivar_4</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_parabs</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_parabs.future__types.html#"><span class="id" title="library">future__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="future_return" class="idref" href="#future_return"><span class="id" title="definition">future_return</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.ivar_4__code.html#ivar_4_make"><span class="id" title="definition">ivar_4_make</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="future_set" class="idref" href="#future_set"><span class="id" title="definition">future_set</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "ctx" "t" "res" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.ivar_4__code.html#ivar_4_notify"><span class="id" title="definition">ivar_4_notify</span></a> "t" "ctx" "res".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="future_async" class="idref" href="#future_async"><span class="id" title="definition">future_async</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "ctx" "task" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "t" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo_std.ivar_4__code.html#ivar_4_create"><span class="id" title="definition">ivar_4_create</span></a> <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a> <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#pool_async"><span class="id" title="definition">pool_async</span></a> "ctx" (<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a> <a class="idref" href="zoo_parabs.future__code.html#future_set"><span class="id" title="definition">future_set</span></a> "ctx" "t" ("task" "ctx")) <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="future_wait" class="idref" href="#future_wait"><span class="id" title="definition">future_wait</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "ctx" "t" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#pool_wait_ivar"><span class="id" title="definition">pool_wait_ivar</span></a> "ctx" "t" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.ivar_4__code.html#ivar_4_get"><span class="id" title="definition">ivar_4_get</span></a> "t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="future_iter" class="idref" href="#future_iter"><span class="id" title="definition">future_iter</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "ctx" "t" "task" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">match</span></a><a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">:</span></a> <a class="idref" href="zoo_std.ivar_4__code.html#ivar_4_wait"><span class="id" title="definition">ivar_4_wait</span></a> "t" "task" <a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">with</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo.language.notations.html#:zoo_tag::'None'"><span class="id" title="notation">None</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo.language.notations.html#:zoo_tag::'Some'"><span class="id" title="notation">Some</span></a> "res" <a class="idref" href="zoo.language.notations.html#a6d75581414bfb873c3b757943b3a17a"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"task" "ctx" "res"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">end</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="future_map" class="idref" href="#future_map"><span class="id" title="definition">future_map</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "ctx" "t1" "task" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "t2" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo_std.ivar_4__code.html#ivar_4_create"><span class="id" title="definition">ivar_4_create</span></a> <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a> <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.future__code.html#future_iter"><span class="id" title="definition">future_iter</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ctx"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t1"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.notations.html#9128d935939e61e3b1c9be04fdfcf4fa"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#9128d935939e61e3b1c9be04fdfcf4fa"><span class="id" title="notation">:</span></a> "ctx" "res1" <a class="idref" href="zoo.language.notations.html#9128d935939e61e3b1c9be04fdfcf4fa"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#pool_async"><span class="id" title="definition">pool_async</span></a> "ctx"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a> <a class="idref" href="zoo_parabs.future__code.html#future_set"><span class="id" title="definition">future_set</span></a> "ctx" "t2" ("task" "ctx" "res1"))) <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t2".<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.clst__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_std.clst__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.clst__types.html#"><span class="id" title="library">clst__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="clst_app" class="idref" href="#clst_app"><span class="id" title="definition">clst_app</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">rec</span></a><a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">:</span></a> "app" "t1" "t2" <a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">match</span></a><a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">:</span></a> "t1" <a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">with</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstClosed'"><span class="id" title="notation">ClstClosed</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Fail"><span class="id" title="abbreviation">Fail</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstOpen'"><span class="id" title="notation">ClstOpen</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t2"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstCons'"><span class="id" title="notation">ClstCons</span></a> "v" "t1" <a class="idref" href="zoo.language.notations.html#a6d75581414bfb873c3b757943b3a17a"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">‘</span></a><a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstCons'"><span class="id" title="notation">ClstCons</span></a><a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">[</span></a> "v"<a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">,</span></a> "app" "t1" "t2" <a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">]</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">end</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="clst_rev_app" class="idref" href="#clst_rev_app"><span class="id" title="definition">clst_rev_app</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">rec</span></a><a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">:</span></a> "rev_app" "t1" "t2" <a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">match</span></a><a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">:</span></a> "t1" <a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">with</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstClosed'"><span class="id" title="notation">ClstClosed</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Fail"><span class="id" title="abbreviation">Fail</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstOpen'"><span class="id" title="notation">ClstOpen</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t2"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstCons'"><span class="id" title="notation">ClstCons</span></a> "v" "t1" <a class="idref" href="zoo.language.notations.html#a6d75581414bfb873c3b757943b3a17a"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"rev_app" "t1" <a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">‘</span></a><a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstCons'"><span class="id" title="notation">ClstCons</span></a><a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">[</span></a> "v"<a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">,</span></a> "t2" <a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">]</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">end</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="clst_iter" class="idref" href="#clst_iter"><span class="id" title="definition">clst_iter</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">rec</span></a><a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">:</span></a> "iter" "fn" "param" <a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">match</span></a><a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">:</span></a> "param" <a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">with</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstClosed'"><span class="id" title="notation">ClstClosed</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Fail"><span class="id" title="abbreviation">Fail</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstOpen'"><span class="id" title="notation">ClstOpen</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.clst__types.html#:zoo_tag::'ClstCons'"><span class="id" title="notation">ClstCons</span></a> "v" "t" <a class="idref" href="zoo.language.notations.html#a6d75581414bfb873c3b757943b3a17a"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fn" "v" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iter" "fn" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">end</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

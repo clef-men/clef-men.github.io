@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo.program_logic.counter</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo.program_logic.counter</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">iris.base_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.invariants.html#"><span class="id" title="library">lib.invariants</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.bi</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.iris.bi.big_op.big_op.html#"><span class="id" title="library">big_op</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.program_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.wp.html#"><span class="id" title="library">wp</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.diaframe</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.diaframe.diaframe.html#"><span class="id" title="library">diaframe</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="zoo_counter_incr" class="idref" href="#zoo_counter_incr"><span class="id" title="definition">zoo_counter_incr</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#::binder_scope:'&lt;&gt;'"><span class="id" title="notation">≠</span></a> <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#FAA"><span class="id" title="constructor">FAA</span></a> <a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">(</span></a><a class="idref" href="zoo.language.notations.html#66e8f9d9f9894a066beff0d1c67d3c77"><span class="id" title="notation">#</span></a><a class="idref" href="zoo.program_logic.state_interp.html#zoo_counter"><span class="id" title="axiom">zoo_counter</span></a><a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">).[</span></a><a class="idref" href="zoo.language.notations.html#:zoo_field::'contents'"><span class="id" title="notation">contents</span></a><a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">]</span></a> 1.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a id="zoo_G" class="idref" href="#zoo_G"><span class="id" title="section">zoo_G</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> `{<a id="zoo_G.zoo_G" class="idref" href="#zoo_G.zoo_G"><span class="id" title="variable">zoo_G</span></a> : !<a class="idref" href="zoo.program_logic.state_interp.html#ZooG"><span class="id" title="class">ZooG</span></a> <span class="id" title="var">Σ</span>}.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="ec33db4a3ec2759ad03e8095477101cc" class="idref" href="#ec33db4a3ec2759ad03e8095477101cc"><span class="id" title="lemma">zoo_counter_incr</span></a><a id="ec33db4a3ec2759ad03e8095477101cc" class="idref" href="#ec33db4a3ec2759ad03e8095477101cc"><span class="id" title="lemma">𑁒</span></a><a id="ec33db4a3ec2759ad03e8095477101cc" class="idref" href="#ec33db4a3ec2759ad03e8095477101cc"><span class="id" title="lemma">spec</span></a> <a id="ids:3" class="idref" href="#ids:3"><span class="id" title="binder">ids</span></a> <a id="v:4" class="idref" href="#v:4"><span class="id" title="binder">v</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.wp.html#ddb78f655442001feef8f61c11cb148c"><span class="id" title="notation">{{{</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">[∗</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">list</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">]</span></a> <a id="id:5" class="idref" href="#id:5"><span class="id" title="binder"><span id="id:6" class="id">id</span></span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">∈</span></a> <a class="idref" href="zoo.program_logic.counter.html#ids:3"><span class="id" title="variable">ids</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">,</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#6a949150dff4dc18cd2632b730bdfc23"><span class="id" title="notation">∃</span></a> <a id="v:7" class="idref" href="#v:7"><span class="id" title="binder">v</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#6a949150dff4dc18cd2632b730bdfc23"><span class="id" title="notation">,</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.state_interp.html#zoo_counter_at"><span class="id" title="definition">zoo_counter_at</span></a> <a class="idref" href="zoo.program_logic.counter.html#id:5"><span class="id" title="variable">id</span></a> <a class="idref" href="zoo.program_logic.counter.html#v:7"><span class="id" title="variable">v</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.wp.html#ddb78f655442001feef8f61c11cb148c"><span class="id" title="notation">}}}</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.counter.html#zoo_counter_incr"><span class="id" title="definition">zoo_counter_incr</span></a> <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.wp.html#ddb78f655442001feef8f61c11cb148c"><span class="id" title="notation">{{{</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="id:8" class="idref" href="#id:8"><span class="id" title="binder">id</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.wp.html#ddb78f655442001feef8f61c11cb148c"><span class="id" title="notation">,</span></a> <a class="idref" href="zoo.program_logic.wp.html#ddb78f655442001feef8f61c11cb148c"><span class="id" title="notation">RET</span></a> <a class="idref" href="zoo.language.notations.html#66e8f9d9f9894a066beff0d1c67d3c77"><span class="id" title="notation">#</span></a><a class="idref" href="zoo.program_logic.counter.html#id:8"><span class="id" title="variable">id</span></a><a class="idref" href="zoo.program_logic.wp.html#ddb78f655442001feef8f61c11cb148c"><span class="id" title="notation">;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.state_interp.html#zoo_counter_at"><span class="id" title="definition">zoo_counter_at</span></a> <a class="idref" href="zoo.program_logic.counter.html#id:8"><span class="id" title="variable">id</span></a> <a class="idref" href="zoo.program_logic.counter.html#v:4"><span class="id" title="variable">v</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#17a7b93bfefac02a752836d54e5bc9da"><span class="id" title="notation">∗</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#08ba0c98aaa0db435a5f99ebae3ae8e7"><span class="id" title="notation">⌜</span></a><a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Lists.ListDef.html#Forall"><span class="id" title="inductive">Forall</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#ff88c71c6684abdd81d9ebb2dbc304be"><span class="id" title="notation">(.≠</span></a> <a class="idref" href="zoo.program_logic.counter.html#id:8"><span class="id" title="variable">id</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#ff88c71c6684abdd81d9ebb2dbc304be"><span class="id" title="notation">)</span></a> <a class="idref" href="zoo.program_logic.counter.html#ids:3"><span class="id" title="variable">ids</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#08ba0c98aaa0db435a5f99ebae3ae8e7"><span class="id" title="notation">⌝</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.wp.html#ddb78f655442001feef8f61c11cb148c"><span class="id" title="notation">}}}</span></a>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="zoo.program_logic.counter.html#zoo_G"><span class="id" title="section">zoo_G</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

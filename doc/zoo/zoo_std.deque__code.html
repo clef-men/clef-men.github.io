@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.deque__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_std.deque__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque.html#"><span class="id" title="library">xdeque</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.deque__types.html#"><span class="id" title="library">deque__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="deque_create" class="idref" href="#deque_create"><span class="id" title="definition">deque_create</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#xdeque_create"><span class="id" title="definition">xdeque_create</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="deque_is_empty" class="idref" href="#deque_is_empty"><span class="id" title="definition">deque_is_empty</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#xdeque_is_empty"><span class="id" title="definition">xdeque_is_empty</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="deque_push_front" class="idref" href="#deque_push_front"><span class="id" title="definition">deque_push_front</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "t" "v" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#xdeque_push_front"><span class="id" title="definition">xdeque_push_front</span></a> "t" <a class="idref" href="zoo.language.notations.html#dfa51ef4a1318f83f46f4e52f586c0e5"><span class="id" title="notation">{</span></a> "t"<a class="idref" href="zoo.language.notations.html#dfa51ef4a1318f83f46f4e52f586c0e5"><span class="id" title="notation">,</span></a> "t"<a class="idref" href="zoo.language.notations.html#dfa51ef4a1318f83f46f4e52f586c0e5"><span class="id" title="notation">,</span></a> "v" <a class="idref" href="zoo.language.notations.html#dfa51ef4a1318f83f46f4e52f586c0e5"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="deque_push_back" class="idref" href="#deque_push_back"><span class="id" title="definition">deque_push_back</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "t" "v" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#xdeque_push_back"><span class="id" title="definition">xdeque_push_back</span></a> "t" <a class="idref" href="zoo.language.notations.html#dfa51ef4a1318f83f46f4e52f586c0e5"><span class="id" title="notation">{</span></a> "t"<a class="idref" href="zoo.language.notations.html#dfa51ef4a1318f83f46f4e52f586c0e5"><span class="id" title="notation">,</span></a> "t"<a class="idref" href="zoo.language.notations.html#dfa51ef4a1318f83f46f4e52f586c0e5"><span class="id" title="notation">,</span></a> "v" <a class="idref" href="zoo.language.notations.html#dfa51ef4a1318f83f46f4e52f586c0e5"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="deque_pop_front" class="idref" href="#deque_pop_front"><span class="id" title="definition">deque_pop_front</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "t" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">match</span></a><a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">:</span></a> <a class="idref" href="zoo_std.xdeque__code.html#xdeque_pop_front"><span class="id" title="definition">xdeque_pop_front</span></a> "t" <a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">with</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo.language.notations.html#:zoo_tag::'None'"><span class="id" title="notation">None</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#4b58797801c0403491cfc1d96db60c56"><span class="id" title="notation">§</span></a><a class="idref" href="zoo.language.notations.html#:zoo_tag::'None'"><span class="id" title="notation">None</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo.language.notations.html#:zoo_tag::'Some'"><span class="id" title="notation">Some</span></a> "node" <a class="idref" href="zoo.language.notations.html#a6d75581414bfb873c3b757943b3a17a"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">‘</span></a><a class="idref" href="zoo.language.notations.html#:zoo_tag::'Some'"><span class="id" title="notation">Some</span></a><a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">(</span></a> "node"<a class="idref" href="zoo.language.notations.html#81f03c5c93a92e79a33b48907d6555ed"><span class="id" title="notation">.{</span></a><a class="idref" href="zoo_std.xdeque__types.html#:zoo_field::'xdeque_data'"><span class="id" title="notation">xdeque_data</span></a><a class="idref" href="zoo.language.notations.html#81f03c5c93a92e79a33b48907d6555ed"><span class="id" title="notation">}</span></a> <a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">)</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">end</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="deque_pop_back" class="idref" href="#deque_pop_back"><span class="id" title="definition">deque_pop_back</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "t" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">match</span></a><a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">:</span></a> <a class="idref" href="zoo_std.xdeque__code.html#xdeque_pop_back"><span class="id" title="definition">xdeque_pop_back</span></a> "t" <a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">with</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo.language.notations.html#:zoo_tag::'None'"><span class="id" title="notation">None</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#4b58797801c0403491cfc1d96db60c56"><span class="id" title="notation">§</span></a><a class="idref" href="zoo.language.notations.html#:zoo_tag::'None'"><span class="id" title="notation">None</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo.language.notations.html#:zoo_tag::'Some'"><span class="id" title="notation">Some</span></a> "node" <a class="idref" href="zoo.language.notations.html#a6d75581414bfb873c3b757943b3a17a"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">‘</span></a><a class="idref" href="zoo.language.notations.html#:zoo_tag::'Some'"><span class="id" title="notation">Some</span></a><a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">(</span></a> "node"<a class="idref" href="zoo.language.notations.html#81f03c5c93a92e79a33b48907d6555ed"><span class="id" title="notation">.{</span></a><a class="idref" href="zoo_std.xdeque__types.html#:zoo_field::'xdeque_data'"><span class="id" title="notation">xdeque_data</span></a><a class="idref" href="zoo.language.notations.html#81f03c5c93a92e79a33b48907d6555ed"><span class="id" title="notation">}</span></a> <a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">)</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">end</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="deque_iter" class="idref" href="#deque_iter"><span class="id" title="definition">deque_iter</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "fn" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#xdeque_iter"><span class="id" title="definition">xdeque_iter</span></a> (<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "node" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a> "fn" "node"<a class="idref" href="zoo.language.notations.html#81f03c5c93a92e79a33b48907d6555ed"><span class="id" title="notation">.{</span></a><a class="idref" href="zoo_std.xdeque__types.html#:zoo_field::'xdeque_data'"><span class="id" title="notation">xdeque_data</span></a><a class="idref" href="zoo.language.notations.html#81f03c5c93a92e79a33b48907d6555ed"><span class="id" title="notation">}</span></a>).<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

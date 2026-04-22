@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo.common.listne</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo.common.listne</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.common</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.common.list.html#"><span class="id" title="library">list</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="listne" class="idref" href="#listne"><span class="id" title="definition">listne</span></a> <a id="A:1" class="idref" href="#A:1"><span class="id" title="binder">A</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Specif.html#6556914db359db999889decec6a4a562"><span class="id" title="notation">{</span></a> <a id="x:2" class="idref" href="#x:2"><span class="id" title="binder">x</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Specif.html#6556914db359db999889decec6a4a562"><span class="id" title="notation">:</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#list"><span class="id" title="inductive">list</span></a> <a class="idref" href="zoo.common.listne.html#A:1"><span class="id" title="variable">A</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Specif.html#6556914db359db999889decec6a4a562"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo.common.listne.html#x:2"><span class="id" title="variable">x</span></a> <span class="id" title="notation">≠</span> <span class="id" title="notation">[]</span> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Specif.html#6556914db359db999889decec6a4a562"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a id="listne" class="idref" href="#listne"><span class="id" title="section">listne</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> {<a id="listne.A" class="idref" href="#listne.A"><span class="id" title="variable">A</span></a> : <span class="id" title="keyword">Type</span>}.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="zoo.common.listne.html#listne.A"><span class="id" title="variable">A</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> <span class="id" title="var">l</span> : <a class="idref" href="zoo.common.listne.html#listne"><span class="id" title="definition">listne</span></a> <a class="idref" href="zoo.common.listne.html#listne.A"><span class="id" title="variable">A</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Program Definition</span> <a id="listne_app" class="idref" href="#listne_app"><span class="id" title="definition">listne_app</span></a> <a id="l1:4" class="idref" href="#l1:4"><span class="id" title="binder">l1</span></a> <a id="l2:5" class="idref" href="#l2:5"><span class="id" title="binder">l2</span></a> : <a class="idref" href="zoo.common.listne.html#listne"><span class="id" title="definition">listne</span></a> <a class="idref" href="zoo.common.listne.html#listne.A"><span class="id" title="variable">A</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#5d6eea20192f4b90d9ee9e82f9b13c67"><span class="id" title="notation">`</span></a><a class="idref" href="zoo.common.listne.html#l1:4"><span class="id" title="variable">l1</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#bc347c51eaf667706ae54503b26d52c6"><span class="id" title="notation">++</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#5d6eea20192f4b90d9ee9e82f9b13c67"><span class="id" title="notation">`</span></a><a class="idref" href="zoo.common.listne.html#l2:5"><span class="id" title="variable">l2</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;#[<span class="id" title="var">global</span>] <span class="id" title="keyword">Instance</span> <a id="listne_elem_of" class="idref" href="#listne_elem_of"><span class="id" title="instance">listne_elem_of</span></a> : <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#ElemOf"><span class="id" title="class">ElemOf</span></a> <a class="idref" href="zoo.common.listne.html#listne.A"><span class="id" title="variable">A</span></a> (<a class="idref" href="zoo.common.listne.html#listne"><span class="id" title="definition">listne</span></a> <a class="idref" href="zoo.common.listne.html#listne.A"><span class="id" title="variable">A</span></a>) :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">λ</span> <a id="x:6" class="idref" href="#x:6"><span class="id" title="binder">x</span></a> <a id="l:7" class="idref" href="#l:7"><span class="id" title="binder">l</span></a><span class="id" title="notation">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#x:6"><span class="id" title="variable">x</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#2a78afea1eeed082be084d2a55e1605c"><span class="id" title="notation">∈</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#5d6eea20192f4b90d9ee9e82f9b13c67"><span class="id" title="notation">`</span></a><a class="idref" href="zoo.common.listne.html#l:7"><span class="id" title="variable">l</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="listne_Forall" class="idref" href="#listne_Forall"><span class="id" title="definition">listne_Forall</span></a> <a id="P:8" class="idref" href="#P:8"><span class="id" title="binder">P</span></a> <a id="l:9" class="idref" href="#l:9"><span class="id" title="binder">l</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Lists.ListDef.html#Forall"><span class="id" title="inductive">Forall</span></a> <a class="idref" href="zoo.common.listne.html#P:8"><span class="id" title="variable">P</span></a> (<a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#5d6eea20192f4b90d9ee9e82f9b13c67"><span class="id" title="notation">`</span></a><a class="idref" href="zoo.common.listne.html#l:9"><span class="id" title="variable">l</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="listne_non_empty" class="idref" href="#listne_non_empty"><span class="id" title="lemma">listne_non_empty</span></a> <a id="l:10" class="idref" href="#l:10"><span class="id" title="binder">l</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">∃</span> <a id="x:11" class="idref" href="#x:11"><span class="id" title="binder">x</span></a><span class="id" title="notation">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#x:11"><span class="id" title="variable">x</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#2a78afea1eeed082be084d2a55e1605c"><span class="id" title="notation">∈</span></a> <a class="idref" href="zoo.common.listne.html#l:10"><span class="id" title="variable">l</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="listne_elem_of_singleton" class="idref" href="#listne_elem_of_singleton"><span class="id" title="lemma">listne_elem_of_singleton</span></a> <a id="x:12" class="idref" href="#x:12"><span class="id" title="binder">x</span></a> <a id="y:13" class="idref" href="#y:13"><span class="id" title="binder">y</span></a> <a id="H:14" class="idref" href="#H:14"><span class="id" title="binder">H</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#x:12"><span class="id" title="variable">x</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#2a78afea1eeed082be084d2a55e1605c"><span class="id" title="notation">∈</span></a> <span class="id" title="notation">[</span><a class="idref" href="zoo.common.listne.html#y:13"><span class="id" title="variable">y</span></a><span class="id" title="notation">]</span><a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#0bcc5d7e710249ba487036902eea9532"><span class="id" title="notation">↾</span></a><a class="idref" href="zoo.common.listne.html#H:14"><span class="id" title="variable">H</span></a> <span class="id" title="notation">↔</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#x:12"><span class="id" title="variable">x</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="zoo.common.listne.html#y:13"><span class="id" title="variable">y</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="listne_elem_of_app" class="idref" href="#listne_elem_of_app"><span class="id" title="lemma">listne_elem_of_app</span></a> <a id="l1:15" class="idref" href="#l1:15"><span class="id" title="binder">l1</span></a> <a id="l2:16" class="idref" href="#l2:16"><span class="id" title="binder">l2</span></a> <a id="x:17" class="idref" href="#x:17"><span class="id" title="binder">x</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#x:17"><span class="id" title="variable">x</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#2a78afea1eeed082be084d2a55e1605c"><span class="id" title="notation">∈</span></a> <a class="idref" href="zoo.common.listne.html#listne_app"><span class="id" title="definition">listne_app</span></a> <a class="idref" href="zoo.common.listne.html#l1:15"><span class="id" title="variable">l1</span></a> <a class="idref" href="zoo.common.listne.html#l2:16"><span class="id" title="variable">l2</span></a> <span class="id" title="notation">↔</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#x:17"><span class="id" title="variable">x</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#2a78afea1eeed082be084d2a55e1605c"><span class="id" title="notation">∈</span></a> <a class="idref" href="zoo.common.listne.html#l1:15"><span class="id" title="variable">l1</span></a> <span class="id" title="notation">∨</span> <a class="idref" href="zoo.common.listne.html#x:17"><span class="id" title="variable">x</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#2a78afea1eeed082be084d2a55e1605c"><span class="id" title="notation">∈</span></a> <a class="idref" href="zoo.common.listne.html#l2:16"><span class="id" title="variable">l2</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="listne_Forall_forall" class="idref" href="#listne_Forall_forall"><span class="id" title="lemma">listne_Forall_forall</span></a> <a id="P:18" class="idref" href="#P:18"><span class="id" title="binder">P</span></a> <a id="l:19" class="idref" href="#l:19"><span class="id" title="binder">l</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#listne_Forall"><span class="id" title="definition">listne_Forall</span></a> <a class="idref" href="zoo.common.listne.html#P:18"><span class="id" title="variable">P</span></a> <a class="idref" href="zoo.common.listne.html#l:19"><span class="id" title="variable">l</span></a> <span class="id" title="notation">↔</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">∀</span> <a id="x:20" class="idref" href="#x:20"><span class="id" title="binder">x</span></a><span class="id" title="notation">,</span> <a class="idref" href="zoo.common.listne.html#x:20"><span class="id" title="variable">x</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#2a78afea1eeed082be084d2a55e1605c"><span class="id" title="notation">∈</span></a> <a class="idref" href="zoo.common.listne.html#l:19"><span class="id" title="variable">l</span></a> <span class="id" title="notation">→</span> <a class="idref" href="zoo.common.listne.html#P:18"><span class="id" title="variable">P</span></a> <a class="idref" href="zoo.common.listne.html#x:20"><span class="id" title="variable">x</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="listne_Forall_singleton" class="idref" href="#listne_Forall_singleton"><span class="id" title="lemma">listne_Forall_singleton</span></a> {<a id="P:21" class="idref" href="#P:21"><span class="id" title="binder">P</span></a>} <a id="x:22" class="idref" href="#x:22"><span class="id" title="binder">x</span></a> <a id="H:23" class="idref" href="#H:23"><span class="id" title="binder">H</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#listne_Forall"><span class="id" title="definition">listne_Forall</span></a> <a class="idref" href="zoo.common.listne.html#P:21"><span class="id" title="variable">P</span></a> (<span class="id" title="notation">[</span><a class="idref" href="zoo.common.listne.html#x:22"><span class="id" title="variable">x</span></a><span class="id" title="notation">]</span><a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#0bcc5d7e710249ba487036902eea9532"><span class="id" title="notation">↾</span></a><a class="idref" href="zoo.common.listne.html#H:23"><span class="id" title="variable">H</span></a>) <span class="id" title="notation">↔</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#P:21"><span class="id" title="variable">P</span></a> <a class="idref" href="zoo.common.listne.html#x:22"><span class="id" title="variable">x</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="listne_Forall_app" class="idref" href="#listne_Forall_app"><span class="id" title="lemma">listne_Forall_app</span></a> <a id="P:24" class="idref" href="#P:24"><span class="id" title="binder">P</span></a> <a id="l1:25" class="idref" href="#l1:25"><span class="id" title="binder">l1</span></a> <a id="l2:26" class="idref" href="#l2:26"><span class="id" title="binder">l2</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#listne_Forall"><span class="id" title="definition">listne_Forall</span></a> <a class="idref" href="zoo.common.listne.html#P:24"><span class="id" title="variable">P</span></a> (<a class="idref" href="zoo.common.listne.html#listne_app"><span class="id" title="definition">listne_app</span></a> <a class="idref" href="zoo.common.listne.html#l1:25"><span class="id" title="variable">l1</span></a> <a class="idref" href="zoo.common.listne.html#l2:26"><span class="id" title="variable">l2</span></a>) <span class="id" title="notation">↔</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#listne_Forall"><span class="id" title="definition">listne_Forall</span></a> <a class="idref" href="zoo.common.listne.html#P:24"><span class="id" title="variable">P</span></a> <a class="idref" href="zoo.common.listne.html#l1:25"><span class="id" title="variable">l1</span></a> <span class="id" title="notation">∧</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#listne_Forall"><span class="id" title="definition">listne_Forall</span></a> <a class="idref" href="zoo.common.listne.html#P:24"><span class="id" title="variable">P</span></a> <a class="idref" href="zoo.common.listne.html#l2:26"><span class="id" title="variable">l2</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="listne_Forall_elem_of" class="idref" href="#listne_Forall_elem_of"><span class="id" title="lemma">listne_Forall_elem_of</span></a> <a id="P:27" class="idref" href="#P:27"><span class="id" title="binder">P</span></a> <a id="l:28" class="idref" href="#l:28"><span class="id" title="binder">l</span></a> <a id="x:29" class="idref" href="#x:29"><span class="id" title="binder">x</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#listne_Forall"><span class="id" title="definition">listne_Forall</span></a> <a class="idref" href="zoo.common.listne.html#P:27"><span class="id" title="variable">P</span></a> <a class="idref" href="zoo.common.listne.html#l:28"><span class="id" title="variable">l</span></a> <span class="id" title="notation">→</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#x:29"><span class="id" title="variable">x</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#2a78afea1eeed082be084d2a55e1605c"><span class="id" title="notation">∈</span></a> <a class="idref" href="zoo.common.listne.html#l:28"><span class="id" title="variable">l</span></a> <span class="id" title="notation">→</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.common.listne.html#P:27"><span class="id" title="variable">P</span></a> <a class="idref" href="zoo.common.listne.html#x:29"><span class="id" title="variable">x</span></a>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="zoo.common.listne.html#listne"><span class="id" title="section">listne</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

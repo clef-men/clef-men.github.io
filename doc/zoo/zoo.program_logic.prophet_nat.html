@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo.program_logic.prophet_nat</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo.program_logic.prophet_nat</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.program_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.prophet_typed.html#"><span class="id" title="library">prophet_typed</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Definition</span> <a id="prophet_nat" class="idref" href="#prophet_nat"><span class="id" title="definition">prophet_nat</span></a> :=<br/>
+&nbsp;&nbsp;{|<a class="idref" href="zoo.program_logic.prophet_typed.html#prophet_typed_type"><span class="id" title="projection">prophet_typed_type</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a><br/>
+&nbsp;&nbsp;; <a class="idref" href="zoo.program_logic.prophet_typed.html#prophet_typed_of_val"><span class="id" title="projection">prophet_typed_of_val</span></a> <a id="v:1" class="idref" href="#v:1"><span class="id" title="binder">v</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="zoo.program_logic.prophet_nat.html#v:1"><span class="id" title="variable">v</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#ValInt"><span class="id" title="abbreviation">ValInt</span></a> <span class="id" title="var">i</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> (<span class="id" title="definition">Z.to_nat</span> <span class="id" title="var">i</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#None"><span class="id" title="constructor">None</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;; <a class="idref" href="zoo.program_logic.prophet_typed.html#prophet_typed_to_val"><span class="id" title="projection">prophet_typed_to_val</span></a> <a id="i:3" class="idref" href="#i:3"><span class="id" title="binder">i</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#66e8f9d9f9894a066beff0d1c67d3c77"><span class="id" title="notation">#</span></a><a class="idref" href="zoo.program_logic.prophet_nat.html#i:3"><span class="id" title="variable">i</span></a><br/>
+&nbsp;&nbsp;|}.<br/>
+<span class="id" title="keyword">Solve</span> <span class="id" title="keyword">Obligations</span> <span class="id" title="keyword">of</span> <span class="id" title="var">prophet_nat</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;<span class="id" title="tactic">try</span> <span class="id" title="var">done</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Definition</span> <a id="prophet_nat_1" class="idref" href="#prophet_nat_1"><span class="id" title="definition">prophet_nat_1</span></a> :=<br/>
+&nbsp;&nbsp;{|<a class="idref" href="zoo.program_logic.prophet_typed.html#prophet_typed_1_type"><span class="id" title="projection">prophet_typed_1_type</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a><br/>
+&nbsp;&nbsp;; <a class="idref" href="zoo.program_logic.prophet_typed.html#prophet_typed_1_of_val"><span class="id" title="projection">prophet_typed_1_of_val</span></a> <a id="v:4" class="idref" href="#v:4"><span class="id" title="binder">v</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="zoo.program_logic.prophet_nat.html#v:4"><span class="id" title="variable">v</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#ValInt"><span class="id" title="abbreviation">ValInt</span></a> <span class="id" title="var">i</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> (<span class="id" title="definition">Z.to_nat</span> <span class="id" title="var">i</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#None"><span class="id" title="constructor">None</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;; <a class="idref" href="zoo.program_logic.prophet_typed.html#prophet_typed_1_to_val"><span class="id" title="projection">prophet_typed_1_to_val</span></a> <a id="i:6" class="idref" href="#i:6"><span class="id" title="binder">i</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#66e8f9d9f9894a066beff0d1c67d3c77"><span class="id" title="notation">#</span></a><a class="idref" href="zoo.program_logic.prophet_nat.html#i:6"><span class="id" title="variable">i</span></a><br/>
+&nbsp;&nbsp;|}.<br/>
+<span class="id" title="keyword">Solve</span> <span class="id" title="keyword">Obligations</span> <span class="id" title="keyword">of</span> <span class="id" title="var">prophet_nat_1</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;<span class="id" title="tactic">try</span> <span class="id" title="var">done</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

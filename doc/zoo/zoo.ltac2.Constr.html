@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo.ltac2.Constr</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo.ltac2.Constr</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">Ltac2</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
+&nbsp;&nbsp;<span class="id" title="library">Constr</span><br/>
+&nbsp;&nbsp;<span class="id" title="library">Init</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.ltac2</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.ltac2.Array.html#"><span class="id" title="library">Array</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.ltac2.List.html#"><span class="id" title="library">List</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Module</span> <a id="Unsafe" class="idref" href="#Unsafe"><span class="id" title="module">Unsafe</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Export</span> <span class="id" title="module">Unsafe</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_rel</span> <span class="id" title="var">i</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Rel</span> <span class="id" title="var">i</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_var</span> <span class="id" title="var">id</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Var</span> <span class="id" title="var">id</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_meta</span> <span class="id" title="var">meta</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Meta</span> <span class="id" title="var">meta</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_evar</span> <span class="id" title="tactic">evar</span> <span class="id" title="var">ts</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Evar</span> <span class="id" title="tactic">evar</span> <span class="id" title="var">ts</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_sort</span> <span class="id" title="var">sort</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="keyword">Sort</span> <span class="id" title="var">sort</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_cast</span> <span class="id" title="var">t</span> <span class="id" title="var">cast</span> <span class="id" title="var">ty</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Cast</span> <span class="id" title="var">t</span> <span class="id" title="var">cast</span> <span class="id" title="var">ty</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_prod</span> <span class="id" title="var">bdr</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Prod</span> <span class="id" title="var">bdr</span> <span class="id" title="var">t</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_lambda</span> <span class="id" title="var">bdr</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Lambda</span> <span class="id" title="var">bdr</span> <span class="id" title="var">t</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_let</span> <span class="id" title="var">bdr</span> <span class="id" title="var">t1</span> <span class="id" title="var">t2</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">LetIn</span> <span class="id" title="var">bdr</span> <span class="id" title="var">t1</span> <span class="id" title="var">t2</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_app</span> <span class="id" title="var">t</span> <span class="id" title="var">ts</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">App</span> <span class="id" title="var">t</span> <span class="id" title="var">ts</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_constant</span> <span class="id" title="var">const</span> <span class="id" title="var">inst</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Constant</span> <span class="id" title="var">const</span> <span class="id" title="var">inst</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_ind</span> <span class="id" title="var">ind</span> <span class="id" title="var">inst</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Ind</span> <span class="id" title="var">ind</span> <span class="id" title="var">inst</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_constructor</span> <span class="id" title="var">ctor</span> <span class="id" title="var">inst</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Constructor</span> <span class="id" title="var">ctor</span> <span class="id" title="var">inst</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_case</span> <span class="id" title="tactic">case</span> <span class="id" title="tactic">info</span> <span class="id" title="var">inv</span> <span class="id" title="var">t</span> <span class="id" title="var">brs</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Case</span> <span class="id" title="tactic">case</span> <span class="id" title="tactic">info</span> <span class="id" title="var">inv</span> <span class="id" title="var">t</span> <span class="id" title="var">brs</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_fix</span> <span class="id" title="var">structs</span> <span class="id" title="var">i</span> <span class="id" title="var">bdrs</span> <span class="id" title="var">ts</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="keyword">Fix</span> <span class="id" title="var">structs</span> <span class="id" title="var">i</span> <span class="id" title="var">bdrs</span> <span class="id" title="var">ts</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_cofix</span> <span class="id" title="var">i</span> <span class="id" title="var">bdrs</span> <span class="id" title="var">ts</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">CoFix</span> <span class="id" title="var">i</span> <span class="id" title="var">bdrs</span> <span class="id" title="var">ts</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_proj</span> <span class="id" title="var">proj</span> <span class="id" title="var">relevance</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Proj</span> <span class="id" title="var">proj</span> <span class="id" title="var">relevance</span> <span class="id" title="var">t</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_uint63</span> <span class="id" title="var">n</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Uint63</span> <span class="id" title="var">n</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_float</span> <span class="id" title="var">f</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Float</span> <span class="id" title="var">f</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_string</span> <span class="id" title="var">str</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">String</span> <span class="id" title="var">str</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_array</span> <span class="id" title="var">inst</span> <span class="id" title="var">ts</span> <span class="id" title="var">t1</span> <span class="id" title="var">t2</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make</span> (<span class="id" title="var">Array</span> <span class="id" title="var">inst</span> <span class="id" title="var">ts</span> <span class="id" title="var">t1</span> <span class="id" title="var">t2</span>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_lambdas</span> <span class="id" title="var">bdrs</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">List.fold_right</span> <span class="id" title="var">make_lambda</span> <span class="id" title="var">bdrs</span> <span class="id" title="var">t</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_app'</span> <span class="id" title="var">t</span> <span class="id" title="var">ts</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make_app</span> <span class="id" title="var">t</span> (<span class="id" title="var">Array.of_list</span> <span class="id" title="var">ts</span>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">make_case_simple</span> <span class="id" title="var">ind</span> <span class="id" title="var">ty1</span> <span class="id" title="var">ty2</span> <span class="id" title="var">t</span> <span class="id" title="var">brs</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">make_case</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="tactic">case</span> <span class="id" title="var">ind</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( ( <span class="id" title="var">make_lambda</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">Binder.make</span> <span class="id" title="var">None</span> <span class="id" title="var">ty1</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">ty2</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Binder.Relevant</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">NoInvert</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">t</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">brs</span>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="zoo.ltac2.Constr.html#Unsafe"><span class="id" title="module">Unsafe</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="keyword">rec</span> <span class="id" title="var">head</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">Unsafe.kind</span> <span class="id" title="var">t</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">Unsafe.App</span> <span class="id" title="var">t</span> <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">head</span> <span class="id" title="var">t</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">t</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+#[<span class="id" title="var">local</span>] <span class="id" title="var">Ltac2</span> <span class="id" title="keyword">rec</span> <span class="id" title="var">head_tail'</span> <span class="id" title="var">t</span> <span class="id" title="var">acc</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">Unsafe.kind</span> <span class="id" title="var">t</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">Unsafe.App</span> <span class="id" title="var">t</span> <span class="id" title="var">ts</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="var">acc</span> := <span class="id" title="var">Array.append</span> <span class="id" title="var">ts</span> <span class="id" title="var">acc</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">head_tail'</span> <span class="id" title="var">t</span> <span class="id" title="var">acc</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">t</span>, <span class="id" title="var">acc</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">head_tail</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="var">head_tail'</span> <span class="id" title="var">t</span> <span class="id" title="var">Array.empty</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">tail</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">let</span> (<span class="id" title="var">_</span>, <span class="id" title="var">tl</span>) := <span class="id" title="var">head_tail</span> <span class="id" title="var">t</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;<span class="id" title="var">tl</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="keyword">rec</span> <span class="id" title="var">product_arity</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">Unsafe.kind</span> <span class="id" title="var">t</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">Unsafe.Prod</span> <span class="id" title="var">_</span> <span class="id" title="var">t</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Int.add</span> (<span class="id" title="var">product_arity</span> <span class="id" title="var">t</span>) 1<br/>
+&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+#[<span class="id" title="var">local</span>] <span class="id" title="var">Ltac2</span> <span class="id" title="keyword">rec</span> <span class="id" title="var">product_decompose'</span> <span class="id" title="var">t</span> <span class="id" title="var">acc</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">Unsafe.kind</span> <span class="id" title="var">t</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">Unsafe.Prod</span> <span class="id" title="var">bdr</span> <span class="id" title="var">t</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="var">ty</span> := <span class="id" title="var">Binder.type</span> <span class="id" title="var">bdr</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">product_decompose'</span> <span class="id" title="var">t</span> (<span class="id" title="var">ty</span> :: <span class="id" title="var">acc</span>)<br/>
+&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">List.rev</span> <span class="id" title="var">acc</span>, <span class="id" title="var">t</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">product_decompose</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="var">product_decompose'</span> <span class="id" title="var">t</span> [].<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">product_parameters</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">let</span> (<span class="id" title="var">params</span>, <span class="id" title="var">_</span>) := <span class="id" title="var">product_decompose</span> <span class="id" title="var">t</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;<span class="id" title="var">params</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="keyword">rec</span> <span class="id" title="var">product_result</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">Unsafe.kind</span> <span class="id" title="var">t</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">Unsafe.Prod</span> <span class="id" title="var">_</span> <span class="id" title="var">t</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">product_result</span> <span class="id" title="var">t</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">t</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

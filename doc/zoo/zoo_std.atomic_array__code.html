@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.atomic_array__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_std.atomic_array__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array.html#"><span class="id" title="library">array</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.atomic_array__types.html#"><span class="id" title="library">atomic_array__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_make" class="idref" href="#atomic_array_make"><span class="id" title="definition">atomic_array_make</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_make"><span class="id" title="definition">array_make</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_init" class="idref" href="#atomic_array_init"><span class="id" title="definition">atomic_array_init</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_init"><span class="id" title="definition">array_init</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_initi" class="idref" href="#atomic_array_initi"><span class="id" title="definition">atomic_array_initi</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_initi"><span class="id" title="definition">array_initi</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_size" class="idref" href="#atomic_array_size"><span class="id" title="definition">atomic_array_size</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_size"><span class="id" title="definition">array_size</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_unsafe_get" class="idref" href="#atomic_array_unsafe_get"><span class="id" title="definition">atomic_array_unsafe_get</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_unsafe_get"><span class="id" title="definition">array_unsafe_get</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_get" class="idref" href="#atomic_array_get"><span class="id" title="definition">atomic_array_get</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_get"><span class="id" title="definition">array_get</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_unsafe_set" class="idref" href="#atomic_array_unsafe_set"><span class="id" title="definition">atomic_array_unsafe_set</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_unsafe_set"><span class="id" title="definition">array_unsafe_set</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_set" class="idref" href="#atomic_array_set"><span class="id" title="definition">atomic_array_set</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_set"><span class="id" title="definition">array_set</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_unsafe_xchg" class="idref" href="#atomic_array_unsafe_xchg"><span class="id" title="definition">atomic_array_unsafe_xchg</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array.html#array_unsafe_xchg"><span class="id" title="definition">array_unsafe_xchg</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_unsafe_cas" class="idref" href="#atomic_array_unsafe_cas"><span class="id" title="definition">atomic_array_unsafe_cas</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array.html#array_unsafe_cas"><span class="id" title="definition">array_unsafe_cas</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_unsafe_faa" class="idref" href="#atomic_array_unsafe_faa"><span class="id" title="definition">atomic_array_unsafe_faa</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array.html#array_unsafe_faa"><span class="id" title="definition">array_unsafe_faa</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_foldli" class="idref" href="#atomic_array_foldli"><span class="id" title="definition">atomic_array_foldli</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_foldli"><span class="id" title="definition">array_foldli</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_foldl" class="idref" href="#atomic_array_foldl"><span class="id" title="definition">atomic_array_foldl</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_foldl"><span class="id" title="definition">array_foldl</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="atomic_array_sum" class="idref" href="#atomic_array_sum"><span class="id" title="definition">atomic_array_sum</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#array_sum"><span class="id" title="definition">array_sum</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

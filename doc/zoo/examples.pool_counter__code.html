@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>examples.pool_counter__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library examples.pool_counter__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_parabs</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool.html#"><span class="id" title="library">pool</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">examples</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="examples.pool_counter__types.html#"><span class="id" title="library">pool_counter__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="pool_counter_main" class="idref" href="#pool_counter_main"><span class="id" title="definition">pool_counter_main</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "num_worker" "n" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "cnt" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'ref'_x"><span class="id" title="notation">ref</span></a> 0 <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#pool_run"><span class="id" title="definition">pool_run</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"num_worker"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#1c39e82bf8bf5e1d3b3be51ed13b4f9a"><span class="id" title="notation">for</span></a><a class="idref" href="zoo.language.notations.html#1c39e82bf8bf5e1d3b3be51ed13b4f9a"><span class="id" title="notation">:</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#::binder_scope:'&lt;&gt;'"><span class="id" title="notation">≠</span></a> <a class="idref" href="zoo.language.notations.html#1c39e82bf8bf5e1d3b3be51ed13b4f9a"><span class="id" title="notation">:=</span></a> 0 <a class="idref" href="zoo.language.notations.html#1c39e82bf8bf5e1d3b3be51ed13b4f9a"><span class="id" title="notation">to</span></a> "n" <a class="idref" href="zoo.language.notations.html#1c39e82bf8bf5e1d3b3be51ed13b4f9a"><span class="id" title="notation">begin</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#pool_async"><span class="id" title="definition">pool_async</span></a> "ctx" (<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "_ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a> <a class="idref" href="zoo.language.syntax.html#FAA"><span class="id" title="constructor">FAA</span></a> "cnt"<a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">.[</span></a><a class="idref" href="zoo.language.notations.html#:zoo_field::'contents'"><span class="id" title="notation">contents</span></a><a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">]</span></a> 1 <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#1c39e82bf8bf5e1d3b3be51ed13b4f9a"><span class="id" title="notation">end</span></a>) <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#569b74bc432a2b233b93ae1b45418e26"><span class="id" title="notation">!</span></a>"cnt".<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

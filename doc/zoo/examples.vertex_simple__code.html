@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>examples.vertex_simple__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library examples.vertex_simple__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_parabs</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool.html#"><span class="id" title="library">pool</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex.html#"><span class="id" title="library">vertex</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.ivar_4.html#"><span class="id" title="library">ivar_4</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">examples</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="examples.vertex_simple__types.html#"><span class="id" title="library">vertex_simple__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="vertex_simple_main" class="idref" href="#vertex_simple_main"><span class="id" title="definition">vertex_simple_main</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "num_worker" "a" "b" "c" "d" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "ivar" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo_std.ivar_4__code.html#ivar_4_create"><span class="id" title="definition">ivar_4_create</span></a> <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a> <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "vtx_a" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo_parabs.vertex__code.html#vertex_create'"><span class="id" title="definition">vertex_create'</span></a> (<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "_ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a> "a" <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a>) <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "vtx_b" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo_parabs.vertex__code.html#vertex_create'"><span class="id" title="definition">vertex_create'</span></a> (<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "_ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a> "b" <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a>) <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "vtx_c" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo_parabs.vertex__code.html#vertex_create'"><span class="id" title="definition">vertex_create'</span></a> (<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "_ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a> "c" <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a>) <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "vtx_d" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_create'"><span class="id" title="definition">vertex_create'</span></a> (<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a> "d" <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a> <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.ivar_4__code.html#ivar_4_notify"><span class="id" title="definition">ivar_4_notify</span></a> "ivar" "ctx" <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_precede"><span class="id" title="definition">vertex_precede</span></a> "vtx_a" "vtx_b" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_precede"><span class="id" title="definition">vertex_precede</span></a> "vtx_a" "vtx_c" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_precede"><span class="id" title="definition">vertex_precede</span></a> "vtx_b" "vtx_d" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_precede"><span class="id" title="definition">vertex_precede</span></a> "vtx_c" "vtx_d" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#pool_run"><span class="id" title="definition">pool_run</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"num_worker"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">:</span></a> "ctx" <a class="idref" href="zoo.language.notations.html#8959909e2f1d36a01339bff5d536dea8"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_release"><span class="id" title="definition">vertex_release</span></a> "ctx" "vtx_d" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_release"><span class="id" title="definition">vertex_release</span></a> "ctx" "vtx_c" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_release"><span class="id" title="definition">vertex_release</span></a> "ctx" "vtx_b" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex__code.html#vertex_release"><span class="id" title="definition">vertex_release</span></a> "ctx" "vtx_a" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#pool_wait_ivar"><span class="id" title="definition">pool_wait_ivar</span></a> "ctx" "ivar").<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

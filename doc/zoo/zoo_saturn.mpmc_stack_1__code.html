@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_saturn.mpmc_stack_1__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_saturn.mpmc_stack_1__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.glst.html#"><span class="id" title="library">glst</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.domain.html#"><span class="id" title="library">domain</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_saturn</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_saturn.mpmc_stack_1__types.html#"><span class="id" title="library">mpmc_stack_1__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="mpmc_stack_1_create" class="idref" href="#mpmc_stack_1_create"><span class="id" title="definition">mpmc_stack_1_create</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#::binder_scope:'&lt;&gt;'"><span class="id" title="notation">≠</span></a> <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'ref'_x"><span class="id" title="notation">ref</span></a> <a class="idref" href="zoo.language.notations.html#4b58797801c0403491cfc1d96db60c56"><span class="id" title="notation">§</span></a><a class="idref" href="zoo_std.glst__types.html#:zoo_tag::'Gnil'"><span class="id" title="notation">Gnil</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="mpmc_stack_1_push" class="idref" href="#mpmc_stack_1_push"><span class="id" title="definition">mpmc_stack_1_push</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">rec</span></a><a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">:</span></a> "push" "t" "v" <a class="idref" href="zoo.language.notations.html#1ec11f156d3762749caaa1701ebe6fab"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "old" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo.language.notations.html#569b74bc432a2b233b93ae1b45418e26"><span class="id" title="notation">!</span></a>"t" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "new_" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> <a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">‘</span></a><a class="idref" href="zoo_std.glst__types.html#:zoo_tag::'Gcons'"><span class="id" title="notation">Gcons</span></a><a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">[</span></a> "v"<a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">,</span></a> "old" <a class="idref" href="zoo.language.notations.html#d89a5c92110af7fc122fac6f2467b727"><span class="id" title="notation">]</span></a> <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">if</span></a><a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">:</span></a> <a class="idref" href="zoo.language.notations.html#248e4724632d387f5b93ebbd08ad48f7"><span class="id" title="notation">¬</span></a> <a class="idref" href="zoo.language.syntax.html#CAS"><span class="id" title="constructor">CAS</span></a> "t"<a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">.[</span></a><a class="idref" href="zoo.language.notations.html#:zoo_field::'contents'"><span class="id" title="notation">contents</span></a><a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">]</span></a> "old" "new_" <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">then</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">(</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.domain__code.html#domain_yield"><span class="id" title="axiom">domain_yield</span></a> <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a> <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"push" "t" "v"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">)</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="mpmc_stack_1_pop" class="idref" href="#mpmc_stack_1_pop"><span class="id" title="definition">mpmc_stack_1_pop</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#268028dc28fc910a57572d5bab71544e"><span class="id" title="notation">rec</span></a><a class="idref" href="zoo.language.notations.html#268028dc28fc910a57572d5bab71544e"><span class="id" title="notation">:</span></a> "pop" "t" <a class="idref" href="zoo.language.notations.html#268028dc28fc910a57572d5bab71544e"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">match</span></a><a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">:</span></a> <a class="idref" href="zoo.language.notations.html#569b74bc432a2b233b93ae1b45418e26"><span class="id" title="notation">!</span></a>"t" <a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">with</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.glst__types.html#:zoo_tag::'Gnil'"><span class="id" title="notation">Gnil</span></a> <a class="idref" href="zoo.language.notations.html#eabd7638f9cc0146fa2837cccfa6d403"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#4b58797801c0403491cfc1d96db60c56"><span class="id" title="notation">§</span></a><a class="idref" href="zoo.language.notations.html#:zoo_tag::'None'"><span class="id" title="notation">None</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">|</span></a> <a class="idref" href="zoo_std.glst__types.html#:zoo_tag::'Gcons'"><span class="id" title="notation">Gcons</span></a> "v" "new_" <a class="idref" href="zoo.language.notations.html#a1172a4bc73bfaf49b69c60c36f339d4"><span class="id" title="notation">as</span></a> "old" <a class="idref" href="zoo.language.notations.html#a1172a4bc73bfaf49b69c60c36f339d4"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x_'else'_x"><span class="id" title="notation">if</span></a><a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x_'else'_x"><span class="id" title="notation">:</span></a> <a class="idref" href="zoo.language.syntax.html#CAS"><span class="id" title="constructor">CAS</span></a> "t"<a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">.[</span></a><a class="idref" href="zoo.language.notations.html#:zoo_field::'contents'"><span class="id" title="notation">contents</span></a><a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">]</span></a> "old" "new_" <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x_'else'_x"><span class="id" title="notation">then</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x_'else'_x"><span class="id" title="notation">(</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">‘</span></a><a class="idref" href="zoo.language.notations.html#:zoo_tag::'Some'"><span class="id" title="notation">Some</span></a><a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">(</span></a> "v" <a class="idref" href="zoo.language.notations.html#4d3488d1e0a4958f8184f17fe7a2957c"><span class="id" title="notation">)</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x_'else'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x_'else'_x"><span class="id" title="notation">else</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x_'else'_x"><span class="id" title="notation">(</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.domain__code.html#domain_yield"><span class="id" title="axiom">domain_yield</span></a> <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a> <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"pop" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x_'else'_x"><span class="id" title="notation">)</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#6719dbdd5e5aa471bc3ce308fea696c7"><span class="id" title="notation">end</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="mpmc_stack_1_snapshot" class="idref" href="#mpmc_stack_1_snapshot"><span class="id" title="definition">mpmc_stack_1_snapshot</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "t" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#569b74bc432a2b233b93ae1b45418e26"><span class="id" title="notation">!</span></a>"t".<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
