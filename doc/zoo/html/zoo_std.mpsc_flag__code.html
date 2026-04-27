@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.mpsc_flag__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_std.mpsc_flag__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.mpsc_flag__types.html#"><span class="id" title="library">mpsc_flag__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="eaafd5c5ac679a27dc13fb149299a164" class="idref" href="#eaafd5c5ac679a27dc13fb149299a164"><span class="id" title="definition">mpsc_flag</span></a><a id="eaafd5c5ac679a27dc13fb149299a164" class="idref" href="#eaafd5c5ac679a27dc13fb149299a164"><span class="id" title="definition">٠</span></a><a id="eaafd5c5ac679a27dc13fb149299a164" class="idref" href="#eaafd5c5ac679a27dc13fb149299a164"><span class="id" title="definition">create</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#::binder_scope:'&lt;&gt;'"><span class="id" title="notation">≠</span></a> <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'ref'_x"><span class="id" title="notation">ref</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'false'"><span class="id" title="notation">false</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="af1e58c3dd04b09bfce44b3dc4849fe0" class="idref" href="#af1e58c3dd04b09bfce44b3dc4849fe0"><span class="id" title="definition">mpsc_flag</span></a><a id="af1e58c3dd04b09bfce44b3dc4849fe0" class="idref" href="#af1e58c3dd04b09bfce44b3dc4849fe0"><span class="id" title="definition">٠</span></a><a id="af1e58c3dd04b09bfce44b3dc4849fe0" class="idref" href="#af1e58c3dd04b09bfce44b3dc4849fe0"><span class="id" title="definition">get</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "1" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#569b74bc432a2b233b93ae1b45418e26"><span class="id" title="notation">!</span></a>"1".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="d98390015d15190252eed664e6cfefd9" class="idref" href="#d98390015d15190252eed664e6cfefd9"><span class="id" title="definition">mpsc_flag</span></a><a id="d98390015d15190252eed664e6cfefd9" class="idref" href="#d98390015d15190252eed664e6cfefd9"><span class="id" title="definition">٠</span></a><a id="d98390015d15190252eed664e6cfefd9" class="idref" href="#d98390015d15190252eed664e6cfefd9"><span class="id" title="definition">set</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "t" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t" <a class="idref" href="zoo.language.notations.html#::expr_scope:x_'&lt;-'_x"><span class="id" title="notation">&lt;-</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'true'"><span class="id" title="notation">true</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

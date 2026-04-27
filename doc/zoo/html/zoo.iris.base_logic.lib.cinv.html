@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo.iris.base_logic.lib.cinv</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo.iris.base_logic.lib.cinv</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">iris.base_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
+&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.cancelable_invariants.html#"><span class="id" title="library">lib.cancelable_invariants</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.common</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.common.math.html#"><span class="id" title="library">math</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.bi</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.iris.bi.big_op.big_op.html#"><span class="id" title="library">big_op</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.base_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.base.html#"><span class="id" title="library">lib.base</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.iris.diaframe.diaframe.html#"><span class="id" title="library">diaframe</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a id="cinv_G" class="idref" href="#cinv_G"><span class="id" title="section">cinv_G</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> `{<a id="cinv_G.inv_G" class="idref" href="#cinv_G.inv_G"><span class="id" title="variable">inv_G</span></a> : !<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.fancy_updates.html#invGS"><span class="id" title="abbreviation">invGS</span></a> <span class="id" title="var">Σ</span>}.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> `{<a id="cinv_G.cinv_G" class="idref" href="#cinv_G.cinv_G"><span class="id" title="variable">cinv_G</span></a> : !<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.cancelable_invariants.html#cinvG"><span class="id" title="class">cinvG</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#ca7a04e1fe2d6b671a1964ae9ba9a7eb"><span class="id" title="variable">Σ</span></a>}.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="cinv_own_divide" class="idref" href="#cinv_own_divide"><span class="id" title="lemma">cinv_own_divide</span></a> {<a id="3bba16d9494c640e61f3a4c91ca586e3" class="idref" href="#3bba16d9494c640e61f3a4c91ca586e3"><span class="id" title="binder">γ</span></a> <a id="q:5" class="idref" href="#q:5"><span class="id" title="binder">q</span></a>} <a id="n:6" class="idref" href="#n:6"><span class="id" title="binder">n</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.cinv.html#n:6"><span class="id" title="variable">n</span></a> <span class="id" title="notation">≠</span> 0 <span class="id" title="notation">→</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.cancelable_invariants.html#cinv_own"><span class="id" title="definition">cinv_own</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#3bba16d9494c640e61f3a4c91ca586e3"><span class="id" title="variable">γ</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#q:5"><span class="id" title="variable">q</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#e55eb026c3f0434cd18ddc04e5d7c1ac"><span class="id" title="notation">⊢</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">[∗</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">list</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">]</span></a> <a id="pat:7" class="idref" href="#pat:7"><span class="id" title="binder">_</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">∈</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Lists.ListDef.html#seq"><span class="id" title="definition">seq</span></a> 0 <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#n:6"><span class="id" title="variable">n</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">,</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.cancelable_invariants.html#cinv_own"><span class="id" title="definition">cinv_own</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#3bba16d9494c640e61f3a4c91ca586e3"><span class="id" title="variable">γ</span></a> (<a class="idref" href="zoo.iris.base_logic.lib.cinv.html#q:5"><span class="id" title="variable">q</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.numbers.html#b4302126e6945f3aa85374697a12ab80"><span class="id" title="notation">/</span></a> <a class="idref" href="zoo.common.math.html#Qp_of_nat"><span class="id" title="definition">Qp_of_nat</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#n:6"><span class="id" title="variable">n</span></a>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="cinv_own_gather" class="idref" href="#cinv_own_gather"><span class="id" title="lemma">cinv_own_gather</span></a> <a id="8b6cd59ca0e98ee35db3ac5053db09c3" class="idref" href="#8b6cd59ca0e98ee35db3ac5053db09c3"><span class="id" title="binder">γ</span></a> <a id="q:9" class="idref" href="#q:9"><span class="id" title="binder">q</span></a> <a id="n:10" class="idref" href="#n:10"><span class="id" title="binder">n</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.cinv.html#n:10"><span class="id" title="variable">n</span></a> <span class="id" title="notation">≠</span> 0 <span class="id" title="notation">→</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#e55eb026c3f0434cd18ddc04e5d7c1ac"><span class="id" title="notation">(</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">[∗</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">list</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">]</span></a> <a id="pat:11" class="idref" href="#pat:11"><span class="id" title="binder">_</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">∈</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Lists.ListDef.html#seq"><span class="id" title="definition">seq</span></a> 0 <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#n:10"><span class="id" title="variable">n</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">,</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.cancelable_invariants.html#cinv_own"><span class="id" title="definition">cinv_own</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#8b6cd59ca0e98ee35db3ac5053db09c3"><span class="id" title="variable">γ</span></a> (<a class="idref" href="zoo.iris.base_logic.lib.cinv.html#q:9"><span class="id" title="variable">q</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.numbers.html#b4302126e6945f3aa85374697a12ab80"><span class="id" title="notation">/</span></a> <a class="idref" href="zoo.common.math.html#Qp_of_nat"><span class="id" title="definition">Qp_of_nat</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#n:10"><span class="id" title="variable">n</span></a>)<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#e55eb026c3f0434cd18ddc04e5d7c1ac"><span class="id" title="notation">)</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#e55eb026c3f0434cd18ddc04e5d7c1ac"><span class="id" title="notation">⊢</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.cancelable_invariants.html#cinv_own"><span class="id" title="definition">cinv_own</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#8b6cd59ca0e98ee35db3ac5053db09c3"><span class="id" title="variable">γ</span></a> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#q:9"><span class="id" title="variable">q</span></a>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="zoo.iris.base_logic.lib.cinv.html#cinv_G"><span class="id" title="section">cinv_G</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

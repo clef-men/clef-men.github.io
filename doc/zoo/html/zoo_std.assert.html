@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.assert</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_std.assert</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.diaframe</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.diaframe.diaframe.html#"><span class="id" title="library">diaframe</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.base.html#"><span class="id" title="library">base</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="assert" class="idref" href="#assert"><span class="id" title="definition">assert</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "b" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">if</span></a><a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">:</span></a> <a class="idref" href="zoo.language.notations.html#248e4724632d387f5b93ebbd08ad48f7"><span class="id" title="notation">¬</span></a> "b" <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">then</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Fail"><span class="id" title="abbreviation">Fail</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a id="zoo_G" class="idref" href="#zoo_G"><span class="id" title="section">zoo_G</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> `{<a id="zoo_G.zoo_G" class="idref" href="#zoo_G.zoo_G"><span class="id" title="variable">zoo_G</span></a> : !<a class="idref" href="zoo.program_logic.state_interp.html#ZooG"><span class="id" title="class">ZooG</span></a> <span class="id" title="var">Σ</span>}.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="340ecebc2646e078397742b8badc5bad" class="idref" href="#340ecebc2646e078397742b8badc5bad"><span class="id" title="lemma">assert</span></a><a id="340ecebc2646e078397742b8badc5bad" class="idref" href="#340ecebc2646e078397742b8badc5bad"><span class="id" title="lemma">𑁒</span></a><a id="340ecebc2646e078397742b8badc5bad" class="idref" href="#340ecebc2646e078397742b8badc5bad"><span class="id" title="lemma">spec</span></a> (<a id="b:3" class="idref" href="#b:3"><span class="id" title="binder">b</span></a> : <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#bool"><span class="id" title="inductive">bool</span></a>) <a id="f838c42210310bbc1cef1f28376650f1" class="idref" href="#f838c42210310bbc1cef1f28376650f1"><span class="id" title="binder">Φ</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.assert.html#b:3"><span class="id" title="variable">b</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="zoo.language.notations.html#::core_scope:'true'"><span class="id" title="notation">true</span></a> <span class="id" title="notation">→</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#1ab064278224e8da215d0768a08713fe"><span class="id" title="notation">▷</span></a> <a class="idref" href="zoo_std.assert.html#f838c42210310bbc1cef1f28376650f1"><span class="id" title="variable">Φ</span></a> <a class="idref" href="zoo.language.notations.html#3127c6bc552ca21a494fc6e3474a507d"><span class="id" title="notation">()</span></a>%<span class="id" title="var">V</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.interface.html#0f70793a7efc24c230ef5e3a6ac95b68"><span class="id" title="notation">-∗</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.wp.html#68252f544ad3154cc3a3bff6d8afec49"><span class="id" title="notation">WP</span></a> <a class="idref" href="zoo_std.assert.html#assert"><span class="id" title="definition">assert</span></a> <a class="idref" href="zoo.language.notations.html#66e8f9d9f9894a066beff0d1c67d3c77"><span class="id" title="notation">#</span></a><a class="idref" href="zoo_std.assert.html#b:3"><span class="id" title="variable">b</span></a> <a class="idref" href="zoo.program_logic.wp.html#68252f544ad3154cc3a3bff6d8afec49"><span class="id" title="notation">{{</span></a> <a class="idref" href="zoo_std.assert.html#f838c42210310bbc1cef1f28376650f1"><span class="id" title="variable">Φ</span></a> <a class="idref" href="zoo.program_logic.wp.html#68252f544ad3154cc3a3bff6d8afec49"><span class="id" title="notation">}}</span></a>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="zoo_std.assert.html#zoo_G"><span class="id" title="section">zoo_G</span></a>.<br/>
+
+<br/>
+#[<span class="id" title="var">global</span>] <span class="id" title="keyword">Opaque</span> <a class="idref" href="zoo_std.assert.html#assert"><span class="id" title="definition">assert</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

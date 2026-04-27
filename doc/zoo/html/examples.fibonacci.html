@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>examples.fibonacci</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library examples.fibonacci</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a id="fibonacci" class="idref" href="#fibonacci"><span class="id" title="definition">fibonacci</span></a> <a id="n:1" class="idref" href="#n:1"><span class="id" title="binder">n</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="examples.fibonacci.html#n:1"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| 0 ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br/>
+&nbsp;&nbsp;| <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="examples.fibonacci.html#n:1"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0 ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">m</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#fibonacci:2"><span class="id" title="definition">fibonacci</span></a> <a class="idref" href="examples.fibonacci.html#n:1"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#0dacc1786c5ba797d47dd85006231633"><span class="id" title="notation">+</span></a> <a class="idref" href="examples.fibonacci.html#fibonacci:2"><span class="id" title="definition">fibonacci</span></a> <span class="id" title="var">m</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+#[<span class="id" title="var">global</span>] <span class="id" title="var">Arguments</span> <a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> !<span class="id" title="var">_</span> /.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a id="fibonacci_spec" class="idref" href="#fibonacci_spec"><span class="id" title="lemma">fibonacci_spec</span></a> <a id="n:5" class="idref" href="#n:5"><span class="id" title="binder">n</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> <a class="idref" href="examples.fibonacci.html#n:5"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.ssr.ssreflect.html#::general_if_scope:'if'_x_'then'_x_'else'_x"><span class="id" title="notation">if</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#decide"><span class="id" title="definition">decide</span></a> (<a class="idref" href="examples.fibonacci.html#n:5"><span class="id" title="variable">n</span></a> <span class="id" title="notation">≤</span> 1) <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.ssr.ssreflect.html#::general_if_scope:'if'_x_'then'_x_'else'_x"><span class="id" title="notation">then</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#n:5"><span class="id" title="variable">n</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.ssr.ssreflect.html#::general_if_scope:'if'_x_'then'_x_'else'_x"><span class="id" title="notation">else</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> (<a class="idref" href="examples.fibonacci.html#n:5"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#::nat_scope:x_'-'_x"><span class="id" title="notation">-</span></a> 1) <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#0dacc1786c5ba797d47dd85006231633"><span class="id" title="notation">+</span></a> <a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> (<a class="idref" href="examples.fibonacci.html#n:5"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#::nat_scope:x_'-'_x"><span class="id" title="notation">-</span></a> 2).<br/>
+<span class="id" title="keyword">Lemma</span> <a id="fibonacci_spec_Z" class="idref" href="#fibonacci_spec_Z"><span class="id" title="lemma">fibonacci_spec_Z</span></a> <a id="n:6" class="idref" href="#n:6"><span class="id" title="binder">n</span></a> :<br/>
+&nbsp;&nbsp;(0 <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.numbers.html#4ba61b06dfba8efe2fde3e31f9b023d3"><span class="id" title="notation">≤</span></a> <a class="idref" href="examples.fibonacci.html#n:6"><span class="id" title="variable">n</span></a>)%<span class="id" title="var">Z</span> <span class="id" title="notation">→</span><br/>
+&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> <a class="idref" href="zoo.prelude.html#49bb2f151f8e3068e909c0fcbb30b811"><span class="id" title="notation">₊</span></a><a class="idref" href="examples.fibonacci.html#n:6"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.ssr.ssreflect.html#::general_if_scope:'if'_x_'then'_x_'else'_x"><span class="id" title="notation">if</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.base.html#decide"><span class="id" title="definition">decide</span></a> (<a class="idref" href="examples.fibonacci.html#n:6"><span class="id" title="variable">n</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.numbers.html#4ba61b06dfba8efe2fde3e31f9b023d3"><span class="id" title="notation">≤</span></a> 1)%<span class="id" title="var">Z</span> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.ssr.ssreflect.html#::general_if_scope:'if'_x_'then'_x_'else'_x"><span class="id" title="notation">then</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#49bb2f151f8e3068e909c0fcbb30b811"><span class="id" title="notation">₊</span></a><a class="idref" href="examples.fibonacci.html#n:6"><span class="id" title="variable">n</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.ssr.ssreflect.html#::general_if_scope:'if'_x_'then'_x_'else'_x"><span class="id" title="notation">else</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> <a class="idref" href="zoo.prelude.html#49bb2f151f8e3068e909c0fcbb30b811"><span class="id" title="notation">₊(</span></a><a class="idref" href="examples.fibonacci.html#n:6"><span class="id" title="variable">n</span></a> <span class="id" title="notation">-</span> 1<a class="idref" href="zoo.prelude.html#49bb2f151f8e3068e909c0fcbb30b811"><span class="id" title="notation">)</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#0dacc1786c5ba797d47dd85006231633"><span class="id" title="notation">+</span></a> <a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> <a class="idref" href="zoo.prelude.html#49bb2f151f8e3068e909c0fcbb30b811"><span class="id" title="notation">₊(</span></a><a class="idref" href="examples.fibonacci.html#n:6"><span class="id" title="variable">n</span></a> <span class="id" title="notation">-</span> 2<a class="idref" href="zoo.prelude.html#49bb2f151f8e3068e909c0fcbb30b811"><span class="id" title="notation">)</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a id="fibonacci_base" class="idref" href="#fibonacci_base"><span class="id" title="lemma">fibonacci_base</span></a> <a id="n:7" class="idref" href="#n:7"><span class="id" title="binder">n</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#n:7"><span class="id" title="variable">n</span></a> <span class="id" title="notation">≤</span> 1 <span class="id" title="notation">→</span><br/>
+&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> <a class="idref" href="examples.fibonacci.html#n:7"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="examples.fibonacci.html#n:7"><span class="id" title="variable">n</span></a>.<br/>
+<span class="id" title="keyword">Lemma</span> <a id="fibonacci_recursive" class="idref" href="#fibonacci_recursive"><span class="id" title="lemma">fibonacci_recursive</span></a> <a id="n:8" class="idref" href="#n:8"><span class="id" title="binder">n</span></a> :<br/>
+&nbsp;&nbsp;1 <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#::nat_scope:x_'&lt;'_x"><span class="id" title="notation">&lt;</span></a> <a class="idref" href="examples.fibonacci.html#n:8"><span class="id" title="variable">n</span></a> <span class="id" title="notation">→</span><br/>
+&nbsp;&nbsp;<a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> <a class="idref" href="examples.fibonacci.html#n:8"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> (<a class="idref" href="examples.fibonacci.html#n:8"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#::nat_scope:x_'-'_x"><span class="id" title="notation">-</span></a> 1) <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#0dacc1786c5ba797d47dd85006231633"><span class="id" title="notation">+</span></a> <a class="idref" href="examples.fibonacci.html#fibonacci"><span class="id" title="definition">fibonacci</span></a> (<a class="idref" href="examples.fibonacci.html#n:8"><span class="id" title="variable">n</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Peano.html#::nat_scope:x_'-'_x"><span class="id" title="notation">-</span></a> 2).<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

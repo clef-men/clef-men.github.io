@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.random__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_std.random__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.random__types.html#"><span class="id" title="library">random__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Parameter</span> <a id="d6d76ae29c563c2c7e6c48c0d1b30700" class="idref" href="#d6d76ae29c563c2c7e6c48c0d1b30700"><span class="id" title="axiom">random</span></a><a id="d6d76ae29c563c2c7e6c48c0d1b30700" class="idref" href="#d6d76ae29c563c2c7e6c48c0d1b30700"><span class="id" title="axiom">٠</span></a><a id="d6d76ae29c563c2c7e6c48c0d1b30700" class="idref" href="#d6d76ae29c563c2c7e6c48c0d1b30700"><span class="id" title="axiom">init</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Parameter</span> <a id="cee5f4210b84531e4390be2e363fb864" class="idref" href="#cee5f4210b84531e4390be2e363fb864"><span class="id" title="axiom">random</span></a><a id="cee5f4210b84531e4390be2e363fb864" class="idref" href="#cee5f4210b84531e4390be2e363fb864"><span class="id" title="axiom">٠</span></a><a id="cee5f4210b84531e4390be2e363fb864" class="idref" href="#cee5f4210b84531e4390be2e363fb864"><span class="id" title="axiom">bits</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Parameter</span> <a id="32cda198edf88e05e929c6f3159e2410" class="idref" href="#32cda198edf88e05e929c6f3159e2410"><span class="id" title="axiom">random</span></a><a id="32cda198edf88e05e929c6f3159e2410" class="idref" href="#32cda198edf88e05e929c6f3159e2410"><span class="id" title="axiom">٠</span></a><a id="32cda198edf88e05e929c6f3159e2410" class="idref" href="#32cda198edf88e05e929c6f3159e2410"><span class="id" title="axiom">int</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="c1d2a18e02e462e653a8bfddd3eb748b" class="idref" href="#c1d2a18e02e462e653a8bfddd3eb748b"><span class="id" title="definition">random</span></a><a id="c1d2a18e02e462e653a8bfddd3eb748b" class="idref" href="#c1d2a18e02e462e653a8bfddd3eb748b"><span class="id" title="definition">٠</span></a><a id="c1d2a18e02e462e653a8bfddd3eb748b" class="idref" href="#c1d2a18e02e462e653a8bfddd3eb748b"><span class="id" title="definition">int_in_range</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "lb" "ub" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"lb" <a class="idref" href="zoo.language.notations.html#a4d9e3466bf1928a450a1a8426a17af3"><span class="id" title="notation">+</span></a> <a class="idref" href="zoo_std.random__code.html#32cda198edf88e05e929c6f3159e2410"><span class="id" title="axiom">random</span></a><a class="idref" href="zoo_std.random__code.html#32cda198edf88e05e929c6f3159e2410"><span class="id" title="axiom">٠</span></a><a class="idref" href="zoo_std.random__code.html#32cda198edf88e05e929c6f3159e2410"><span class="id" title="axiom">int</span></a> ("ub" <a class="idref" href="zoo.language.notations.html#::expr_scope:x_'-'_x"><span class="id" title="notation">-</span></a> "lb").<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

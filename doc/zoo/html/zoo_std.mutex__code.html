@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.mutex__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_std.mutex__code</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex__types.html#"><span class="id" title="library">mutex__types</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="046d95cb0893fedbbf91574b07dbe79a" class="idref" href="#046d95cb0893fedbbf91574b07dbe79a"><span class="id" title="definition">mutex</span></a><a id="046d95cb0893fedbbf91574b07dbe79a" class="idref" href="#046d95cb0893fedbbf91574b07dbe79a"><span class="id" title="definition">٠</span></a><a id="046d95cb0893fedbbf91574b07dbe79a" class="idref" href="#046d95cb0893fedbbf91574b07dbe79a"><span class="id" title="definition">create</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#::binder_scope:'&lt;&gt;'"><span class="id" title="notation">≠</span></a> <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'ref'_x"><span class="id" title="notation">ref</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'false'"><span class="id" title="notation">false</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="70ec9c055ef822530460de7525cec187" class="idref" href="#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">mutex</span></a><a id="70ec9c055ef822530460de7525cec187" class="idref" href="#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">٠</span></a><a id="70ec9c055ef822530460de7525cec187" class="idref" href="#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">lock</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#268028dc28fc910a57572d5bab71544e"><span class="id" title="notation">rec</span></a><a class="idref" href="zoo.language.notations.html#268028dc28fc910a57572d5bab71544e"><span class="id" title="notation">:</span></a> "lock" "t" <a class="idref" href="zoo.language.notations.html#268028dc28fc910a57572d5bab71544e"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">if</span></a><a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">:</span></a> <a class="idref" href="zoo.language.notations.html#248e4724632d387f5b93ebbd08ad48f7"><span class="id" title="notation">¬</span></a> <a class="idref" href="zoo.language.syntax.html#CAS"><span class="id" title="constructor">CAS</span></a> "t"<a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">.[</span></a><a class="idref" href="zoo.language.notations.html#:zoo_field::'contents'"><span class="id" title="notation">contents</span></a><a class="idref" href="zoo.language.notations.html#dd55488f1b6e12a85edeaf0d29134762"><span class="id" title="notation">]</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'false'"><span class="id" title="notation">false</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'true'"><span class="id" title="notation">true</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">then</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">(</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"lock" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'if:'_x_'then'_x"><span class="id" title="notation">)</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="5306654fede25e68be0617e74c762ccf" class="idref" href="#5306654fede25e68be0617e74c762ccf"><span class="id" title="definition">mutex</span></a><a id="5306654fede25e68be0617e74c762ccf" class="idref" href="#5306654fede25e68be0617e74c762ccf"><span class="id" title="definition">٠</span></a><a id="5306654fede25e68be0617e74c762ccf" class="idref" href="#5306654fede25e68be0617e74c762ccf"><span class="id" title="definition">create_lock</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#::binder_scope:'&lt;&gt;'"><span class="id" title="notation">≠</span></a> <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#::expr_scope:'ref'_x"><span class="id" title="notation">ref</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'true'"><span class="id" title="notation">true</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="a7e6f67f1514c21ec2033c8d689687fd" class="idref" href="#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">mutex</span></a><a id="a7e6f67f1514c21ec2033c8d689687fd" class="idref" href="#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">٠</span></a><a id="a7e6f67f1514c21ec2033c8d689687fd" class="idref" href="#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">unlock</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "t" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t" <a class="idref" href="zoo.language.notations.html#::expr_scope:x_'&lt;-'_x"><span class="id" title="notation">&lt;-</span></a> <a class="idref" href="zoo.language.notations.html#::expr_scope:'false'"><span class="id" title="notation">false</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="6da200f779118f5a339fc06d4f57820f" class="idref" href="#6da200f779118f5a339fc06d4f57820f"><span class="id" title="definition">mutex</span></a><a id="6da200f779118f5a339fc06d4f57820f" class="idref" href="#6da200f779118f5a339fc06d4f57820f"><span class="id" title="definition">٠</span></a><a id="6da200f779118f5a339fc06d4f57820f" class="idref" href="#6da200f779118f5a339fc06d4f57820f"><span class="id" title="definition">synchronize</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">:</span></a> "t" <a class="idref" href="zoo.language.notations.html#78dd011fb0ae5cc8c6ee774c2db4b4cb"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex__code.html#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">mutex</span></a><a class="idref" href="zoo_std.mutex__code.html#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.mutex__code.html#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">lock</span></a> "t" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex__code.html#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">mutex</span></a><a class="idref" href="zoo_std.mutex__code.html#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.mutex__code.html#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">unlock</span></a> "t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="9765db2a050600cfcbf5b99eaa8b2bde" class="idref" href="#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">mutex</span></a><a id="9765db2a050600cfcbf5b99eaa8b2bde" class="idref" href="#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">٠</span></a><a id="9765db2a050600cfcbf5b99eaa8b2bde" class="idref" href="#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">protect</span></a> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">fun</span></a><a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">:</span></a> "t" "fn" <a class="idref" href="zoo.language.notations.html#79516a553a46bf01403e4a351b9abb12"><span class="id" title="notation">⇒</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex__code.html#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">mutex</span></a><a class="idref" href="zoo_std.mutex__code.html#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.mutex__code.html#70ec9c055ef822530460de7525cec187"><span class="id" title="definition">lock</span></a> "t" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">let</span></a><a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:</span></a> "res" <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">:=</span></a> "fn" <a class="idref" href="zoo.language.notations.html#09a487fbe9ad8504f1443b1a0a10fe89"><span class="id" title="notation">()</span></a> <a class="idref" href="zoo.language.notations.html#f2a86cf1716b42d91300f888867d22e8"><span class="id" title="notation">in</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex__code.html#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">mutex</span></a><a class="idref" href="zoo_std.mutex__code.html#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.mutex__code.html#a7e6f67f1514c21ec2033c8d689687fd"><span class="id" title="definition">unlock</span></a> "t" <a class="idref" href="zoo.language.notations.html#2ec28258c896f2c046d760685d2be2ab"><span class="id" title="notation">;;</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"res".<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
