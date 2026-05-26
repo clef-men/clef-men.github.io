@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_mcas.mcas_1__types</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library zoo_mcas.mcas_1__types</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.typeclasses.html#"><span class="id" title="library">typeclasses</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo_std.list.html#"><span class="id" title="library">list</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.program_logic.identifier.html#"><span class="id" title="library">identifier</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_field::'casn'" class="idref" href="#:zoo_field::'casn'"><span class="id" title="notation">&quot;</span></a>'casn'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.state" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_field::'before'" class="idref" href="#:zoo_field::'before'"><span class="id" title="notation">&quot;</span></a>'before'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.state" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_field::'after'" class="idref" href="#:zoo_field::'after'"><span class="id" title="notation">&quot;</span></a>'after'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.state" 2<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_proj::'loc'" class="idref" href="#:zoo_proj::'loc'"><span class="id" title="notation">&quot;</span></a>'loc'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.cas" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_proj</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_proj::'state'" class="idref" href="#:zoo_proj::'state'"><span class="id" title="notation">&quot;</span></a>'state'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.cas" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_proj</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_field::'status'" class="idref" href="#:zoo_field::'status'"><span class="id" title="notation">&quot;</span></a>'status'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.casn" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_field::'proph'" class="idref" href="#:zoo_field::'proph'"><span class="id" title="notation">&quot;</span></a>'proph'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.casn" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_tag::'Undetermined'" class="idref" href="#:zoo_tag::'Undetermined'"><span class="id" title="notation">&quot;</span></a>'Undetermined'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.status" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_tag::'Before'" class="idref" href="#:zoo_tag::'Before'"><span class="id" title="notation">&quot;</span></a>'Before'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.status" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id=":zoo_tag::'After'" class="idref" href="#:zoo_tag::'After'"><span class="id" title="notation">&quot;</span></a>'After'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "zoo_mcas.mcas_1.status" 2<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
