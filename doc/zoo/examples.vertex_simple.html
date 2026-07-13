@@ -19,24 +19,15 @@
 <h1 class="libtitle">Library examples.vertex_simple</h1>
 
 <div class="code">
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.base_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.fupd.html#"><span class="id" title="library">lib.fupd</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.saved_prop.html#"><span class="id" title="library">lib.saved_prop</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.diaframe</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.diaframe.diaframe.html#"><span class="id" title="library">diaframe</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.ivar_4.html#"><span class="id" title="library">ivar_4</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_parabs</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool.html#"><span class="id" title="library">pool</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_parabs.vertex.html#"><span class="id" title="library">vertex</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">examples</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
-&nbsp;&nbsp;<a class="idref" href="examples.vertex_simple__code.html#"><span class="id" title="library">vertex_simple__code</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.prelude.html#"><span class="id" title="library">zoo.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.base_logic.lib.fupd.html#"><span class="id" title="library">zoo.iris.base_logic.lib.fupd</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.base_logic.lib.saved_prop.html#"><span class="id" title="library">zoo.iris.base_logic.lib.saved_prop</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.base.html#"><span class="id" title="library">zoo.base</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.ivar_4.html#"><span class="id" title="library">zoo_std.ivar_4</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_parabs.pool.html#"><span class="id" title="library">zoo_parabs.pool</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_parabs.vertex.html#"><span class="id" title="library">zoo_parabs.vertex</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="examples.vertex_simple__code.html#"><span class="id" title="library">examples.vertex_simple__code</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.options.html#"><span class="id" title="library">zoo.options</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> <span class="id" title="var">v</span> <span class="id" title="var">ctx</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span> <span class="id" title="var">d</span> : <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>.<br/>
@@ -83,8 +74,7 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="examples.vertex_simple.html#vertex_simple_G"><span class="id" title="section">vertex_simple_G</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">examples</span> <span class="id" title="keyword">Require</span><br/>
-&nbsp;&nbsp;<a class="idref" href="examples.vertex_simple__opaque.html#"><span class="id" title="library">vertex_simple__opaque</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <a class="idref" href="examples.vertex_simple__opaque.html#"><span class="id" title="library">examples.vertex_simple__opaque</span></a>.<br/>
 </div>
 </div>
 

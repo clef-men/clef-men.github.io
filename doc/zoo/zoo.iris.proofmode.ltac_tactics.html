@@ -19,37 +19,29 @@
 <h1 class="libtitle">Library zoo.iris.proofmode.ltac_tactics</h1>
 
 <div class="code">
-<span class="id" title="keyword">From</span> <span class="id" title="var">stdpp</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.namespaces.html#"><span class="id" title="library">namespaces</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.hlist.html#"><span class="id" title="library">hlist</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.pretty.html#"><span class="id" title="library">pretty</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.namespaces.html#"><span class="id" title="library">stdpp.namespaces</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.hlist.html#"><span class="id" title="library">stdpp.hlist</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.pretty.html#"><span class="id" title="library">stdpp.pretty</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">iris.bi</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.bi.html#"><span class="id" title="library">bi</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.telescopes.html#"><span class="id" title="library">telescopes</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">iris.proofmode</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.base.html#"><span class="id" title="library">base</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.spec_patterns.html#"><span class="id" title="library">spec_patterns</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.reduction.html#"><span class="id" title="library">reduction</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.string_ident.html#"><span class="id" title="library">string_ident</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">iris.proofmode</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.classes.html#"><span class="id" title="library">classes</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.notation.html#"><span class="id" title="library">notation</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.bi.html#"><span class="id" title="library">iris.bi.bi</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.telescopes.html#"><span class="id" title="library">iris.bi.telescopes</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.base.html#"><span class="id" title="library">iris.proofmode.base</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.spec_patterns.html#"><span class="id" title="library">iris.proofmode.spec_patterns</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.reduction.html#"><span class="id" title="library">iris.proofmode.reduction</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.string_ident.html#"><span class="id" title="library">iris.proofmode.string_ident</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.classes.html#"><span class="id" title="library">iris.proofmode.classes</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.notation.html#"><span class="id" title="library">iris.proofmode.notation</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.ltac2</span> <span class="id" title="keyword">Require</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.ltac2.Ident.html#"><span class="id" title="library">Ident</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.common</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.common.format.html#"><span class="id" title="library">format</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.proofmode</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.proofmode.coq_tactics.html#"><span class="id" title="library">coq_tactics</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.proofmode.intro_patterns.html#"><span class="id" title="library">intro_patterns</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.proofmode.sel_patterns.html#"><span class="id" title="library">sel_patterns</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <a class="idref" href="zoo.ltac2.Ident.html#"><span class="id" title="library">zoo.ltac2.Ident</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.common.format.html#"><span class="id" title="library">zoo.common.format</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.proofmode.coq_tactics.html#"><span class="id" title="library">zoo.iris.proofmode.coq_tactics</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.proofmode.intro_patterns.html#"><span class="id" title="library">zoo.iris.proofmode.intro_patterns</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.proofmode.sel_patterns.html#"><span class="id" title="library">zoo.iris.proofmode.sel_patterns</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">iris.prelude</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.prelude.options.html#"><span class="id" title="library">options</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.prelude.options.html#"><span class="id" title="library">iris.prelude.options</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.proofmode.base.html#ident"><span class="id" title="module">ident</span></a>.<br/>

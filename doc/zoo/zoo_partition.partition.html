@@ -19,28 +19,17 @@
 <h1 class="libtitle">Library zoo_partition.partition</h1>
 
 <div class="code">
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.common</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.common.countable.html#"><span class="id" title="library">countable</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.common.gset.html#"><span class="id" title="library">gset</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.algebra</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.algebra.big_op.html#"><span class="id" title="library">big_op</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.base_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.mono_gset.html#"><span class="id" title="library">mono_gset</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.diaframe</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.diaframe.diaframe.html#"><span class="id" title="library">diaframe</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.list.html#"><span class="id" title="library">list</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.xdlchain.html#"><span class="id" title="library">xdlchain</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_partition</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_partition.partition__types.html#"><span class="id" title="library">partition__types</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_partition</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_partition.partition__code.html#"><span class="id" title="library">partition__code</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.prelude.html#"><span class="id" title="library">zoo.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.common.countable.html#"><span class="id" title="library">zoo.common.countable</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.common.gset.html#"><span class="id" title="library">zoo.common.gset</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.algebra.big_op.html#"><span class="id" title="library">zoo.iris.algebra.big_op</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.base_logic.lib.mono_gset.html#"><span class="id" title="library">zoo.iris.base_logic.lib.mono_gset</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.base.html#"><span class="id" title="library">zoo.base</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.list.html#"><span class="id" title="library">zoo_std.list</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.xdlchain.html#"><span class="id" title="library">zoo_std.xdlchain</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_partition.partition__types.html#"><span class="id" title="library">zoo_partition.partition__types</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="zoo_partition.partition__code.html#"><span class="id" title="library">zoo_partition.partition__code</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.options.html#"><span class="id" title="library">zoo.options</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> <span class="id" title="var">b</span> : <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#bool"><span class="id" title="inductive">bool</span></a>.<br/>
@@ -438,8 +427,7 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="zoo_partition.partition.html#partition_G"><span class="id" title="section">partition_G</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_partition</span> <span class="id" title="keyword">Require</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_partition.partition__opaque.html#"><span class="id" title="library">partition__opaque</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <a class="idref" href="zoo_partition.partition__opaque.html#"><span class="id" title="library">zoo_partition.partition__opaque</span></a>.<br/>
 
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Opaque</span> <a class="idref" href="zoo_partition.partition.html#partition_model"><span class="id" title="definition">partition_model</span></a>.<br/>

@@ -19,30 +19,21 @@
 <h1 class="libtitle">Library zoo.program_logic.ghost_state</h1>
 
 <div class="code">
-<span class="id" title="keyword">From</span> <span class="id" title="var">iris.bi</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.lib.fractional.html#"><span class="id" title="library">lib.fractional</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">iris.base_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.ghost_map.html#"><span class="id" title="library">lib.ghost_map</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.invariants.html#"><span class="id" title="library">lib.invariants</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.bi.lib.fractional.html#"><span class="id" title="library">iris.bi.lib.fractional</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.ghost_map.html#"><span class="id" title="library">iris.base_logic.lib.ghost_map</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/iris//iris.base_logic.lib.invariants.html#"><span class="id" title="library">iris.base_logic.lib.invariants</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.bi</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.bi.big_op.big_op.html#"><span class="id" title="library">big_op</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.base_logic</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.auth_nat_max.html#"><span class="id" title="library">lib.auth_nat_max</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.ghost_heap.html#"><span class="id" title="library">lib.ghost_heap</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.ghost_list.html#"><span class="id" title="library">lib.ghost_list</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.base_logic.lib.mono_list.html#"><span class="id" title="library">lib.mono_list</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.diaframe.diaframe.html#"><span class="id" title="library">diaframe</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.language.language.html#"><span class="id" title="library">language</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.prelude.html#"><span class="id" title="library">zoo.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.bi.big_op.html#"><span class="id" title="library">zoo.iris.bi.big_op</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.base_logic.lib.auth_nat_max.html#"><span class="id" title="library">zoo.iris.base_logic.lib.auth_nat_max</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.base_logic.lib.ghost_heap.html#"><span class="id" title="library">zoo.iris.base_logic.lib.ghost_heap</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.base_logic.lib.ghost_list.html#"><span class="id" title="library">zoo.iris.base_logic.lib.ghost_list</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.base_logic.lib.mono_list.html#"><span class="id" title="library">zoo.iris.base_logic.lib.mono_list</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.diaframe.html#"><span class="id" title="library">zoo.iris.diaframe</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="zoo.language.language.html#"><span class="id" title="library">zoo.language.language</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">zoo.language.notations</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.options.html#"><span class="id" title="library">zoo.options</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> <span class="id" title="var">cnt</span> <span class="id" title="var">ns</span> <span class="id" title="var">nt</span> : <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>.<br/>

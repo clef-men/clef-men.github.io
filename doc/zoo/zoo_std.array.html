@@ -19,30 +19,19 @@
 <h1 class="libtitle">Library zoo_std.array</h1>
 
 <div class="code">
-<span class="id" title="keyword">From</span> <span class="id" title="var">Stdlib</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<span class="id" title="library">ZifyNat</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Stdlib.micromega.ZifyNat</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.common</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.common.list.html#"><span class="id" title="library">list</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.common.math.html#"><span class="id" title="library">math</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.iris.bi</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.iris.bi.big_op.big_op.html#"><span class="id" title="library">big_op</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.diaframe</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.diaframe.diaframe.html#"><span class="id" title="library">diaframe</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.base.html#"><span class="id" title="library">base</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.array__code.html#"><span class="id" title="library">array__code</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.for_.html#"><span class="id" title="library">for_</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.assume.html#"><span class="id" title="library">assume</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.chunk.html#"><span class="id" title="library">chunk</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.prelude.html#"><span class="id" title="library">zoo.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.common.list.html#"><span class="id" title="library">zoo.common.list</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.common.math.html#"><span class="id" title="library">zoo.common.math</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.bi.big_op.html#"><span class="id" title="library">zoo.iris.bi.big_op</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.base.html#"><span class="id" title="library">zoo.base</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="zoo_std.array__code.html#"><span class="id" title="library">zoo_std.array__code</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.for_.html#"><span class="id" title="library">zoo_std.for_</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.assume.html#"><span class="id" title="library">zoo_std.assume</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.chunk.html#"><span class="id" title="library">zoo_std.chunk</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.options.html#"><span class="id" title="library">zoo.options</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> <span class="id" title="var">b</span> : <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#bool"><span class="id" title="inductive">bool</span></a>.<br/>
@@ -6060,8 +6049,7 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="zoo_std.array.html#zoo_G"><span class="id" title="section">zoo_G</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.array__opaque.html#"><span class="id" title="library">array__opaque</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <a class="idref" href="zoo_std.array__opaque.html#"><span class="id" title="library">zoo_std.array__opaque</span></a>.<br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Opaque</span> <a class="idref" href="zoo_std.array.html#0f21945e184863860149686836a983c6"><span class="id" title="definition">array</span></a><a class="idref" href="zoo_std.array.html#0f21945e184863860149686836a983c6"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.array.html#0f21945e184863860149686836a983c6"><span class="id" title="definition">unsafe_xchg</span></a>.<br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Opaque</span> <a class="idref" href="zoo_std.array.html#954e9d73c765ef650b89115901559f4a"><span class="id" title="definition">array</span></a><a class="idref" href="zoo_std.array.html#954e9d73c765ef650b89115901559f4a"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.array.html#954e9d73c765ef650b89115901559f4a"><span class="id" title="definition">unsafe_cas</span></a>.<br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Opaque</span> <a class="idref" href="zoo_std.array.html#2ca16f1ccb6939b78fef7f99404cfe6c"><span class="id" title="definition">array</span></a><a class="idref" href="zoo_std.array.html#2ca16f1ccb6939b78fef7f99404cfe6c"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.array.html#2ca16f1ccb6939b78fef7f99404cfe6c"><span class="id" title="definition">unsafe_faa</span></a>.<br/>

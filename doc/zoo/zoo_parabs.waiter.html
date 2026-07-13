@@ -19,25 +19,16 @@
 <h1 class="libtitle">Library zoo_parabs.waiter</h1>
 
 <div class="code">
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.prelude.html#"><span class="id" title="library">prelude</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.language</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#"><span class="id" title="library">notations</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo.diaframe</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.diaframe.diaframe.html#"><span class="id" title="library">diaframe</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_std</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.condition.html#"><span class="id" title="library">condition</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex.html#"><span class="id" title="library">mutex</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_saturn</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_saturn.mpmc_queue_1.html#"><span class="id" title="library">mpmc_queue_1</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_parabs</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_parabs.base.html#"><span class="id" title="library">base</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter__code.html#"><span class="id" title="library">waiter__code</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_parabs</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_parabs.base.html#"><span class="id" title="library">base</span></a><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter__types.html#"><span class="id" title="library">waiter__types</span></a>.<br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.options.html#"><span class="id" title="library">options</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.prelude.html#"><span class="id" title="library">zoo.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.base.html#"><span class="id" title="library">zoo.base</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.condition.html#"><span class="id" title="library">zoo_std.condition</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.mutex.html#"><span class="id" title="library">zoo_std.mutex</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_saturn.mpmc_queue_1.html#"><span class="id" title="library">zoo_saturn.mpmc_queue_1</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="zoo_parabs.base.html#"><span class="id" title="library">zoo_parabs.base</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="zoo_parabs.waiter__code.html#"><span class="id" title="library">zoo_parabs.waiter__code</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_parabs.base.html#"><span class="id" title="library">zoo_parabs.base</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_parabs.waiter__types.html#"><span class="id" title="library">zoo_parabs.waiter__types</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.options.html#"><span class="id" title="library">zoo.options</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> <span class="id" title="var">b</span> : <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#bool"><span class="id" title="inductive">bool</span></a>.<br/>
@@ -153,8 +144,7 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="zoo_parabs.waiter.html#waiter_G"><span class="id" title="section">waiter_G</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">From</span> <span class="id" title="var">zoo_parabs</span> <span class="id" title="keyword">Require</span><br/>
-&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter__opaque.html#"><span class="id" title="library">waiter__opaque</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <a class="idref" href="zoo_parabs.waiter__opaque.html#"><span class="id" title="library">zoo_parabs.waiter__opaque</span></a>.<br/>
 
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Opaque</span> <a class="idref" href="zoo_parabs.waiter.html#waiter_inv"><span class="id" title="definition">waiter_inv</span></a>.<br/>
