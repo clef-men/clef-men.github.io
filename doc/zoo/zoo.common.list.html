@@ -19,6 +19,9 @@
 <h1 class="libtitle">Library zoo.common.list</h1>
 
 <div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="library">Ltac2.Ltac2</span>.<br/>
+
+<br/>
 <span class="id" title="keyword">Require</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list.html#"><span class="id" title="library">stdpp.list</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.sorting.html#"><span class="id" title="library">stdpp.sorting</span></a>.<br/>
 
@@ -32,7 +35,7 @@
 <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.sorting.html#"><span class="id" title="module">stdpp.sorting</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Create HintDb</span> <span class="id" title="var">simpl_length</span>.<br/>
+<span class="id" title="keyword">Create HintDb</span> <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Rewrite</span><br/>
@@ -46,21 +49,53 @@
 &nbsp;&nbsp;@<span class="id" title="lemma">length_seq</span><br/>
 &nbsp;&nbsp;@<a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_numbers.html#list.length_seqZ"><span class="id" title="lemma">length_seqZ</span></a><br/>
 &nbsp;&nbsp;@<a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_monad.html#list.length_zip_with"><span class="id" title="lemma">length_zip_with</span></a><br/>
-: <span class="id" title="var">simpl_length</span>.<br/>
+: <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Tactic Notation</span> "simpl_length" :=<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">autorewrite</span> <span class="id" title="keyword">with</span> <span class="id" title="var">simpl_length</span>; <span class="id" title="tactic">try</span> <span class="id" title="var">done</span>.<br/>
-<span class="id" title="keyword">Tactic Notation</span> "simpl_length" "/=" :=<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> (<span class="id" title="tactic">progress</span> <span class="id" title="var">csimpl</span> <span class="id" title="tactic">in</span> × || <span class="id" title="var">simpl_length</span>).<br/>
-<span class="id" title="keyword">Tactic Notation</span> "simpl_length" "in" <span class="id" title="var">ne_hyp_list</span>(<span class="id" title="var">Hs</span>) :=<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">autorewrite</span> <span class="id" title="keyword">with</span> <span class="id" title="var">simpl_length</span> <span class="id" title="tactic">in</span> <span class="id" title="var">Hs</span>; <span class="id" title="tactic">try</span> <span class="id" title="var">done</span>.<br/>
-<span class="id" title="keyword">Tactic Notation</span> "simpl_length" "/=" "in" <span class="id" title="var">ne_hyp_list</span>(<span class="id" title="var">Hs</span>) :=<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> (<span class="id" title="tactic">progress</span> <span class="id" title="var">csimpl</span> <span class="id" title="tactic">in</span> × || <span class="id" title="var">simpl_length</span> <span class="id" title="tactic">in</span> <span class="id" title="var">Hs</span>).<br/>
-<span class="id" title="keyword">Tactic Notation</span> "simpl_length" "in" "*" :=<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">autorewrite</span> <span class="id" title="keyword">with</span> <span class="id" title="var">simpl_length</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">try</span> <span class="id" title="var">done</span>.<br/>
-<span class="id" title="keyword">Tactic Notation</span> "simpl_length" "/=" "in" "*" :=<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> (<span class="id" title="tactic">progress</span> <span class="id" title="var">csimpl</span> <span class="id" title="tactic">in</span> × || <span class="id" title="var">simpl_length</span> <span class="id" title="tactic">in</span> × ).<br/>
+<span class="id" title="keyword">Tactic Notation</span> "simp_length" :=<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">autorewrite</span> <span class="id" title="keyword">with</span> <span class="id" title="var">simp_length</span>; <span class="id" title="tactic">try</span> <span class="id" title="var">done</span>.<br/>
+<span class="id" title="keyword">Tactic Notation</span> "simp_length" "/=" :=<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> (<span class="id" title="tactic">progress</span> <span class="id" title="var">csimpl</span> <span class="id" title="tactic">in</span> × || <span class="id" title="var">simp_length</span>).<br/>
+<span class="id" title="keyword">Tactic Notation</span> "simp_length" "in" <span class="id" title="var">ne_hyp_list</span>(<span class="id" title="var">Hs</span>) :=<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">autorewrite</span> <span class="id" title="keyword">with</span> <span class="id" title="var">simp_length</span> <span class="id" title="tactic">in</span> <span class="id" title="var">Hs</span>; <span class="id" title="tactic">try</span> <span class="id" title="var">done</span>.<br/>
+<span class="id" title="keyword">Tactic Notation</span> "simp_length" "/=" "in" <span class="id" title="var">ne_hyp_list</span>(<span class="id" title="var">Hs</span>) :=<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> (<span class="id" title="tactic">progress</span> <span class="id" title="var">csimpl</span> <span class="id" title="tactic">in</span> × || <span class="id" title="var">simp_length</span> <span class="id" title="tactic">in</span> <span class="id" title="var">Hs</span>).<br/>
+<span class="id" title="keyword">Tactic Notation</span> "simp_length" "in" "*" :=<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">autorewrite</span> <span class="id" title="keyword">with</span> <span class="id" title="var">simp_length</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">try</span> <span class="id" title="var">done</span>.<br/>
+<span class="id" title="keyword">Tactic Notation</span> "simp_length" "/=" "in" "*" :=<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> (<span class="id" title="tactic">progress</span> <span class="id" title="var">csimpl</span> <span class="id" title="tactic">in</span> × || <span class="id" title="var">simp_length</span> <span class="id" title="tactic">in</span> × ).<br/>
+
+<br/>
+<span class="id" title="keyword">Module</span> <a id="lengths" class="idref" href="#lengths"><span class="id" title="module">lengths</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Import</span> <span class="id" title="module">Ltac2</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">main</span> () :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Control.enter</span> (<span class="id" title="keyword">fun</span> () ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">List.iter</span> (<span class="id" title="keyword">fun</span> (<span class="id" title="var">hyp</span>, <span class="id" title="var">_</span>, <span class="id" title="var">ty</span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">lazy_match</span>! <span class="id" title="var">ty</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">try</span> (<span class="id" title="tactic">apply</span> (<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Logic.html#f_equal"><span class="id" title="lemma">f_equal</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#length"><span class="id" title="definition">length</span></a>) <span class="id" title="tactic">in</span> $<span class="id" title="var">hyp</span> <span class="id" title="keyword">as</span> ?)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_relations.html#a59b32c68d9206e7609b1b857088523f"><span class="id" title="notation">≡ₚ</span></a> <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="lemma">Permutation_length</span> <span class="id" title="tactic">in</span> $<span class="id" title="var">hyp</span> <span class="id" title="keyword">as</span> ?<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_relations.html#31fb7f0a73f5b79f951d3de071392d06"><span class="id" title="notation">⊆+</span></a> <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_relations.html#list.submseteq_length"><span class="id" title="lemma">submseteq_length</span></a> <span class="id" title="tactic">in</span> $<span class="id" title="var">hyp</span> <span class="id" title="keyword">as</span> ?<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_relations.html#f73466f3d29588020e2aeb3bac44599d"><span class="id" title="notation">`</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_relations.html#f73466f3d29588020e2aeb3bac44599d"><span class="id" title="notation">prefix_of</span></a><a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_relations.html#f73466f3d29588020e2aeb3bac44599d"><span class="id" title="notation">`</span></a> <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.list_relations.html#list.prefix_length"><span class="id" title="lemma">prefix_length</span></a> <span class="id" title="tactic">in</span> $<span class="id" title="var">hyp</span> <span class="id" title="keyword">as</span> ?<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) (<span class="id" title="var">Control.hyps</span> ())<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;).<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="zoo.common.list.html#lengths"><span class="id" title="module">lengths</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Tactic Notation</span> "lengths" :=<br/>
+&nbsp;&nbsp;<span class="id" title="var">ltac2</span>:(<span class="id" title="var">lengths.main</span> ());<br/>
+&nbsp;&nbsp;<span class="id" title="var">simp_length</span> <span class="id" title="tactic">in</span> ×.<br/>
+<span class="id" title="keyword">Tactic Notation</span> "lengths" "/=" :=<br/>
+&nbsp;&nbsp;<span class="id" title="var">ltac2</span>:(<span class="id" title="var">lengths.main</span> ());<br/>
+&nbsp;&nbsp;<span class="id" title="var">simp_length</span>/= <span class="id" title="tactic">in</span> ×.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="basic" class="idref" href="#basic"><span class="id" title="section">basic</span></a>.<br/>
@@ -290,7 +325,7 @@
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Rewrite</span><br/>
 &nbsp;&nbsp;@<a class="idref" href="zoo.common.list.html#92337c9149b993446b6a23f632e78bbb"><span class="id" title="lemma">length</span></a><a class="idref" href="zoo.common.list.html#92337c9149b993446b6a23f632e78bbb"><span class="id" title="lemma">ｰ</span></a><a class="idref" href="zoo.common.list.html#92337c9149b993446b6a23f632e78bbb"><span class="id" title="lemma">zip3_with</span></a><br/>
-: <span class="id" title="var">simpl_length</span>.<br/>
+: <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="zip3" class="idref" href="#zip3"><span class="id" title="section">zip3</span></a>.<br/>
@@ -319,7 +354,7 @@
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Rewrite</span><br/>
 &nbsp;&nbsp;@<a class="idref" href="zoo.common.list.html#e5995d2794432ed613ba71fc250e90d4"><span class="id" title="lemma">length</span></a><a class="idref" href="zoo.common.list.html#e5995d2794432ed613ba71fc250e90d4"><span class="id" title="lemma">ｰ</span></a><a class="idref" href="zoo.common.list.html#e5995d2794432ed613ba71fc250e90d4"><span class="id" title="lemma">zip3</span></a><br/>
-: <span class="id" title="var">simpl_length</span>.<br/>
+: <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="foldri" class="idref" href="#foldri"><span class="id" title="section">foldri</span></a>.<br/>
@@ -709,7 +744,7 @@
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Rewrite</span><br/>
 &nbsp;&nbsp;@<a class="idref" href="zoo.common.list.html#434844d866ceaf0d542a080c58503b5e"><span class="id" title="lemma">length</span></a><a class="idref" href="zoo.common.list.html#434844d866ceaf0d542a080c58503b5e"><span class="id" title="lemma">ｰ</span></a><a class="idref" href="zoo.common.list.html#434844d866ceaf0d542a080c58503b5e"><span class="id" title="lemma">slice</span></a><br/>
-: <span class="id" title="var">simpl_length</span>.<br/>
+: <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="with_slice" class="idref" href="#with_slice"><span class="id" title="section">with_slice</span></a>.<br/>
@@ -787,7 +822,7 @@
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Rewrite</span><br/>
 &nbsp;&nbsp;@<a class="idref" href="zoo.common.list.html#476c2def53f0f14382b0a9dd9cee5cc5"><span class="id" title="lemma">length</span></a><a class="idref" href="zoo.common.list.html#476c2def53f0f14382b0a9dd9cee5cc5"><span class="id" title="lemma">ｰ</span></a><a class="idref" href="zoo.common.list.html#476c2def53f0f14382b0a9dd9cee5cc5"><span class="id" title="lemma">with_slice</span></a><br/>
-: <span class="id" title="var">simpl_length</span>.<br/>
+: <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="rotation" class="idref" href="#rotation"><span class="id" title="section">rotation</span></a>.<br/>
@@ -830,7 +865,7 @@
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Rewrite</span><br/>
 &nbsp;&nbsp;@<a class="idref" href="zoo.common.list.html#9e7e468a46ad6c436050a67f648d9495"><span class="id" title="lemma">length</span></a><a class="idref" href="zoo.common.list.html#9e7e468a46ad6c436050a67f648d9495"><span class="id" title="lemma">ｰ</span></a><a class="idref" href="zoo.common.list.html#9e7e468a46ad6c436050a67f648d9495"><span class="id" title="lemma">rotation</span></a><br/>
-: <span class="id" title="var">simpl_length</span>.<br/>
+: <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="omap" class="idref" href="#omap"><span class="id" title="section">omap</span></a>.<br/>
@@ -884,7 +919,7 @@
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Rewrite</span><br/>
 &nbsp;&nbsp;@<a class="idref" href="zoo.common.list.html#e6f9f94d3520f008f07b11389865eb48"><span class="id" title="lemma">length</span></a><a class="idref" href="zoo.common.list.html#e6f9f94d3520f008f07b11389865eb48"><span class="id" title="lemma">ｰ</span></a><a class="idref" href="zoo.common.list.html#e6f9f94d3520f008f07b11389865eb48"><span class="id" title="lemma">omap</span></a><br/>
-: <span class="id" title="var">simpl_length</span>.<br/>
+: <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="oflatten" class="idref" href="#oflatten"><span class="id" title="section">oflatten</span></a>.<br/>
@@ -960,7 +995,7 @@
 <br/>
 #[<span class="id" title="var">global</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Rewrite</span><br/>
 &nbsp;&nbsp;@<a class="idref" href="zoo.common.list.html#a6ec82a5678c6e26d9634e93e6927d81"><span class="id" title="lemma">length</span></a><a class="idref" href="zoo.common.list.html#a6ec82a5678c6e26d9634e93e6927d81"><span class="id" title="lemma">ｰ</span></a><a class="idref" href="zoo.common.list.html#a6ec82a5678c6e26d9634e93e6927d81"><span class="id" title="lemma">oflatten</span></a><br/>
-: <span class="id" title="var">simpl_length</span>.<br/>
+: <span class="id" title="var">simp_length</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="Sorted" class="idref" href="#Sorted"><span class="id" title="section">Sorted</span></a>.<br/>
