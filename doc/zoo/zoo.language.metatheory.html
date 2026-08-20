@@ -103,9 +103,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.metatheory.html#occurs:3"><span class="id" title="definition">occurs</span></a> <a class="idref" href="zoo.language.metatheory.html#x:1"><span class="id" title="variable">x</span></a> <span class="id" title="var">e2</span><br/>
 &nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#Fork"><span class="id" title="constructor">Fork</span></a> <span class="id" title="var">e</span> ⇒<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.metatheory.html#occurs:3"><span class="id" title="definition">occurs</span></a> <a class="idref" href="zoo.language.metatheory.html#x:1"><span class="id" title="variable">x</span></a> <a class="idref" href="zoo.language.metatheory.html#e:2"><span class="id" title="variable">e</span></a><br/>
-&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#GetLocal"><span class="id" title="constructor">GetLocal</span></a> ⇒<br/>
+&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#LocalGet"><span class="id" title="constructor">LocalGet</span></a> ⇒<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#false"><span class="id" title="constructor">false</span></a><br/>
-&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#SetLocal"><span class="id" title="constructor">SetLocal</span></a> <span class="id" title="var">e</span> ⇒<br/>
+&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#LocalSet"><span class="id" title="constructor">LocalSet</span></a> <span class="id" title="var">e</span> ⇒<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.metatheory.html#occurs:3"><span class="id" title="definition">occurs</span></a> <a class="idref" href="zoo.language.metatheory.html#x:1"><span class="id" title="variable">x</span></a> <a class="idref" href="zoo.language.metatheory.html#e:2"><span class="id" title="variable">e</span></a><br/>
 &nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#Proph"><span class="id" title="constructor">Proph</span></a> ⇒<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#false"><span class="id" title="constructor">false</span></a><br/>
@@ -248,10 +248,10 @@
 &nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#Fork"><span class="id" title="constructor">Fork</span></a> <span class="id" title="var">e</span> ⇒<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Fork"><span class="id" title="constructor">Fork</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.metatheory.html#subst:15"><span class="id" title="definition">subst</span></a> <a class="idref" href="zoo.language.metatheory.html#x:12"><span class="id" title="variable">x</span></a> <a class="idref" href="zoo.language.metatheory.html#v:13"><span class="id" title="variable">v</span></a> <a class="idref" href="zoo.language.metatheory.html#e:14"><span class="id" title="variable">e</span></a>)<br/>
-&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#GetLocal"><span class="id" title="constructor">GetLocal</span></a> ⇒<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#GetLocal"><span class="id" title="constructor">GetLocal</span></a><br/>
-&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#SetLocal"><span class="id" title="constructor">SetLocal</span></a> <span class="id" title="var">e</span> ⇒<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#SetLocal"><span class="id" title="constructor">SetLocal</span></a><br/>
+&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#LocalGet"><span class="id" title="constructor">LocalGet</span></a> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#LocalGet"><span class="id" title="constructor">LocalGet</span></a><br/>
+&nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#LocalSet"><span class="id" title="constructor">LocalSet</span></a> <span class="id" title="var">e</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#LocalSet"><span class="id" title="constructor">LocalSet</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.metatheory.html#subst:15"><span class="id" title="definition">subst</span></a> <a class="idref" href="zoo.language.metatheory.html#x:12"><span class="id" title="variable">x</span></a> <a class="idref" href="zoo.language.metatheory.html#v:13"><span class="id" title="variable">v</span></a> <a class="idref" href="zoo.language.metatheory.html#e:14"><span class="id" title="variable">e</span></a>)<br/>
 &nbsp;&nbsp;| <a class="idref" href="zoo.language.syntax.html#Proph"><span class="id" title="constructor">Proph</span></a> ⇒<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Proph"><span class="id" title="constructor">Proph</span></a><br/>
