@@ -29,6 +29,12 @@
 &nbsp;&nbsp;<span class="id" title="var">stdpp.tactics.done</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Tactic Notation</span> "naive" <span class="id" title="var">tactic</span>(<span class="id" title="var">tac</span>) :=<br/>
+&nbsp;&nbsp;<span class="id" title="var">naive_solver</span> <span class="id" title="var">tac</span>.<br/>
+<span class="id" title="keyword">Tactic Notation</span> "naive" :=<br/>
+&nbsp;&nbsp;<span class="id" title="var">naive_solver</span>.<br/>
+
+<br/>
 <span class="id" title="keyword">Tactic Notation</span> "simp" :=<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">repeat</span> (<span class="id" title="var">destruct_conjs</span>; <span class="id" title="var">destruct_or</span>?);<br/>
 &nbsp;&nbsp;<span class="id" title="var">simplify_eq</span>/=.<br/>
