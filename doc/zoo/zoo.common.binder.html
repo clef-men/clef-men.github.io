@@ -19,7 +19,7 @@
 <h1 class="libtitle">Library zoo.common.binder</h1>
 
 <div class="code">
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#"><span class="id" title="library">stdpp.binders</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#"><span class="id" title="library">stdpp.binders</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.prelude.html#"><span class="id" title="library">zoo.prelude</span></a>.<br/>
@@ -28,19 +28,19 @@
 
 <br/>
 <span class="id" title="keyword">Notation</span> <a id="e1a90f18e6a4bf07d50984b65991f91e" class="idref" href="#e1a90f18e6a4bf07d50984b65991f91e"><span class="id" title="notation">&quot;</span></a>⎽" :=<br/>
-&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a><br/>
 : <span class="id" title="var">binder_scope</span>.<br/>
 
 <br/>
-#[<span class="id" title="var">global</span>] <span class="id" title="var">Program</span> <span class="id" title="keyword">Instance</span> <a id="cce13e57754dcaf586eec9bf6b0a2eb7" class="idref" href="#cce13e57754dcaf586eec9bf6b0a2eb7"><span class="id" title="instance">binder</span></a><a id="cce13e57754dcaf586eec9bf6b0a2eb7" class="idref" href="#cce13e57754dcaf586eec9bf6b0a2eb7"><span class="id" title="instance">ｰ</span></a><a id="cce13e57754dcaf586eec9bf6b0a2eb7" class="idref" href="#cce13e57754dcaf586eec9bf6b0a2eb7"><span class="id" title="instance">beq</span></a> : <a class="idref" href="zoo.common.typeclasses.html#Beq"><span class="id" title="class">Beq</span></a> <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a> :=<br/>
+#[<span class="id" title="var">global</span>] <span class="id" title="var">Program</span> <span class="id" title="keyword">Instance</span> <a id="cce13e57754dcaf586eec9bf6b0a2eb7" class="idref" href="#cce13e57754dcaf586eec9bf6b0a2eb7"><span class="id" title="instance">binder</span></a><a id="cce13e57754dcaf586eec9bf6b0a2eb7" class="idref" href="#cce13e57754dcaf586eec9bf6b0a2eb7"><span class="id" title="instance">ｰ</span></a><a id="cce13e57754dcaf586eec9bf6b0a2eb7" class="idref" href="#cce13e57754dcaf586eec9bf6b0a2eb7"><span class="id" title="instance">beq</span></a> : <a class="idref" href="zoo.common.typeclasses.html#Beq"><span class="id" title="class">Beq</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a> :=<br/>
 &nbsp;&nbsp;{|<a class="idref" href="zoo.common.typeclasses.html#beq"><span class="id" title="method">beq</span></a> <a id="bdr1:1" class="idref" href="#bdr1:1"><span class="id" title="binder">bdr1</span></a> <a id="bdr2:2" class="idref" href="#bdr2:2"><span class="id" title="binder">bdr2</span></a> :=<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="zoo.common.binder.html#bdr1:1"><span class="id" title="variable">bdr1</span></a>, <a class="idref" href="zoo.common.binder.html#bdr2:2"><span class="id" title="variable">bdr2</span></a> <span class="id" title="keyword">with</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a>, <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a> ⇒<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#true"><span class="id" title="constructor">true</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">str1</span>, <a class="idref" href="https://plv.mpi-sws.org/coqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">str2</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a>, <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#true"><span class="id" title="constructor">true</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">str1</span>, <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">str2</span> ⇒<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">str1</span> <a class="idref" href="zoo.common.typeclasses.html#3a84c93d6c0d736aa98d40d3f78beffd"><span class="id" title="notation">≟</span></a> <span class="id" title="var">str2</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span>, <span class="id" title="var">_</span> ⇒<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.1.1/stdlib//Corelib.Init.Datatypes.html#false"><span class="id" title="constructor">false</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#false"><span class="id" title="constructor">false</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
 &nbsp;&nbsp;|}.<br/>
 </div>
