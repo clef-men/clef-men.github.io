@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>please.inhabited</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library please.inhabited</h1>
+
+<div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="please.prelude.html#"><span class="id" title="library">please.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="please.options.html#"><span class="id" title="library">please.options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac</span> <span class="id" title="var">solve_inhabited</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">solve</span> [<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<span class="id" title="constructor">populate</span> <span class="id" title="var">_</span>);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">constructor</span>; <span class="id" title="tactic">apply</span> <span class="id" title="method">inhabitant</span><br/>
+&nbsp;&nbsp;].<br/>
+
+<br/>
+<span class="id" title="keyword">Module</span> <a id="tests" class="idref" href="#tests"><span class="id" title="module">tests</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Variant</span> <a id="7882d2766995773b31d96aaebc7ceb36" class="idref" href="#7882d2766995773b31d96aaebc7ceb36"><span class="id" title="inductive">test₁</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="93199430a3524c09224e838fe4bef12b" class="idref" href="#93199430a3524c09224e838fe4bef12b"><span class="id" title="constructor">test₁₁</span></a> : <span class="id" title="notation">False</span> <span class="id" title="notation">→</span> <a class="idref" href="please.inhabited.html#e22df88bff14a97fdc9a96977a2ba104"><span class="id" title="inductive">test₁</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="0bf105c5816478d911a9a0a2ba650619" class="idref" href="#0bf105c5816478d911a9a0a2ba650619"><span class="id" title="constructor">test₁₂</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="8f0c33c283a632ca094c9ee061d0da55" class="idref" href="#8f0c33c283a632ca094c9ee061d0da55"><span class="id" title="constructor">test₁₃</span></a> : <span class="id" title="notation">False</span> <span class="id" title="notation">→</span> <a class="idref" href="please.inhabited.html#e22df88bff14a97fdc9a96977a2ba104"><span class="id" title="inductive">test₁</span></a>.<br/>
+&nbsp;&nbsp;#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Instance</span> <a id="95beecddb01796b42f24b8d7e77e5f65" class="idref" href="#95beecddb01796b42f24b8d7e77e5f65"><span class="id" title="instance">test₁</span></a><a id="95beecddb01796b42f24b8d7e77e5f65" class="idref" href="#95beecddb01796b42f24b8d7e77e5f65"><span class="id" title="instance">ｰ</span></a><a id="95beecddb01796b42f24b8d7e77e5f65" class="idref" href="#95beecddb01796b42f24b8d7e77e5f65"><span class="id" title="instance">inhabited</span></a> : <span class="id" title="class">Inhabited</span> <a class="idref" href="please.inhabited.html#7882d2766995773b31d96aaebc7ceb36"><span class="id" title="inductive">test₁</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">ltac</span>:(<span class="id" title="var">solve_inhabited</span>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Variant</span> <a id="841ea18358ba9045e1e4aaedbb3ac20f" class="idref" href="#841ea18358ba9045e1e4aaedbb3ac20f"><span class="id" title="inductive">test₂</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="9dda23af6c5d7403b1d6dabfd1065cca" class="idref" href="#9dda23af6c5d7403b1d6dabfd1065cca"><span class="id" title="constructor">test₂₁</span></a> : <span class="id" title="notation">False</span> <span class="id" title="notation">→</span> <a class="idref" href="please.inhabited.html#652a3c304473c17ee728ffb211637d67"><span class="id" title="inductive">test₂</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="53b83bec800d382bb3fc941302e3ce44" class="idref" href="#53b83bec800d382bb3fc941302e3ce44"><span class="id" title="constructor">test₂₂</span></a> : <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#unit"><span class="id" title="inductive">unit</span></a> <span class="id" title="notation">→</span> <a class="idref" href="please.inhabited.html#652a3c304473c17ee728ffb211637d67"><span class="id" title="inductive">test₂</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="e7140bdcd5e5703cf43c4049195acef2" class="idref" href="#e7140bdcd5e5703cf43c4049195acef2"><span class="id" title="constructor">test₂₃</span></a> : <span class="id" title="notation">False</span> <span class="id" title="notation">→</span> <a class="idref" href="please.inhabited.html#652a3c304473c17ee728ffb211637d67"><span class="id" title="inductive">test₂</span></a>.<br/>
+&nbsp;&nbsp;#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Instance</span> <a id="9d0748bddb8797ba9f8489b17fc8d495" class="idref" href="#9d0748bddb8797ba9f8489b17fc8d495"><span class="id" title="instance">test₂</span></a><a id="9d0748bddb8797ba9f8489b17fc8d495" class="idref" href="#9d0748bddb8797ba9f8489b17fc8d495"><span class="id" title="instance">ｰ</span></a><a id="9d0748bddb8797ba9f8489b17fc8d495" class="idref" href="#9d0748bddb8797ba9f8489b17fc8d495"><span class="id" title="instance">inhabited</span></a> : <span class="id" title="class">Inhabited</span> <a class="idref" href="please.inhabited.html#841ea18358ba9045e1e4aaedbb3ac20f"><span class="id" title="inductive">test₂</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">ltac</span>:(<span class="id" title="var">solve_inhabited</span>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Variant</span> <a id="825e6d3829c218923a2a057eaa718ac4" class="idref" href="#825e6d3829c218923a2a057eaa718ac4"><span class="id" title="inductive">test₃</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="16825c5ca830d0ae8e0de85422f7ce16" class="idref" href="#16825c5ca830d0ae8e0de85422f7ce16"><span class="id" title="constructor">test₃₁</span></a> : <span class="id" title="notation">False</span> <span class="id" title="notation">→</span> <a class="idref" href="please.inhabited.html#81951377c443a50aa5c2b36fd4c45aaf"><span class="id" title="inductive">test₃</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="bbd933ae6bc1697595203b0a0f634182" class="idref" href="#bbd933ae6bc1697595203b0a0f634182"><span class="id" title="constructor">test₃₂</span></a> : <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#unit"><span class="id" title="inductive">unit</span></a> <span class="id" title="notation">→</span> <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#unit"><span class="id" title="inductive">unit</span></a> <span class="id" title="notation">→</span> <a class="idref" href="please.inhabited.html#81951377c443a50aa5c2b36fd4c45aaf"><span class="id" title="inductive">test₃</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a id="f02cb6c2b68861f35899b5752ba95fe9" class="idref" href="#f02cb6c2b68861f35899b5752ba95fe9"><span class="id" title="constructor">test₃₃</span></a> : <span class="id" title="notation">False</span> <span class="id" title="notation">→</span> <a class="idref" href="please.inhabited.html#81951377c443a50aa5c2b36fd4c45aaf"><span class="id" title="inductive">test₃</span></a>.<br/>
+&nbsp;&nbsp;#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Instance</span> <a id="e80395febc531499f935084865a350e1" class="idref" href="#e80395febc531499f935084865a350e1"><span class="id" title="instance">test₃</span></a><a id="e80395febc531499f935084865a350e1" class="idref" href="#e80395febc531499f935084865a350e1"><span class="id" title="instance">ｰ</span></a><a id="e80395febc531499f935084865a350e1" class="idref" href="#e80395febc531499f935084865a350e1"><span class="id" title="instance">inhabited</span></a> : <span class="id" title="class">Inhabited</span> <a class="idref" href="please.inhabited.html#825e6d3829c218923a2a057eaa718ac4"><span class="id" title="inductive">test₃</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">ltac</span>:(<span class="id" title="var">solve_inhabited</span>).<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="please.inhabited.html#tests"><span class="id" title="module">tests</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

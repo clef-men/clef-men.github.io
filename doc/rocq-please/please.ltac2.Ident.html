@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>please.ltac2.Ident</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library please.ltac2.Ident</h1>
+
+<div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <span class="id" title="library">Ltac2.Ident</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <span class="id" title="library">Ltac2.Init</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="please.prelude.html#"><span class="id" title="library">please.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="please.ltac2.Notations.html#"><span class="id" title="library">please.ltac2.Notations</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <a class="idref" href="please.ltac2.String.html#"><span class="id" title="library">please.ltac2.String</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="please.options.html#"><span class="id" title="library">please.options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">of_string_opt</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="var">of_string</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">of_string</span> <span class="id" title="var">str</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">Ident.of_string</span> <span class="id" title="var">str</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">Some</span> <span class="id" title="var">id</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">id</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">None</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Control.throw</span> (<span class="id" title="var">Invalid_argument</span> (<span class="id" title="var">Some</span> (<span class="id" title="var">Message.of_string</span> "Ident.of_string")))<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="var">of_rocq</span> <span class="id" title="var">str</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="var">str</span> := <span class="id" title="var">String.of_rocq_string</span> <span class="id" title="var">str</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="var">str</span> := <span class="id" title="var">of_string</span> <span class="id" title="var">str</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;<span class="id" title="var">str</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Ltac2</span> <span class="id" title="keyword">rec</span> <span class="id" title="var">list_of_rocq</span> <span class="id" title="var">strs</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="var">lazy_match</span>! <span class="id" title="var">strs</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[]<br/>
+&nbsp;&nbsp;| <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> ?<span class="id" title="var">str</span> ?<span class="id" title="var">strs</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="var">t</span> := <span class="id" title="var">of_rocq</span> <span class="id" title="var">str</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="var">ts</span> := <span class="id" title="var">list_of_rocq</span> <span class="id" title="var">strs</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">t</span> :: <span class="id" title="var">ts</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
