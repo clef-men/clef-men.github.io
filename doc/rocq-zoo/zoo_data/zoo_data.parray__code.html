@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_data.parray__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_data.parray__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.array</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="0bb805a4f6bb42e887c1782019d0e9ee" class="idref" href="#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">&quot;</span></a>'parray٠Root'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_data.parray.descr" <span class="id" title="constructor">Tag0</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="fe96b0005b645c875245f0150115c375" class="idref" href="#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">&quot;</span></a>'parray٠Diff'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_data.parray.descr" <span class="id" title="constructor">Tag1</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="a6e7c99aa4088a2bc3b72669274c9d38" class="idref" href="#a6e7c99aa4088a2bc3b72669274c9d38"><span class="id" title="notation">&quot;</span></a>'parray٠equal'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_data.parray.descr.Root" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_proj</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="67a927a53877438041c659afc63fa14b" class="idref" href="#67a927a53877438041c659afc63fa14b"><span class="id" title="notation">&quot;</span></a>'parray٠data'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_data.parray.descr.Root" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_proj</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="18403fb10b68909ef2f250b6befd15e9" class="idref" href="#18403fb10b68909ef2f250b6befd15e9"><span class="id" title="definition">parray</span></a><a id="18403fb10b68909ef2f250b6befd15e9" class="idref" href="#18403fb10b68909ef2f250b6befd15e9"><span class="id" title="definition">٠</span></a><a id="18403fb10b68909ef2f250b6befd15e9" class="idref" href="#18403fb10b68909ef2f250b6befd15e9"><span class="id" title="definition">make</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "equal" "sz" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "data" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_make</span> "sz" "v" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗳</span> <span class="id" title="notation">‘</span><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">Root</span></a><span class="id" title="notation">(</span> "equal"<span class="id" title="notation">,</span> "data" <span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="2ee3dfe6630585f49f68b5acbfa24e02" class="idref" href="#2ee3dfe6630585f49f68b5acbfa24e02"><span class="id" title="definition">parray</span></a><a id="2ee3dfe6630585f49f68b5acbfa24e02" class="idref" href="#2ee3dfe6630585f49f68b5acbfa24e02"><span class="id" title="definition">٠</span></a><a id="2ee3dfe6630585f49f68b5acbfa24e02" class="idref" href="#2ee3dfe6630585f49f68b5acbfa24e02"><span class="id" title="definition">reroot₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "reroot" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="notation">!</span>"t" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">Root</span></a> <span class="id" title="notation">⎽</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">𝗮𝘀</span> "root_r" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span> "root_r"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_data.parray__code.html#a6e7c99aa4088a2bc3b72669274c9d38"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#a6e7c99aa4088a2bc3b72669274c9d38"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#a6e7c99aa4088a2bc3b72669274c9d38"><span class="id" title="notation">equal</span></a><span class="id" title="notation">&gt;</span><span class="id" title="notation">,</span> "root_r"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_data.parray__code.html#67a927a53877438041c659afc63fa14b"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#67a927a53877438041c659afc63fa14b"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#67a927a53877438041c659afc63fa14b"><span class="id" title="notation">data</span></a><span class="id" title="notation">&gt;</span> <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">Diff</span></a> "i" "v" "t'" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "equal"<span class="id" title="notation">,</span> "data" <span class="id" title="notation">=</span> "reroot" "t'" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t'" <span class="id" title="notation">&lt;-</span> <span class="id" title="notation">‘</span><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">Diff</span></a><span class="id" title="notation">(</span> "i"<span class="id" title="notation">,</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "data" "i"<span class="id" title="notation">,</span> "t" <span class="id" title="notation">)</span> <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_set</span> "data" "i" "v" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span> "equal"<span class="id" title="notation">,</span> "data" <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="4b0b866749d3a6b836dc0c56d6447f1c" class="idref" href="#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">parray</span></a><a id="4b0b866749d3a6b836dc0c56d6447f1c" class="idref" href="#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">٠</span></a><a id="4b0b866749d3a6b836dc0c56d6447f1c" class="idref" href="#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">reroot</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="notation">!</span>"t" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">Root</span></a> <span class="id" title="notation">⎽</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">𝗮𝘀</span> "root_r" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span> "root_r"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_data.parray__code.html#a6e7c99aa4088a2bc3b72669274c9d38"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#a6e7c99aa4088a2bc3b72669274c9d38"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#a6e7c99aa4088a2bc3b72669274c9d38"><span class="id" title="notation">equal</span></a><span class="id" title="notation">&gt;</span><span class="id" title="notation">,</span> "root_r"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_data.parray__code.html#67a927a53877438041c659afc63fa14b"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#67a927a53877438041c659afc63fa14b"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#67a927a53877438041c659afc63fa14b"><span class="id" title="notation">data</span></a><span class="id" title="notation">&gt;</span> <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">Diff</span></a> <span class="id" title="notation">⎽</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "equal"<span class="id" title="notation">,</span> "data" <span class="id" title="notation">=</span> <a class="idref" href="zoo_data.parray__code.html#2ee3dfe6630585f49f68b5acbfa24e02"><span class="id" title="definition">parray</span></a><a class="idref" href="zoo_data.parray__code.html#2ee3dfe6630585f49f68b5acbfa24e02"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_data.parray__code.html#2ee3dfe6630585f49f68b5acbfa24e02"><span class="id" title="definition">reroot₁</span></a> "t" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t" <span class="id" title="notation">&lt;-</span> <span class="id" title="notation">‘</span><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#0bb805a4f6bb42e887c1782019d0e9ee"><span class="id" title="notation">Root</span></a><span class="id" title="notation">(</span> "equal"<span class="id" title="notation">,</span> "data" <span class="id" title="notation">)</span> <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span> "equal"<span class="id" title="notation">,</span> "data" <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="5ac5ee76dceed3f2bdca6074f22970a6" class="idref" href="#5ac5ee76dceed3f2bdca6074f22970a6"><span class="id" title="definition">parray</span></a><a id="5ac5ee76dceed3f2bdca6074f22970a6" class="idref" href="#5ac5ee76dceed3f2bdca6074f22970a6"><span class="id" title="definition">٠</span></a><a id="5ac5ee76dceed3f2bdca6074f22970a6" class="idref" href="#5ac5ee76dceed3f2bdca6074f22970a6"><span class="id" title="definition">get</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> <span class="id" title="notation">⎽</span><span class="id" title="notation">,</span> "data" <span class="id" title="notation">=</span> <a class="idref" href="zoo_data.parray__code.html#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">parray</span></a><a class="idref" href="zoo_data.parray__code.html#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_data.parray__code.html#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">reroot</span></a> "t" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "data" "i".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="6411acfe0fa2b32adafc5341bc61024c" class="idref" href="#6411acfe0fa2b32adafc5341bc61024c"><span class="id" title="definition">parray</span></a><a id="6411acfe0fa2b32adafc5341bc61024c" class="idref" href="#6411acfe0fa2b32adafc5341bc61024c"><span class="id" title="definition">٠</span></a><a id="6411acfe0fa2b32adafc5341bc61024c" class="idref" href="#6411acfe0fa2b32adafc5341bc61024c"><span class="id" title="definition">set</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "equal"<span class="id" title="notation">,</span> "data" <span class="id" title="notation">=</span> <a class="idref" href="zoo_data.parray__code.html#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">parray</span></a><a class="idref" href="zoo_data.parray__code.html#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_data.parray__code.html#4b0b866749d3a6b836dc0c56d6447f1c"><span class="id" title="definition">reroot</span></a> "t" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "v'" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "data" "i" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> "equal" "v" "v'" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_set</span> "data" "i" "v" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "t'" <span class="id" title="notation">=</span> <span class="id" title="notation">𝗿𝗲𝗳</span> <span class="id" title="notation">!</span>"t" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t" <span class="id" title="notation">&lt;-</span> <span class="id" title="notation">‘</span><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">parray</span></a><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_data.parray__code.html#fe96b0005b645c875245f0150115c375"><span class="id" title="notation">Diff</span></a><span class="id" title="notation">(</span> "i"<span class="id" title="notation">,</span> "v'"<span class="id" title="notation">,</span> "t'" <span class="id" title="notation">)</span> <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t'"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

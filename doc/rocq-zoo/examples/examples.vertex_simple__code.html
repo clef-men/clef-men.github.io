@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>examples.vertex_simple__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">examples.vertex_simple__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_parabs.pool</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_parabs.vertex</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.ivar_4</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="269377b94fcbdd223a7f6efe62355b5e" class="idref" href="#269377b94fcbdd223a7f6efe62355b5e"><span class="id" title="definition">vertex_simple</span></a><a id="269377b94fcbdd223a7f6efe62355b5e" class="idref" href="#269377b94fcbdd223a7f6efe62355b5e"><span class="id" title="definition">٠</span></a><a id="269377b94fcbdd223a7f6efe62355b5e" class="idref" href="#269377b94fcbdd223a7f6efe62355b5e"><span class="id" title="definition">main</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "num_worker" "a" "b" "c" "d" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "ivar" <span class="id" title="notation">=</span> <span class="id" title="definition">ivar_4</span><span class="id" title="definition">٠</span><span class="id" title="definition">create</span> <span class="id" title="notation">()</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "vtx_a" <span class="id" title="notation">=</span> <span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">create'</span> (<span class="id" title="notation">𝗳𝘂𝗻</span> "_ctx" <span class="id" title="notation">-&gt;</span> "a" <span class="id" title="notation">()</span>) <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "vtx_b" <span class="id" title="notation">=</span> <span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">create'</span> (<span class="id" title="notation">𝗳𝘂𝗻</span> "_ctx" <span class="id" title="notation">-&gt;</span> "b" <span class="id" title="notation">()</span>) <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "vtx_c" <span class="id" title="notation">=</span> <span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">create'</span> (<span class="id" title="notation">𝗳𝘂𝗻</span> "_ctx" <span class="id" title="notation">-&gt;</span> "c" <span class="id" title="notation">()</span>) <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "vtx_d" <span class="id" title="notation">=</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">create'</span> (<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span> "d" <span class="id" title="notation">()</span> <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">ivar_4</span><span class="id" title="definition">٠</span><span class="id" title="definition">notify</span> "ivar" "ctx" <span class="id" title="notation">()</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">precede</span> "vtx_a" "vtx_b" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">precede</span> "vtx_a" "vtx_c" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">precede</span> "vtx_b" "vtx_d" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">precede</span> "vtx_c" "vtx_d" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">pool</span><span class="id" title="definition">٠</span><span class="id" title="definition">run</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"num_worker"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">release</span> "ctx" "vtx_d" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">release</span> "ctx" "vtx_c" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">release</span> "ctx" "vtx_b" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">vertex</span><span class="id" title="definition">٠</span><span class="id" title="definition">release</span> "ctx" "vtx_a" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">pool</span><span class="id" title="definition">٠</span><span class="id" title="definition">wait_ivar</span> "ctx" "ivar").<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.list__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_std.list__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="ddda2d643efe0428e71eed205ac31945" class="idref" href="#ddda2d643efe0428e71eed205ac31945"><span class="id" title="definition">list</span></a><a id="ddda2d643efe0428e71eed205ac31945" class="idref" href="#ddda2d643efe0428e71eed205ac31945"><span class="id" title="definition">٠</span></a><a id="ddda2d643efe0428e71eed205ac31945" class="idref" href="#ddda2d643efe0428e71eed205ac31945"><span class="id" title="definition">singleton</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"v" <span class="id" title="notation">::</span> <span class="id" title="notation">[]</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="6e98d78b0e9cdd723ccc4f55c11348f7" class="idref" href="#6e98d78b0e9cdd723ccc4f55c11348f7"><span class="id" title="definition">list</span></a><a id="6e98d78b0e9cdd723ccc4f55c11348f7" class="idref" href="#6e98d78b0e9cdd723ccc4f55c11348f7"><span class="id" title="definition">٠</span></a><a id="6e98d78b0e9cdd723ccc4f55c11348f7" class="idref" href="#6e98d78b0e9cdd723ccc4f55c11348f7"><span class="id" title="definition">head</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "param" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "param" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗳𝗮𝗶𝗹</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> "v" <span class="id" title="notation">::</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"v"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="508db953203d6cac4945f7b014c1dc96" class="idref" href="#508db953203d6cac4945f7b014c1dc96"><span class="id" title="definition">list</span></a><a id="508db953203d6cac4945f7b014c1dc96" class="idref" href="#508db953203d6cac4945f7b014c1dc96"><span class="id" title="definition">٠</span></a><a id="508db953203d6cac4945f7b014c1dc96" class="idref" href="#508db953203d6cac4945f7b014c1dc96"><span class="id" title="definition">tail</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "param" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "param" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗳𝗮𝗶𝗹</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">::</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="6047dc5ec0393e5acc8ed44a40d1b3ec" class="idref" href="#6047dc5ec0393e5acc8ed44a40d1b3ec"><span class="id" title="definition">list</span></a><a id="6047dc5ec0393e5acc8ed44a40d1b3ec" class="idref" href="#6047dc5ec0393e5acc8ed44a40d1b3ec"><span class="id" title="definition">٠</span></a><a id="6047dc5ec0393e5acc8ed44a40d1b3ec" class="idref" href="#6047dc5ec0393e5acc8ed44a40d1b3ec"><span class="id" title="definition">is_empty</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "param" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "param" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">true</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">::</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">false</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="7f679ee1101befec8ca5e42ed1ff3362" class="idref" href="#7f679ee1101befec8ca5e42ed1ff3362"><span class="id" title="definition">list</span></a><a id="7f679ee1101befec8ca5e42ed1ff3362" class="idref" href="#7f679ee1101befec8ca5e42ed1ff3362"><span class="id" title="definition">٠</span></a><a id="7f679ee1101befec8ca5e42ed1ff3362" class="idref" href="#7f679ee1101befec8ca5e42ed1ff3362"><span class="id" title="definition">get</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "get" "t" "i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> "i" <span class="id" title="notation">≤</span> 0 <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#6e98d78b0e9cdd723ccc4f55c11348f7"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#6e98d78b0e9cdd723ccc4f55c11348f7"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#6e98d78b0e9cdd723ccc4f55c11348f7"><span class="id" title="definition">head</span></a> "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"get" (<a class="idref" href="zoo_std.list__code.html#508db953203d6cac4945f7b014c1dc96"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#508db953203d6cac4945f7b014c1dc96"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#508db953203d6cac4945f7b014c1dc96"><span class="id" title="definition">tail</span></a> "t") ("i" <span class="id" title="notation">-</span> 1)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="95db554ca7dd4b0623ae5aecec0225db" class="idref" href="#95db554ca7dd4b0623ae5aecec0225db"><span class="id" title="definition">list</span></a><a id="95db554ca7dd4b0623ae5aecec0225db" class="idref" href="#95db554ca7dd4b0623ae5aecec0225db"><span class="id" title="definition">٠</span></a><a id="95db554ca7dd4b0623ae5aecec0225db" class="idref" href="#95db554ca7dd4b0623ae5aecec0225db"><span class="id" title="definition">initi₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "initi" "sz" "fn" "i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> "sz" <span class="id" title="notation">≤</span> "i" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">[]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "v" <span class="id" title="notation">=</span> "fn" "i" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"v" <span class="id" title="notation">::</span> "initi" "sz" "fn" ("i" <span class="id" title="notation">+</span> 1)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="997ae1befecae4ffbee27a3b20bcde7b" class="idref" href="#997ae1befecae4ffbee27a3b20bcde7b"><span class="id" title="definition">list</span></a><a id="997ae1befecae4ffbee27a3b20bcde7b" class="idref" href="#997ae1befecae4ffbee27a3b20bcde7b"><span class="id" title="definition">٠</span></a><a id="997ae1befecae4ffbee27a3b20bcde7b" class="idref" href="#997ae1befecae4ffbee27a3b20bcde7b"><span class="id" title="definition">initi</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "sz" "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#95db554ca7dd4b0623ae5aecec0225db"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#95db554ca7dd4b0623ae5aecec0225db"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#95db554ca7dd4b0623ae5aecec0225db"><span class="id" title="definition">initi₁</span></a> "sz" "fn" 0.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="7ffd03dfd85ef8095b804408576acc6e" class="idref" href="#7ffd03dfd85ef8095b804408576acc6e"><span class="id" title="definition">list</span></a><a id="7ffd03dfd85ef8095b804408576acc6e" class="idref" href="#7ffd03dfd85ef8095b804408576acc6e"><span class="id" title="definition">٠</span></a><a id="7ffd03dfd85ef8095b804408576acc6e" class="idref" href="#7ffd03dfd85ef8095b804408576acc6e"><span class="id" title="definition">init</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "sz" "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#997ae1befecae4ffbee27a3b20bcde7b"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#997ae1befecae4ffbee27a3b20bcde7b"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#997ae1befecae4ffbee27a3b20bcde7b"><span class="id" title="definition">initi</span></a> "sz" (<span class="id" title="notation">𝗳𝘂𝗻</span> "_i" <span class="id" title="notation">-&gt;</span> "fn" <span class="id" title="notation">()</span>).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="78f0b40092ba9309e928d5475b86e2b3" class="idref" href="#78f0b40092ba9309e928d5475b86e2b3"><span class="id" title="definition">list</span></a><a id="78f0b40092ba9309e928d5475b86e2b3" class="idref" href="#78f0b40092ba9309e928d5475b86e2b3"><span class="id" title="definition">٠</span></a><a id="78f0b40092ba9309e928d5475b86e2b3" class="idref" href="#78f0b40092ba9309e928d5475b86e2b3"><span class="id" title="definition">foldli₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "foldli" "fn" "i" "acc" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "t" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"acc"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> "v" <span class="id" title="notation">::</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"foldli" "fn" ("i" <span class="id" title="notation">+</span> 1) ("fn" "i" "acc" "v") "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="08b2fbd05fd7e0e1ba5fa9dd92d2bd96" class="idref" href="#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">list</span></a><a id="08b2fbd05fd7e0e1ba5fa9dd92d2bd96" class="idref" href="#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">٠</span></a><a id="08b2fbd05fd7e0e1ba5fa9dd92d2bd96" class="idref" href="#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">foldli</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#78f0b40092ba9309e928d5475b86e2b3"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#78f0b40092ba9309e928d5475b86e2b3"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#78f0b40092ba9309e928d5475b86e2b3"><span class="id" title="definition">foldli₁</span></a> "fn" 0.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="3180dbef024a2003c9e355648f3a8063" class="idref" href="#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">list</span></a><a id="3180dbef024a2003c9e355648f3a8063" class="idref" href="#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">٠</span></a><a id="3180dbef024a2003c9e355648f3a8063" class="idref" href="#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">foldl</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">foldli</span></a> (<span class="id" title="notation">𝗳𝘂𝗻</span> "_i" <span class="id" title="notation">-&gt;</span> "fn").<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="79327e148cf58006d2f62d494b73d76e" class="idref" href="#79327e148cf58006d2f62d494b73d76e"><span class="id" title="definition">list</span></a><a id="79327e148cf58006d2f62d494b73d76e" class="idref" href="#79327e148cf58006d2f62d494b73d76e"><span class="id" title="definition">٠</span></a><a id="79327e148cf58006d2f62d494b73d76e" class="idref" href="#79327e148cf58006d2f62d494b73d76e"><span class="id" title="definition">foldri₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "foldri" "fn" "i" "t" "acc" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "t" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"acc"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> "v" <span class="id" title="notation">::</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fn" "i" "v" ("foldri" "fn" ("i" <span class="id" title="notation">+</span> 1) "t" "acc")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="b63481828af213770ea6ec2c807edbbe" class="idref" href="#b63481828af213770ea6ec2c807edbbe"><span class="id" title="definition">list</span></a><a id="b63481828af213770ea6ec2c807edbbe" class="idref" href="#b63481828af213770ea6ec2c807edbbe"><span class="id" title="definition">٠</span></a><a id="b63481828af213770ea6ec2c807edbbe" class="idref" href="#b63481828af213770ea6ec2c807edbbe"><span class="id" title="definition">foldri</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#79327e148cf58006d2f62d494b73d76e"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#79327e148cf58006d2f62d494b73d76e"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#79327e148cf58006d2f62d494b73d76e"><span class="id" title="definition">foldri₁</span></a> "fn" 0.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="2266508aa7e28e0119e6b8d2218ae069" class="idref" href="#2266508aa7e28e0119e6b8d2218ae069"><span class="id" title="definition">list</span></a><a id="2266508aa7e28e0119e6b8d2218ae069" class="idref" href="#2266508aa7e28e0119e6b8d2218ae069"><span class="id" title="definition">٠</span></a><a id="2266508aa7e28e0119e6b8d2218ae069" class="idref" href="#2266508aa7e28e0119e6b8d2218ae069"><span class="id" title="definition">foldr</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#b63481828af213770ea6ec2c807edbbe"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#b63481828af213770ea6ec2c807edbbe"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#b63481828af213770ea6ec2c807edbbe"><span class="id" title="definition">foldri</span></a> (<span class="id" title="notation">𝗳𝘂𝗻</span> "_i" <span class="id" title="notation">-&gt;</span> "fn").<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="b05c40e02dd2d911616872b27978ccaa" class="idref" href="#b05c40e02dd2d911616872b27978ccaa"><span class="id" title="definition">list</span></a><a id="b05c40e02dd2d911616872b27978ccaa" class="idref" href="#b05c40e02dd2d911616872b27978ccaa"><span class="id" title="definition">٠</span></a><a id="b05c40e02dd2d911616872b27978ccaa" class="idref" href="#b05c40e02dd2d911616872b27978ccaa"><span class="id" title="definition">size</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">foldl</span></a> (<span class="id" title="notation">𝗳𝘂𝗻</span> "acc" <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span> "acc" <span class="id" title="notation">+</span> 1) 0 "t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="97850ffa876e3b43cb8cab05e1bf22f8" class="idref" href="#97850ffa876e3b43cb8cab05e1bf22f8"><span class="id" title="definition">list</span></a><a id="97850ffa876e3b43cb8cab05e1bf22f8" class="idref" href="#97850ffa876e3b43cb8cab05e1bf22f8"><span class="id" title="definition">٠</span></a><a id="97850ffa876e3b43cb8cab05e1bf22f8" class="idref" href="#97850ffa876e3b43cb8cab05e1bf22f8"><span class="id" title="definition">rev_app</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t1" "t2" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#3180dbef024a2003c9e355648f3a8063"><span class="id" title="definition">foldl</span></a> (<span class="id" title="notation">𝗳𝘂𝗻</span> "acc" "v" <span class="id" title="notation">-&gt;</span> "v" <span class="id" title="notation">::</span> "acc") "t2" "t1".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="553668b7477c6914a9820de3be64caca" class="idref" href="#553668b7477c6914a9820de3be64caca"><span class="id" title="definition">list</span></a><a id="553668b7477c6914a9820de3be64caca" class="idref" href="#553668b7477c6914a9820de3be64caca"><span class="id" title="definition">٠</span></a><a id="553668b7477c6914a9820de3be64caca" class="idref" href="#553668b7477c6914a9820de3be64caca"><span class="id" title="definition">rev</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#97850ffa876e3b43cb8cab05e1bf22f8"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#97850ffa876e3b43cb8cab05e1bf22f8"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#97850ffa876e3b43cb8cab05e1bf22f8"><span class="id" title="definition">rev_app</span></a> "t" <span class="id" title="notation">[]</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="c429f819ea5b8059f3b45e1e0f36ff03" class="idref" href="#c429f819ea5b8059f3b45e1e0f36ff03"><span class="id" title="definition">list</span></a><a id="c429f819ea5b8059f3b45e1e0f36ff03" class="idref" href="#c429f819ea5b8059f3b45e1e0f36ff03"><span class="id" title="definition">٠</span></a><a id="c429f819ea5b8059f3b45e1e0f36ff03" class="idref" href="#c429f819ea5b8059f3b45e1e0f36ff03"><span class="id" title="definition">app</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t1" "t2" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#2266508aa7e28e0119e6b8d2218ae069"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#2266508aa7e28e0119e6b8d2218ae069"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#2266508aa7e28e0119e6b8d2218ae069"><span class="id" title="definition">foldr</span></a> (<span class="id" title="notation">𝗳𝘂𝗻</span> "v" "acc" <span class="id" title="notation">-&gt;</span> "v" <span class="id" title="notation">::</span> "acc") "t1" "t2".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="9db6e7141549617cdcc22b39c4e20979" class="idref" href="#9db6e7141549617cdcc22b39c4e20979"><span class="id" title="definition">list</span></a><a id="9db6e7141549617cdcc22b39c4e20979" class="idref" href="#9db6e7141549617cdcc22b39c4e20979"><span class="id" title="definition">٠</span></a><a id="9db6e7141549617cdcc22b39c4e20979" class="idref" href="#9db6e7141549617cdcc22b39c4e20979"><span class="id" title="definition">snoc</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#c429f819ea5b8059f3b45e1e0f36ff03"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#c429f819ea5b8059f3b45e1e0f36ff03"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#c429f819ea5b8059f3b45e1e0f36ff03"><span class="id" title="definition">app</span></a> "t" (<a class="idref" href="zoo_std.list__code.html#ddda2d643efe0428e71eed205ac31945"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#ddda2d643efe0428e71eed205ac31945"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#ddda2d643efe0428e71eed205ac31945"><span class="id" title="definition">singleton</span></a> "v").<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="29b8ca39a4282bbd4f36f04193808324" class="idref" href="#29b8ca39a4282bbd4f36f04193808324"><span class="id" title="definition">list</span></a><a id="29b8ca39a4282bbd4f36f04193808324" class="idref" href="#29b8ca39a4282bbd4f36f04193808324"><span class="id" title="definition">٠</span></a><a id="29b8ca39a4282bbd4f36f04193808324" class="idref" href="#29b8ca39a4282bbd4f36f04193808324"><span class="id" title="definition">iteri</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#08b2fbd05fd7e0e1ba5fa9dd92d2bd96"><span class="id" title="definition">foldli</span></a> (<span class="id" title="notation">𝗳𝘂𝗻</span> "i" <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span> "fn" "i") <span class="id" title="notation">()</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="8f1ff103e91acca5894016ee31e816b0" class="idref" href="#8f1ff103e91acca5894016ee31e816b0"><span class="id" title="definition">list</span></a><a id="8f1ff103e91acca5894016ee31e816b0" class="idref" href="#8f1ff103e91acca5894016ee31e816b0"><span class="id" title="definition">٠</span></a><a id="8f1ff103e91acca5894016ee31e816b0" class="idref" href="#8f1ff103e91acca5894016ee31e816b0"><span class="id" title="definition">iter</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#29b8ca39a4282bbd4f36f04193808324"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#29b8ca39a4282bbd4f36f04193808324"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#29b8ca39a4282bbd4f36f04193808324"><span class="id" title="definition">iteri</span></a> (<span class="id" title="notation">𝗳𝘂𝗻</span> "_i" <span class="id" title="notation">-&gt;</span> "fn").<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="dcfef37762177e993d6a59fcc6654db6" class="idref" href="#dcfef37762177e993d6a59fcc6654db6"><span class="id" title="definition">list</span></a><a id="dcfef37762177e993d6a59fcc6654db6" class="idref" href="#dcfef37762177e993d6a59fcc6654db6"><span class="id" title="definition">٠</span></a><a id="dcfef37762177e993d6a59fcc6654db6" class="idref" href="#dcfef37762177e993d6a59fcc6654db6"><span class="id" title="definition">mapi₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "mapi" "fn" "i" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "t" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">[]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> "v" <span class="id" title="notation">::</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "v" <span class="id" title="notation">=</span> "fn" "i" "v" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"v" <span class="id" title="notation">::</span> "mapi" "fn" ("i" <span class="id" title="notation">+</span> 1) "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="e5651f54a2610c8df7feddc52adff0f6" class="idref" href="#e5651f54a2610c8df7feddc52adff0f6"><span class="id" title="definition">list</span></a><a id="e5651f54a2610c8df7feddc52adff0f6" class="idref" href="#e5651f54a2610c8df7feddc52adff0f6"><span class="id" title="definition">٠</span></a><a id="e5651f54a2610c8df7feddc52adff0f6" class="idref" href="#e5651f54a2610c8df7feddc52adff0f6"><span class="id" title="definition">mapi</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#dcfef37762177e993d6a59fcc6654db6"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#dcfef37762177e993d6a59fcc6654db6"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#dcfef37762177e993d6a59fcc6654db6"><span class="id" title="definition">mapi₁</span></a> "fn" 0.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="d890de280c14d12e4f1b212a507e17ba" class="idref" href="#d890de280c14d12e4f1b212a507e17ba"><span class="id" title="definition">list</span></a><a id="d890de280c14d12e4f1b212a507e17ba" class="idref" href="#d890de280c14d12e4f1b212a507e17ba"><span class="id" title="definition">٠</span></a><a id="d890de280c14d12e4f1b212a507e17ba" class="idref" href="#d890de280c14d12e4f1b212a507e17ba"><span class="id" title="definition">map</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.list__code.html#e5651f54a2610c8df7feddc52adff0f6"><span class="id" title="definition">list</span></a><a class="idref" href="zoo_std.list__code.html#e5651f54a2610c8df7feddc52adff0f6"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.list__code.html#e5651f54a2610c8df7feddc52adff0f6"><span class="id" title="definition">mapi</span></a> (<span class="id" title="notation">𝗳𝘂𝗻</span> "_i" <span class="id" title="notation">-&gt;</span> "fn").<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="1795cb14373512cd7a6669b8e23fe298" class="idref" href="#1795cb14373512cd7a6669b8e23fe298"><span class="id" title="definition">list</span></a><a id="1795cb14373512cd7a6669b8e23fe298" class="idref" href="#1795cb14373512cd7a6669b8e23fe298"><span class="id" title="definition">٠</span></a><a id="1795cb14373512cd7a6669b8e23fe298" class="idref" href="#1795cb14373512cd7a6669b8e23fe298"><span class="id" title="definition">forall</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "forall" "pred" "param" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "param" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">true</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> "v" <span class="id" title="notation">::</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"pred" "v" <span class="id" title="notation">𝗮𝗻𝗱</span> "forall" "pred" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="3d2867f84078f6acf7cc97f56904fc84" class="idref" href="#3d2867f84078f6acf7cc97f56904fc84"><span class="id" title="definition">list</span></a><a id="3d2867f84078f6acf7cc97f56904fc84" class="idref" href="#3d2867f84078f6acf7cc97f56904fc84"><span class="id" title="definition">٠</span></a><a id="3d2867f84078f6acf7cc97f56904fc84" class="idref" href="#3d2867f84078f6acf7cc97f56904fc84"><span class="id" title="definition">exists</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "exists" "pred" "param" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "param" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">false</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> "v" <span class="id" title="notation">::</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"pred" "v" <span class="id" title="notation">𝗼𝗿</span> "exists" "pred" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

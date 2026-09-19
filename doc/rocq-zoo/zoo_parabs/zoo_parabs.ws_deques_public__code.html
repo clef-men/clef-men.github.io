@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_parabs.ws_deques_public__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_parabs.ws_deques_public__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_saturn.ws_deque_2</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.array</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.random</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="707d42d655c91aa4ac2c9cb7680512ed" class="idref" href="#707d42d655c91aa4ac2c9cb7680512ed"><span class="id" title="definition">ws_deques_public</span></a><a id="707d42d655c91aa4ac2c9cb7680512ed" class="idref" href="#707d42d655c91aa4ac2c9cb7680512ed"><span class="id" title="definition">٠</span></a><a id="707d42d655c91aa4ac2c9cb7680512ed" class="idref" href="#707d42d655c91aa4ac2c9cb7680512ed"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "sz" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_init</span> "sz" <span class="id" title="definition">ws_deque_2</span><span class="id" title="definition">٠</span><span class="id" title="definition">create</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="5eef21c69d63a62519d4fe4528546bc3" class="idref" href="#5eef21c69d63a62519d4fe4528546bc3"><span class="id" title="definition">ws_deques_public</span></a><a id="5eef21c69d63a62519d4fe4528546bc3" class="idref" href="#5eef21c69d63a62519d4fe4528546bc3"><span class="id" title="definition">٠</span></a><a id="5eef21c69d63a62519d4fe4528546bc3" class="idref" href="#5eef21c69d63a62519d4fe4528546bc3"><span class="id" title="definition">size</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">size</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="2dd717658cf4fe4509804a24bb33eff1" class="idref" href="#2dd717658cf4fe4509804a24bb33eff1"><span class="id" title="definition">ws_deques_public</span></a><a id="2dd717658cf4fe4509804a24bb33eff1" class="idref" href="#2dd717658cf4fe4509804a24bb33eff1"><span class="id" title="definition">٠</span></a><a id="2dd717658cf4fe4509804a24bb33eff1" class="idref" href="#2dd717658cf4fe4509804a24bb33eff1"><span class="id" title="definition">block</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "_t" "_i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">()</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="6c6bb7666159d1ac6338f10104d2887e" class="idref" href="#6c6bb7666159d1ac6338f10104d2887e"><span class="id" title="definition">ws_deques_public</span></a><a id="6c6bb7666159d1ac6338f10104d2887e" class="idref" href="#6c6bb7666159d1ac6338f10104d2887e"><span class="id" title="definition">٠</span></a><a id="6c6bb7666159d1ac6338f10104d2887e" class="idref" href="#6c6bb7666159d1ac6338f10104d2887e"><span class="id" title="definition">unblock</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "_t" "_i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">()</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="292238cff3c178e52175b2c0eec935d4" class="idref" href="#292238cff3c178e52175b2c0eec935d4"><span class="id" title="definition">ws_deques_public</span></a><a id="292238cff3c178e52175b2c0eec935d4" class="idref" href="#292238cff3c178e52175b2c0eec935d4"><span class="id" title="definition">٠</span></a><a id="292238cff3c178e52175b2c0eec935d4" class="idref" href="#292238cff3c178e52175b2c0eec935d4"><span class="id" title="definition">push</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "queue" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "t" "i" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">ws_deque_2</span><span class="id" title="definition">٠</span><span class="id" title="definition">push</span> "queue" "v".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="09872e18a5192b3db90195326b292c9a" class="idref" href="#09872e18a5192b3db90195326b292c9a"><span class="id" title="definition">ws_deques_public</span></a><a id="09872e18a5192b3db90195326b292c9a" class="idref" href="#09872e18a5192b3db90195326b292c9a"><span class="id" title="definition">٠</span></a><a id="09872e18a5192b3db90195326b292c9a" class="idref" href="#09872e18a5192b3db90195326b292c9a"><span class="id" title="definition">pop</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "queue" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "t" "i" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">ws_deque_2</span><span class="id" title="definition">٠</span><span class="id" title="definition">pop</span> "queue".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="7788d5bb60cd80ebb1c76a9b63de3525" class="idref" href="#7788d5bb60cd80ebb1c76a9b63de3525"><span class="id" title="definition">ws_deques_public</span></a><a id="7788d5bb60cd80ebb1c76a9b63de3525" class="idref" href="#7788d5bb60cd80ebb1c76a9b63de3525"><span class="id" title="definition">٠</span></a><a id="7788d5bb60cd80ebb1c76a9b63de3525" class="idref" href="#7788d5bb60cd80ebb1c76a9b63de3525"><span class="id" title="definition">steal_to</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "_i" "j" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "queue" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "t" "j" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">ws_deque_2</span><span class="id" title="definition">٠</span><span class="id" title="definition">steal</span> "queue".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="38d0fcca14b176dc7ae91e372acc1ddd" class="idref" href="#38d0fcca14b176dc7ae91e372acc1ddd"><span class="id" title="definition">ws_deques_public</span></a><a id="38d0fcca14b176dc7ae91e372acc1ddd" class="idref" href="#38d0fcca14b176dc7ae91e372acc1ddd"><span class="id" title="definition">٠</span></a><a id="38d0fcca14b176dc7ae91e372acc1ddd" class="idref" href="#38d0fcca14b176dc7ae91e372acc1ddd"><span class="id" title="definition">steal_as₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "steal_as" "t" "sz" "i" "round" "n" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> "n" <span class="id" title="notation">≤</span> 0 <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "j" <span class="id" title="notation">=</span> <span class="id" title="notation">(</span>"i" <span class="id" title="notation">+</span> 1 <span class="id" title="notation">+</span> <span class="id" title="definition">random</span><span class="id" title="definition">٠</span><span class="id" title="definition">round</span><span class="id" title="definition">٠</span><span class="id" title="definition">next</span> "round"<span class="id" title="notation">)</span> <span class="id" title="notation">𝗿𝗲𝗺</span> "sz" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <a class="idref" href="zoo_parabs.ws_deques_public__code.html#7788d5bb60cd80ebb1c76a9b63de3525"><span class="id" title="definition">ws_deques_public</span></a><a class="idref" href="zoo_parabs.ws_deques_public__code.html#7788d5bb60cd80ebb1c76a9b63de3525"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.ws_deques_public__code.html#7788d5bb60cd80ebb1c76a9b63de3525"><span class="id" title="definition">steal_to</span></a> "t" "i" "j" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">None</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"steal_as" "t" "sz" "i" "round" ("n" <span class="id" title="notation">-</span> 1)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">𝗮𝘀</span> "res" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"res"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="3948fc7d0b64c0a47df007165866676d" class="idref" href="#3948fc7d0b64c0a47df007165866676d"><span class="id" title="definition">ws_deques_public</span></a><a id="3948fc7d0b64c0a47df007165866676d" class="idref" href="#3948fc7d0b64c0a47df007165866676d"><span class="id" title="definition">٠</span></a><a id="3948fc7d0b64c0a47df007165866676d" class="idref" href="#3948fc7d0b64c0a47df007165866676d"><span class="id" title="definition">steal_as</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" "round" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "sz" <span class="id" title="notation">=</span> <a class="idref" href="zoo_parabs.ws_deques_public__code.html#5eef21c69d63a62519d4fe4528546bc3"><span class="id" title="definition">ws_deques_public</span></a><a class="idref" href="zoo_parabs.ws_deques_public__code.html#5eef21c69d63a62519d4fe4528546bc3"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.ws_deques_public__code.html#5eef21c69d63a62519d4fe4528546bc3"><span class="id" title="definition">size</span></a> "t" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.ws_deques_public__code.html#38d0fcca14b176dc7ae91e372acc1ddd"><span class="id" title="definition">ws_deques_public</span></a><a class="idref" href="zoo_parabs.ws_deques_public__code.html#38d0fcca14b176dc7ae91e372acc1ddd"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.ws_deques_public__code.html#38d0fcca14b176dc7ae91e372acc1ddd"><span class="id" title="definition">steal_as₁</span></a> "t" "sz" "i" "round" ("sz" <span class="id" title="notation">-</span> 1).<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

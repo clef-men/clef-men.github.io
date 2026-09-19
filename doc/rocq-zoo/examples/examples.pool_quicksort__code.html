@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>examples.pool_quicksort__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">examples.pool_quicksort__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_parabs.pool</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.array</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="4002dc95511601a83884d7717b214993" class="idref" href="#4002dc95511601a83884d7717b214993"><span class="id" title="definition">pool_quicksort</span></a><a id="4002dc95511601a83884d7717b214993" class="idref" href="#4002dc95511601a83884d7717b214993"><span class="id" title="definition">٠</span></a><a id="4002dc95511601a83884d7717b214993" class="idref" href="#4002dc95511601a83884d7717b214993"><span class="id" title="definition">main₂</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "main" "ctx" "arr" "i" "sz" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> 1 <span class="id" title="notation">&lt;</span> "sz" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "pivot" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">partition</span> "arr" "i" "sz" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">pool</span><span class="id" title="definition">٠</span><span class="id" title="definition">async</span> "ctx" (<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span> "main" "ctx" "arr" "i" ("pivot" <span class="id" title="notation">-</span> "i")) <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">pool</span><span class="id" title="definition">٠</span><span class="id" title="definition">async</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ctx"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"main" "ctx" "arr" ("pivot" <span class="id" title="notation">+</span> 1) ("sz" <span class="id" title="notation">-</span> <span class="id" title="notation">(</span>"pivot" <span class="id" title="notation">-</span> "i"<span class="id" title="notation">)</span> <span class="id" title="notation">-</span> 1))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="f2d2fe0cd8636f7123cecefd7ad81083" class="idref" href="#f2d2fe0cd8636f7123cecefd7ad81083"><span class="id" title="definition">pool_quicksort</span></a><a id="f2d2fe0cd8636f7123cecefd7ad81083" class="idref" href="#f2d2fe0cd8636f7123cecefd7ad81083"><span class="id" title="definition">٠</span></a><a id="f2d2fe0cd8636f7123cecefd7ad81083" class="idref" href="#f2d2fe0cd8636f7123cecefd7ad81083"><span class="id" title="definition">main₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" "arr" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="examples.pool_quicksort__code.html#4002dc95511601a83884d7717b214993"><span class="id" title="definition">pool_quicksort</span></a><a class="idref" href="examples.pool_quicksort__code.html#4002dc95511601a83884d7717b214993"><span class="id" title="definition">٠</span></a><a class="idref" href="examples.pool_quicksort__code.html#4002dc95511601a83884d7717b214993"><span class="id" title="definition">main₂</span></a> "ctx" "arr" 0 (<span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">size</span> "arr").<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="02cab4a0b7a1cff376acb2c537e43c4f" class="idref" href="#02cab4a0b7a1cff376acb2c537e43c4f"><span class="id" title="definition">pool_quicksort</span></a><a id="02cab4a0b7a1cff376acb2c537e43c4f" class="idref" href="#02cab4a0b7a1cff376acb2c537e43c4f"><span class="id" title="definition">٠</span></a><a id="02cab4a0b7a1cff376acb2c537e43c4f" class="idref" href="#02cab4a0b7a1cff376acb2c537e43c4f"><span class="id" title="definition">main</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "num_worker" "arr" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">pool</span><span class="id" title="definition">٠</span><span class="id" title="definition">run</span> "num_worker" (<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span> <a class="idref" href="examples.pool_quicksort__code.html#f2d2fe0cd8636f7123cecefd7ad81083"><span class="id" title="definition">pool_quicksort</span></a><a class="idref" href="examples.pool_quicksort__code.html#f2d2fe0cd8636f7123cecefd7ad81083"><span class="id" title="definition">٠</span></a><a class="idref" href="examples.pool_quicksort__code.html#f2d2fe0cd8636f7123cecefd7ad81083"><span class="id" title="definition">main₁</span></a> "ctx" "arr").<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

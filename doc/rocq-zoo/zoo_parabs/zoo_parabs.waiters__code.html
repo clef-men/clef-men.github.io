@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_parabs.waiters__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_parabs.waiters__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_parabs.waiter.html#"><span class="id" title="library">zoo_parabs.waiter</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_saturn.queue_mpmc_1</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.array</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="3fabd662f88f2a10ea97642c76b2b554" class="idref" href="#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">&quot;</span></a>'waiters٠waiters'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_parabs.waiters.t" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_proj</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="17040d6b144d83cf6b984c43e70f867e" class="idref" href="#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">&quot;</span></a>'waiters٠queue'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_parabs.waiters.t" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_proj</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="600ef7b08323b74a7f4fb10c499a17da" class="idref" href="#600ef7b08323b74a7f4fb10c499a17da"><span class="id" title="definition">waiters</span></a><a id="600ef7b08323b74a7f4fb10c499a17da" class="idref" href="#600ef7b08323b74a7f4fb10c499a17da"><span class="id" title="definition">٠</span></a><a id="600ef7b08323b74a7f4fb10c499a17da" class="idref" href="#600ef7b08323b74a7f4fb10c499a17da"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "sz" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_init</span> "sz" <a class="idref" href="zoo_parabs.waiter__code.html#6aad352be2e853032fe8a9bc8167bbc5"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter__code.html#6aad352be2e853032fe8a9bc8167bbc5"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.waiter__code.html#6aad352be2e853032fe8a9bc8167bbc5"><span class="id" title="definition">create</span></a><span class="id" title="notation">,</span> <span class="id" title="definition">queue_mpmc_1</span><span class="id" title="definition">٠</span><span class="id" title="definition">create</span> <span class="id" title="notation">()</span> <span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="0759f12b335a4d7b3fd3fb7673a59446" class="idref" href="#0759f12b335a4d7b3fd3fb7673a59446"><span class="id" title="definition">waiters</span></a><a id="0759f12b335a4d7b3fd3fb7673a59446" class="idref" href="#0759f12b335a4d7b3fd3fb7673a59446"><span class="id" title="definition">٠</span></a><a id="0759f12b335a4d7b3fd3fb7673a59446" class="idref" href="#0759f12b335a4d7b3fd3fb7673a59446"><span class="id" title="definition">notify</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "waiter" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "t"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">waiters</span></a><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">waiters</span></a><span class="id" title="notation">&gt;</span> "i" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">notify</span></a> "waiter" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">()</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="b1a46c658b16d2405605bb9a9f30d9ab" class="idref" href="#b1a46c658b16d2405605bb9a9f30d9ab"><span class="id" title="definition">waiters</span></a><a id="b1a46c658b16d2405605bb9a9f30d9ab" class="idref" href="#b1a46c658b16d2405605bb9a9f30d9ab"><span class="id" title="definition">٠</span></a><a id="b1a46c658b16d2405605bb9a9f30d9ab" class="idref" href="#b1a46c658b16d2405605bb9a9f30d9ab"><span class="id" title="definition">notify_one</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "notify_one" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="definition">queue_mpmc_1</span><span class="id" title="definition">٠</span><span class="id" title="definition">pop</span> "t"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">waiters</span></a><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">queue</span></a><span class="id" title="notation">&gt;</span> <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">None</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">()</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">Some</span> "waiter" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> <span class="id" title="notation">~</span> <a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">notify</span></a> "waiter" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"notify_one" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="fa16cabf77d6a99a6ef624e7f29a42b0" class="idref" href="#fa16cabf77d6a99a6ef624e7f29a42b0"><span class="id" title="definition">waiters</span></a><a id="fa16cabf77d6a99a6ef624e7f29a42b0" class="idref" href="#fa16cabf77d6a99a6ef624e7f29a42b0"><span class="id" title="definition">٠</span></a><a id="fa16cabf77d6a99a6ef624e7f29a42b0" class="idref" href="#fa16cabf77d6a99a6ef624e7f29a42b0"><span class="id" title="definition">notify_all</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "notify_all" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="definition">queue_mpmc_1</span><span class="id" title="definition">٠</span><span class="id" title="definition">pop</span> "t"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">waiters</span></a><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">queue</span></a><span class="id" title="notation">&gt;</span> <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">None</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">()</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">Some</span> "waiter" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.waiter__code.html#0288587ec35cd266aacf1080185468be"><span class="id" title="definition">notify</span></a> "waiter" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"notify_all" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="b2e15fef49807853ed60fa3e4c0da2f8" class="idref" href="#b2e15fef49807853ed60fa3e4c0da2f8"><span class="id" title="definition">waiters</span></a><a id="b2e15fef49807853ed60fa3e4c0da2f8" class="idref" href="#b2e15fef49807853ed60fa3e4c0da2f8"><span class="id" title="definition">٠</span></a><a id="b2e15fef49807853ed60fa3e4c0da2f8" class="idref" href="#b2e15fef49807853ed60fa3e4c0da2f8"><span class="id" title="definition">prepare_wait</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "waiter" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "t"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">waiters</span></a><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">waiters</span></a><span class="id" title="notation">&gt;</span> "i" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter__code.html#32f1a8c258d3cb45b84942cf1ab225c2"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter__code.html#32f1a8c258d3cb45b84942cf1ab225c2"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.waiter__code.html#32f1a8c258d3cb45b84942cf1ab225c2"><span class="id" title="definition">prepare_wait</span></a> "waiter" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">queue_mpmc_1</span><span class="id" title="definition">٠</span><span class="id" title="definition">push</span> "t"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">waiters</span></a><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_parabs.waiters__code.html#17040d6b144d83cf6b984c43e70f867e"><span class="id" title="notation">queue</span></a><span class="id" title="notation">&gt;</span> "waiter".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="3ff2b001fadd531287c241d1bb51adb1" class="idref" href="#3ff2b001fadd531287c241d1bb51adb1"><span class="id" title="definition">waiters</span></a><a id="3ff2b001fadd531287c241d1bb51adb1" class="idref" href="#3ff2b001fadd531287c241d1bb51adb1"><span class="id" title="definition">٠</span></a><a id="3ff2b001fadd531287c241d1bb51adb1" class="idref" href="#3ff2b001fadd531287c241d1bb51adb1"><span class="id" title="definition">cancel_wait</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "waiter" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "t"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">waiters</span></a><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">waiters</span></a><span class="id" title="notation">&gt;</span> "i" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter__code.html#41589da8c1e5790496d1dbd4143764b4"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter__code.html#41589da8c1e5790496d1dbd4143764b4"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.waiter__code.html#41589da8c1e5790496d1dbd4143764b4"><span class="id" title="definition">cancel_wait</span></a> "waiter".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="ca961214b130693847bd9f6bd233a7f4" class="idref" href="#ca961214b130693847bd9f6bd233a7f4"><span class="id" title="definition">waiters</span></a><a id="ca961214b130693847bd9f6bd233a7f4" class="idref" href="#ca961214b130693847bd9f6bd233a7f4"><span class="id" title="definition">٠</span></a><a id="ca961214b130693847bd9f6bd233a7f4" class="idref" href="#ca961214b130693847bd9f6bd233a7f4"><span class="id" title="definition">commit_wait</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "i" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "waiter" <span class="id" title="notation">=</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "t"<span class="id" title="notation">.&lt;</span><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">waiters</span></a><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_parabs.waiters__code.html#3fabd662f88f2a10ea97642c76b2b554"><span class="id" title="notation">waiters</span></a><span class="id" title="notation">&gt;</span> "i" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter__code.html#96eef2edd1113ce383cf06fc1ba44556"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter__code.html#96eef2edd1113ce383cf06fc1ba44556"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.waiter__code.html#96eef2edd1113ce383cf06fc1ba44556"><span class="id" title="definition">commit_wait</span></a> "waiter".<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

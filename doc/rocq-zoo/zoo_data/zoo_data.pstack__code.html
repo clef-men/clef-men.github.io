@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_data.pstack__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_data.pstack__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.list</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="390a995bf43de84267904343bc9156c0" class="idref" href="#390a995bf43de84267904343bc9156c0"><span class="id" title="definition">pstack</span></a><a id="390a995bf43de84267904343bc9156c0" class="idref" href="#390a995bf43de84267904343bc9156c0"><span class="id" title="definition">٠</span></a><a id="390a995bf43de84267904343bc9156c0" class="idref" href="#390a995bf43de84267904343bc9156c0"><span class="id" title="definition">empty</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">[]</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="3b8427c38e80591aa6a0b0415900d6e3" class="idref" href="#3b8427c38e80591aa6a0b0415900d6e3"><span class="id" title="definition">pstack</span></a><a id="3b8427c38e80591aa6a0b0415900d6e3" class="idref" href="#3b8427c38e80591aa6a0b0415900d6e3"><span class="id" title="definition">٠</span></a><a id="3b8427c38e80591aa6a0b0415900d6e3" class="idref" href="#3b8427c38e80591aa6a0b0415900d6e3"><span class="id" title="definition">is_empty</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="definition">list</span><span class="id" title="definition">٠</span><span class="id" title="definition">is_empty</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="a6e09b5c2825c3d47d83d204c28d6971" class="idref" href="#a6e09b5c2825c3d47d83d204c28d6971"><span class="id" title="definition">pstack</span></a><a id="a6e09b5c2825c3d47d83d204c28d6971" class="idref" href="#a6e09b5c2825c3d47d83d204c28d6971"><span class="id" title="definition">٠</span></a><a id="a6e09b5c2825c3d47d83d204c28d6971" class="idref" href="#a6e09b5c2825c3d47d83d204c28d6971"><span class="id" title="definition">push</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"v" <span class="id" title="notation">::</span> "t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="4c9cf0e4db6d2e9cbd6df87388305b2d" class="idref" href="#4c9cf0e4db6d2e9cbd6df87388305b2d"><span class="id" title="definition">pstack</span></a><a id="4c9cf0e4db6d2e9cbd6df87388305b2d" class="idref" href="#4c9cf0e4db6d2e9cbd6df87388305b2d"><span class="id" title="definition">٠</span></a><a id="4c9cf0e4db6d2e9cbd6df87388305b2d" class="idref" href="#4c9cf0e4db6d2e9cbd6df87388305b2d"><span class="id" title="definition">pop</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "param" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> "param" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">[]</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> "v" <span class="id" title="notation">::</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">Some</span><span class="id" title="notation">(</span> <span class="id" title="notation">(</span> "v"<span class="id" title="notation">,</span> "t" <span class="id" title="notation">)</span> <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

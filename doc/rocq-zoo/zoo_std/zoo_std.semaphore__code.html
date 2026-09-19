@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.semaphore__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_std.semaphore__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.condition.html#"><span class="id" title="library">zoo_std.condition</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.mutex.html#"><span class="id" title="library">zoo_std.mutex</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="ce29994c50447b1795e0c805f8130b3f" class="idref" href="#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">&quot;</span></a>'semaphore٠mutex'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.semaphore.t" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="f3332819aedffae697ded067798a1f74" class="idref" href="#f3332819aedffae697ded067798a1f74"><span class="id" title="notation">&quot;</span></a>'semaphore٠condition'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.semaphore.t" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="2661e8ec12db84be21b70513fb8362aa" class="idref" href="#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">&quot;</span></a>'semaphore٠count'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.semaphore.t" 2<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="1e35eeb3ef0518fb703f8509622c1342" class="idref" href="#1e35eeb3ef0518fb703f8509622c1342"><span class="id" title="definition">semaphore</span></a><a id="1e35eeb3ef0518fb703f8509622c1342" class="idref" href="#1e35eeb3ef0518fb703f8509622c1342"><span class="id" title="definition">٠</span></a><a id="1e35eeb3ef0518fb703f8509622c1342" class="idref" href="#1e35eeb3ef0518fb703f8509622c1342"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "cap" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">{</span> <a class="idref" href="zoo_std.mutex__code.html#046d95cb0893fedbbf91574b07dbe79a"><span class="id" title="definition">mutex</span></a><a class="idref" href="zoo_std.mutex__code.html#046d95cb0893fedbbf91574b07dbe79a"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.mutex__code.html#046d95cb0893fedbbf91574b07dbe79a"><span class="id" title="definition">create</span></a> <span class="id" title="notation">()</span><span class="id" title="notation">,</span> <a class="idref" href="zoo_std.condition__code.html#104a293a486d7b8d801146acff0cf748"><span class="id" title="definition">condition</span></a><a class="idref" href="zoo_std.condition__code.html#104a293a486d7b8d801146acff0cf748"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.condition__code.html#104a293a486d7b8d801146acff0cf748"><span class="id" title="definition">create</span></a> <span class="id" title="notation">()</span><span class="id" title="notation">,</span> "cap" <span class="id" title="notation">-</span> 1 <span class="id" title="notation">}</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="ed7f514c4a53a3588d05003e15df5444" class="idref" href="#ed7f514c4a53a3588d05003e15df5444"><span class="id" title="definition">semaphore</span></a><a id="ed7f514c4a53a3588d05003e15df5444" class="idref" href="#ed7f514c4a53a3588d05003e15df5444"><span class="id" title="definition">٠</span></a><a id="ed7f514c4a53a3588d05003e15df5444" class="idref" href="#ed7f514c4a53a3588d05003e15df5444"><span class="id" title="definition">try_lock</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">mutex</span></a><a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">protect</span></a> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">mutex</span></a><span class="id" title="notation">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "cnt" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">count</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> 0 <span class="id" title="notation">&lt;</span> "cnt" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t" <span class="id" title="notation">&lt;-{</span><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">count</span></a><span class="id" title="notation">}</span> "cnt" <span class="id" title="notation">-</span> 1 <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">true</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">false</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="78c203462bdc1b2af576a2772e33bd84" class="idref" href="#78c203462bdc1b2af576a2772e33bd84"><span class="id" title="definition">semaphore</span></a><a id="78c203462bdc1b2af576a2772e33bd84" class="idref" href="#78c203462bdc1b2af576a2772e33bd84"><span class="id" title="definition">٠</span></a><a id="78c203462bdc1b2af576a2772e33bd84" class="idref" href="#78c203462bdc1b2af576a2772e33bd84"><span class="id" title="definition">lock</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">mutex</span></a><a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">protect</span></a> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">mutex</span></a><span class="id" title="notation">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.condition__code.html#dee6109cc9bc6f4731d43e52edc80937"><span class="id" title="definition">condition</span></a><a class="idref" href="zoo_std.condition__code.html#dee6109cc9bc6f4731d43e52edc80937"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.condition__code.html#dee6109cc9bc6f4731d43e52edc80937"><span class="id" title="definition">wait_until</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#f3332819aedffae697ded067798a1f74"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#f3332819aedffae697ded067798a1f74"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#f3332819aedffae697ded067798a1f74"><span class="id" title="notation">condition</span></a><span class="id" title="notation">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">mutex</span></a><span class="id" title="notation">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span> 0 <span class="id" title="notation">&lt;</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">count</span></a><span class="id" title="notation">}</span>) <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t" <span class="id" title="notation">&lt;-{</span><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">count</span></a><span class="id" title="notation">}</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">count</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">-</span> 1).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="65aecf90ba9b2abad717b91fbad51a78" class="idref" href="#65aecf90ba9b2abad717b91fbad51a78"><span class="id" title="definition">semaphore</span></a><a id="65aecf90ba9b2abad717b91fbad51a78" class="idref" href="#65aecf90ba9b2abad717b91fbad51a78"><span class="id" title="definition">٠</span></a><a id="65aecf90ba9b2abad717b91fbad51a78" class="idref" href="#65aecf90ba9b2abad717b91fbad51a78"><span class="id" title="definition">unlock</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">mutex</span></a><a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.mutex__code.html#9765db2a050600cfcbf5b99eaa8b2bde"><span class="id" title="definition">protect</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#ce29994c50447b1795e0c805f8130b3f"><span class="id" title="notation">mutex</span></a><span class="id" title="notation">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span> "t" <span class="id" title="notation">&lt;-{</span><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">count</span></a><span class="id" title="notation">}</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#2661e8ec12db84be21b70513fb8362aa"><span class="id" title="notation">count</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">+</span> 1) <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.condition__code.html#2a0463465609e17aed66accaded43217"><span class="id" title="definition">condition</span></a><a class="idref" href="zoo_std.condition__code.html#2a0463465609e17aed66accaded43217"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.condition__code.html#2a0463465609e17aed66accaded43217"><span class="id" title="definition">notify</span></a> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.semaphore__code.html#f3332819aedffae697ded067798a1f74"><span class="id" title="notation">semaphore</span></a><a class="idref" href="zoo_std.semaphore__code.html#f3332819aedffae697ded067798a1f74"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.semaphore__code.html#f3332819aedffae697ded067798a1f74"><span class="id" title="notation">condition</span></a><span class="id" title="notation">}</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_parabs.future__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_parabs.future__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_parabs.pool.html#"><span class="id" title="library">zoo_parabs.pool</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.ivar_4</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="1a74ed82277a2e22cb9ca73692e9e677" class="idref" href="#1a74ed82277a2e22cb9ca73692e9e677"><span class="id" title="definition">future</span></a><a id="1a74ed82277a2e22cb9ca73692e9e677" class="idref" href="#1a74ed82277a2e22cb9ca73692e9e677"><span class="id" title="definition">٠</span></a><a id="1a74ed82277a2e22cb9ca73692e9e677" class="idref" href="#1a74ed82277a2e22cb9ca73692e9e677"><span class="id" title="definition">return</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="definition">ivar_4</span><span class="id" title="definition">٠</span><span class="id" title="definition">make</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="d53e71f95df661c92c30bbcc2f8aad1d" class="idref" href="#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">future</span></a><a id="d53e71f95df661c92c30bbcc2f8aad1d" class="idref" href="#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">٠</span></a><a id="d53e71f95df661c92c30bbcc2f8aad1d" class="idref" href="#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">set</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" "t" "res" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">ivar_4</span><span class="id" title="definition">٠</span><span class="id" title="definition">notify</span> "t" "ctx" "res".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="d7827525c322511b1cb8d3bc93adde55" class="idref" href="#d7827525c322511b1cb8d3bc93adde55"><span class="id" title="definition">future</span></a><a id="d7827525c322511b1cb8d3bc93adde55" class="idref" href="#d7827525c322511b1cb8d3bc93adde55"><span class="id" title="definition">٠</span></a><a id="d7827525c322511b1cb8d3bc93adde55" class="idref" href="#d7827525c322511b1cb8d3bc93adde55"><span class="id" title="definition">async</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" "task" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "t" <span class="id" title="notation">=</span> <span class="id" title="definition">ivar_4</span><span class="id" title="definition">٠</span><span class="id" title="definition">create</span> <span class="id" title="notation">()</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#6cbe32e82e830883dd210499e83de726"><span class="id" title="definition">pool</span></a><a class="idref" href="zoo_parabs.pool__code.html#6cbe32e82e830883dd210499e83de726"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.pool__code.html#6cbe32e82e830883dd210499e83de726"><span class="id" title="definition">async</span></a> "ctx" (<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span> <a class="idref" href="zoo_parabs.future__code.html#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">future</span></a><a class="idref" href="zoo_parabs.future__code.html#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.future__code.html#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">set</span></a> "ctx" "t" ("task" "ctx")) <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="90930526022489ae28b666653fac32b5" class="idref" href="#90930526022489ae28b666653fac32b5"><span class="id" title="definition">future</span></a><a id="90930526022489ae28b666653fac32b5" class="idref" href="#90930526022489ae28b666653fac32b5"><span class="id" title="definition">٠</span></a><a id="90930526022489ae28b666653fac32b5" class="idref" href="#90930526022489ae28b666653fac32b5"><span class="id" title="definition">wait</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#9795b0dc71b341e1df0d9d7bc761eda5"><span class="id" title="definition">pool</span></a><a class="idref" href="zoo_parabs.pool__code.html#9795b0dc71b341e1df0d9d7bc761eda5"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.pool__code.html#9795b0dc71b341e1df0d9d7bc761eda5"><span class="id" title="definition">wait_ivar</span></a> "ctx" "t" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">ivar_4</span><span class="id" title="definition">٠</span><span class="id" title="definition">get</span> "t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="259b9329213626e0ad572f1e7a444e86" class="idref" href="#259b9329213626e0ad572f1e7a444e86"><span class="id" title="definition">future</span></a><a id="259b9329213626e0ad572f1e7a444e86" class="idref" href="#259b9329213626e0ad572f1e7a444e86"><span class="id" title="definition">٠</span></a><a id="259b9329213626e0ad572f1e7a444e86" class="idref" href="#259b9329213626e0ad572f1e7a444e86"><span class="id" title="definition">iter</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" "t" "task" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="definition">ivar_4</span><span class="id" title="definition">٠</span><span class="id" title="definition">wait</span> "t" "task" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">None</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">()</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">Some</span> "res" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"task" "ctx" "res"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="3a9f0fcc3c2d02d561024858a018b008" class="idref" href="#3a9f0fcc3c2d02d561024858a018b008"><span class="id" title="definition">future</span></a><a id="3a9f0fcc3c2d02d561024858a018b008" class="idref" href="#3a9f0fcc3c2d02d561024858a018b008"><span class="id" title="definition">٠</span></a><a id="3a9f0fcc3c2d02d561024858a018b008" class="idref" href="#3a9f0fcc3c2d02d561024858a018b008"><span class="id" title="definition">map</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" "t1" "task" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "t2" <span class="id" title="notation">=</span> <span class="id" title="definition">ivar_4</span><span class="id" title="definition">٠</span><span class="id" title="definition">create</span> <span class="id" title="notation">()</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.future__code.html#259b9329213626e0ad572f1e7a444e86"><span class="id" title="definition">future</span></a><a class="idref" href="zoo_parabs.future__code.html#259b9329213626e0ad572f1e7a444e86"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.future__code.html#259b9329213626e0ad572f1e7a444e86"><span class="id" title="definition">iter</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ctx"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t1"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" "res1" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.pool__code.html#6cbe32e82e830883dd210499e83de726"><span class="id" title="definition">pool</span></a><a class="idref" href="zoo_parabs.pool__code.html#6cbe32e82e830883dd210499e83de726"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.pool__code.html#6cbe32e82e830883dd210499e83de726"><span class="id" title="definition">async</span></a> "ctx"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span> <a class="idref" href="zoo_parabs.future__code.html#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">future</span></a><a class="idref" href="zoo_parabs.future__code.html#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_parabs.future__code.html#d53e71f95df661c92c30bbcc2f8aad1d"><span class="id" title="definition">set</span></a> "ctx" "t2" ("task" "ctx" "res1"))) <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t2".<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

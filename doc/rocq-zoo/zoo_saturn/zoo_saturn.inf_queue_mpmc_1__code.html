@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_saturn.inf_queue_mpmc_1__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_saturn.inf_queue_mpmc_1__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">backoff.backoff</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.inf_array</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.int</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.optional</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="992d794bd23b1a1fd9681a93f2b09d86" class="idref" href="#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">&quot;</span></a>'inf_queue_mpmc_1٠data'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_queue_mpmc_1.t" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="220f2ca73d97a50a9dffa992e7816073" class="idref" href="#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">&quot;</span></a>'inf_queue_mpmc_1٠front'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_queue_mpmc_1.t" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="0b38de4034be2544e453f0ff8a933372" class="idref" href="#0b38de4034be2544e453f0ff8a933372"><span class="id" title="notation">&quot;</span></a>'inf_queue_mpmc_1٠back'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_queue_mpmc_1.t" 2<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="2b18696d07c05b7ae03211d44a3d54b6" class="idref" href="#2b18696d07c05b7ae03211d44a3d54b6"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="2b18696d07c05b7ae03211d44a3d54b6" class="idref" href="#2b18696d07c05b7ae03211d44a3d54b6"><span class="id" title="definition">٠</span></a><a id="2b18696d07c05b7ae03211d44a3d54b6" class="idref" href="#2b18696d07c05b7ae03211d44a3d54b6"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">{</span> <span class="id" title="definition">inf_array</span><span class="id" title="definition">٠</span><span class="id" title="definition">create</span> <span class="id" title="notation">§</span><span class="id" title="notation">optional</span><span class="id" title="notation">٠</span><span class="id" title="notation">Nothing</span><span class="id" title="notation">,</span> 0<span class="id" title="notation">,</span> 0 <span class="id" title="notation">}</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="17f0e5f9207bfe64f524f95b46590767" class="idref" href="#17f0e5f9207bfe64f524f95b46590767"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="17f0e5f9207bfe64f524f95b46590767" class="idref" href="#17f0e5f9207bfe64f524f95b46590767"><span class="id" title="definition">٠</span></a><a id="17f0e5f9207bfe64f524f95b46590767" class="idref" href="#17f0e5f9207bfe64f524f95b46590767"><span class="id" title="definition">size</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "size" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "front" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">front</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "proph" <span class="id" title="notation">=</span> <span class="id" title="notation">𝗽𝗿𝗼𝗽𝗵</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "back" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#0b38de4034be2544e453f0ff8a933372"><span class="id" title="notation">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#0b38de4034be2544e453f0ff8a933372"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#0b38de4034be2544e453f0ff8a933372"><span class="id" title="notation">back</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span><span class="id" title="notation">𝗹𝗲𝘁</span> "@tmp" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">front</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝘀𝗼𝗹𝘃𝗲</span> <span class="id" title="notation">𝘀𝗸𝗶𝗽</span> "proph" "@tmp" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"@tmp"<span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">==</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"front"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">int</span><span class="id" title="definition">٠</span><span class="id" title="definition">positive_part</span> ("back" <span class="id" title="notation">-</span> "front")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"size" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="477ee9206b6cc016f5bc0e0aabad7f3d" class="idref" href="#477ee9206b6cc016f5bc0e0aabad7f3d"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="477ee9206b6cc016f5bc0e0aabad7f3d" class="idref" href="#477ee9206b6cc016f5bc0e0aabad7f3d"><span class="id" title="definition">٠</span></a><a id="477ee9206b6cc016f5bc0e0aabad7f3d" class="idref" href="#477ee9206b6cc016f5bc0e0aabad7f3d"><span class="id" title="definition">is_empty</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#17f0e5f9207bfe64f524f95b46590767"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#17f0e5f9207bfe64f524f95b46590767"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#17f0e5f9207bfe64f524f95b46590767"><span class="id" title="definition">size</span></a> "t" <span class="id" title="notation">==</span> 0.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="79a63f7a6a2b1725377f06175e5ea3a5" class="idref" href="#79a63f7a6a2b1725377f06175e5ea3a5"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="79a63f7a6a2b1725377f06175e5ea3a5" class="idref" href="#79a63f7a6a2b1725377f06175e5ea3a5"><span class="id" title="definition">٠</span></a><a id="79a63f7a6a2b1725377f06175e5ea3a5" class="idref" href="#79a63f7a6a2b1725377f06175e5ea3a5"><span class="id" title="definition">is_empty_weak</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "front" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">front</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "back" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#0b38de4034be2544e453f0ff8a933372"><span class="id" title="notation">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#0b38de4034be2544e453f0ff8a933372"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#0b38de4034be2544e453f0ff8a933372"><span class="id" title="notation">back</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"back" <span class="id" title="notation">≤</span> "front".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="7cfb9d6ebb63a595c89697eb34826413" class="idref" href="#7cfb9d6ebb63a595c89697eb34826413"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="7cfb9d6ebb63a595c89697eb34826413" class="idref" href="#7cfb9d6ebb63a595c89697eb34826413"><span class="id" title="definition">٠</span></a><a id="7cfb9d6ebb63a595c89697eb34826413" class="idref" href="#7cfb9d6ebb63a595c89697eb34826413"><span class="id" title="definition">push</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "i" <span class="id" title="notation">=</span> <span class="id" title="notation">𝗳𝗮𝗮</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">inf_queue_mpmc_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">back</span><span class="id" title="notation">]</span> <span class="id" title="notation">1</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">inf_array</span><span class="id" title="definition">٠</span><span class="id" title="definition">set</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">data</span></a><span class="id" title="notation">}</span> "i" <span class="id" title="notation">‘</span><span class="id" title="notation">optional</span><span class="id" title="notation">٠</span><span class="id" title="notation">Something</span><span class="id" title="notation">(</span> "v" <span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="71326373a53ee1c023b987b18a9f83a5" class="idref" href="#71326373a53ee1c023b987b18a9f83a5"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="71326373a53ee1c023b987b18a9f83a5" class="idref" href="#71326373a53ee1c023b987b18a9f83a5"><span class="id" title="definition">٠</span></a><a id="71326373a53ee1c023b987b18a9f83a5" class="idref" href="#71326373a53ee1c023b987b18a9f83a5"><span class="id" title="definition">pop₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "pop" "t" "i" "backoff" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="definition">inf_array</span><span class="id" title="definition">٠</span><span class="id" title="definition">get</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">data</span></a><span class="id" title="notation">}</span> "i" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">optional</span><span class="id" title="notation">٠</span><span class="id" title="notation">Nothing</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"pop" "t" "i" (<span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">once</span> "backoff")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">optional</span><span class="id" title="notation">٠</span><span class="id" title="notation">Anything</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗳𝗮𝗶𝗹</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">optional</span><span class="id" title="notation">٠</span><span class="id" title="notation">Something</span> "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">inf_array</span><span class="id" title="definition">٠</span><span class="id" title="definition">set</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">data</span></a><span class="id" title="notation">}</span> "i" <span class="id" title="notation">§</span><span class="id" title="notation">optional</span><span class="id" title="notation">٠</span><span class="id" title="notation">Anything</span> <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"v"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="42531df46ca7870bf3b589b91e8b8ce6" class="idref" href="#42531df46ca7870bf3b589b91e8b8ce6"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="42531df46ca7870bf3b589b91e8b8ce6" class="idref" href="#42531df46ca7870bf3b589b91e8b8ce6"><span class="id" title="definition">٠</span></a><a id="42531df46ca7870bf3b589b91e8b8ce6" class="idref" href="#42531df46ca7870bf3b589b91e8b8ce6"><span class="id" title="definition">pop</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "i" <span class="id" title="notation">=</span> <span class="id" title="notation">𝗳𝗮𝗮</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">inf_queue_mpmc_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">front</span><span class="id" title="notation">]</span> <span class="id" title="notation">1</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#71326373a53ee1c023b987b18a9f83a5"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#71326373a53ee1c023b987b18a9f83a5"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#71326373a53ee1c023b987b18a9f83a5"><span class="id" title="definition">pop₁</span></a> "t" "i" <span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">default</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="eb6edde0239390d0f8801e2d5a88dbdb" class="idref" href="#eb6edde0239390d0f8801e2d5a88dbdb"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="eb6edde0239390d0f8801e2d5a88dbdb" class="idref" href="#eb6edde0239390d0f8801e2d5a88dbdb"><span class="id" title="definition">٠</span></a><a id="eb6edde0239390d0f8801e2d5a88dbdb" class="idref" href="#eb6edde0239390d0f8801e2d5a88dbdb"><span class="id" title="definition">try_pop</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> <a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#79a63f7a6a2b1725377f06175e5ea3a5"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#79a63f7a6a2b1725377f06175e5ea3a5"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#79a63f7a6a2b1725377f06175e5ea3a5"><span class="id" title="definition">is_empty_weak</span></a> "t" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">Some</span><span class="id" title="notation">(</span> <a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#42531df46ca7870bf3b589b91e8b8ce6"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#42531df46ca7870bf3b589b91e8b8ce6"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.inf_queue_mpmc_1__code.html#42531df46ca7870bf3b589b91e8b8ce6"><span class="id" title="definition">pop</span></a> "t" <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

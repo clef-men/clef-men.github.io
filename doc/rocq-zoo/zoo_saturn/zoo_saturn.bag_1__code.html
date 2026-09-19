@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_saturn.bag_1__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_saturn.bag_1__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">backoff.backoff</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.array</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.goption</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="5b87d1646c5996b0415cfdb4263fd016" class="idref" href="#5b87d1646c5996b0415cfdb4263fd016"><span class="id" title="notation">&quot;</span></a>'bag_1٠data'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.bag_1.t" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="6d5678e7693277b20e7345e0b8afbf2f" class="idref" href="#6d5678e7693277b20e7345e0b8afbf2f"><span class="id" title="notation">&quot;</span></a>'bag_1٠front'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.bag_1.t" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="fc431fcc04db35fe04a8295d527b4d1a" class="idref" href="#fc431fcc04db35fe04a8295d527b4d1a"><span class="id" title="notation">&quot;</span></a>'bag_1٠back'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.bag_1.t" 2<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="6e8f5100e10d1c279189d0a4cce64590" class="idref" href="#6e8f5100e10d1c279189d0a4cce64590"><span class="id" title="definition">bag_1</span></a><a id="6e8f5100e10d1c279189d0a4cce64590" class="idref" href="#6e8f5100e10d1c279189d0a4cce64590"><span class="id" title="definition">٠</span></a><a id="6e8f5100e10d1c279189d0a4cce64590" class="idref" href="#6e8f5100e10d1c279189d0a4cce64590"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "sz" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">{</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_init</span> "sz" (<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span> <span class="id" title="notation">𝗿𝗲𝗳</span> <span class="id" title="notation">§</span><span class="id" title="notation">goption</span><span class="id" title="notation">٠</span><span class="id" title="notation">None</span>)<span class="id" title="notation">,</span> 0<span class="id" title="notation">,</span> 0 <span class="id" title="notation">}</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="d2be0b3191733a1464a6c1499d2d27b2" class="idref" href="#d2be0b3191733a1464a6c1499d2d27b2"><span class="id" title="definition">bag_1</span></a><a id="d2be0b3191733a1464a6c1499d2d27b2" class="idref" href="#d2be0b3191733a1464a6c1499d2d27b2"><span class="id" title="definition">٠</span></a><a id="d2be0b3191733a1464a6c1499d2d27b2" class="idref" href="#d2be0b3191733a1464a6c1499d2d27b2"><span class="id" title="definition">push₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "push" "slot" "o" "backoff" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> <span class="id" title="notation">~</span> <span class="id" title="notation">𝗰𝗮𝘀</span> "slot"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span> <span class="id" title="notation">§</span><span class="id" title="notation">goption</span><span class="id" title="notation">٠</span><span class="id" title="notation">None</span> "o" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"push" "slot" "o" (<span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">once</span> "backoff")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="2a1101263b91700e9393eb47db1aa8ce" class="idref" href="#2a1101263b91700e9393eb47db1aa8ce"><span class="id" title="definition">bag_1</span></a><a id="2a1101263b91700e9393eb47db1aa8ce" class="idref" href="#2a1101263b91700e9393eb47db1aa8ce"><span class="id" title="definition">٠</span></a><a id="2a1101263b91700e9393eb47db1aa8ce" class="idref" href="#2a1101263b91700e9393eb47db1aa8ce"><span class="id" title="definition">push</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "data" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.bag_1__code.html#5b87d1646c5996b0415cfdb4263fd016"><span class="id" title="notation">bag_1</span></a><a class="idref" href="zoo_saturn.bag_1__code.html#5b87d1646c5996b0415cfdb4263fd016"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.bag_1__code.html#5b87d1646c5996b0415cfdb4263fd016"><span class="id" title="notation">data</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "i" <span class="id" title="notation">=</span> <span class="id" title="notation">𝗳𝗮𝗮</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">bag_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">back</span><span class="id" title="notation">]</span> <span class="id" title="notation">1</span> <span class="id" title="notation">𝗿𝗲𝗺</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">size</span> "data" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.bag_1__code.html#d2be0b3191733a1464a6c1499d2d27b2"><span class="id" title="definition">bag_1</span></a><a class="idref" href="zoo_saturn.bag_1__code.html#d2be0b3191733a1464a6c1499d2d27b2"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.bag_1__code.html#d2be0b3191733a1464a6c1499d2d27b2"><span class="id" title="definition">push₁</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "data" "i")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">goption</span><span class="id" title="notation">٠</span><span class="id" title="notation">Some</span><span class="id" title="notation">[</span> "v" <span class="id" title="notation">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">default</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="bb708485ec588f947fdb5fd9595268f5" class="idref" href="#bb708485ec588f947fdb5fd9595268f5"><span class="id" title="definition">bag_1</span></a><a id="bb708485ec588f947fdb5fd9595268f5" class="idref" href="#bb708485ec588f947fdb5fd9595268f5"><span class="id" title="definition">٠</span></a><a id="bb708485ec588f947fdb5fd9595268f5" class="idref" href="#bb708485ec588f947fdb5fd9595268f5"><span class="id" title="definition">pop₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "pop" "slot" "backoff" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="notation">!</span>"slot" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">goption</span><span class="id" title="notation">٠</span><span class="id" title="notation">None</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"pop" "slot" (<span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">once</span> "backoff")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">goption</span><span class="id" title="notation">٠</span><span class="id" title="notation">Some</span> "v" <span class="id" title="notation">𝗮𝘀</span> "o" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> <span class="id" title="notation">𝗰𝗮𝘀</span> "slot"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span> "o" <span class="id" title="notation">§</span><span class="id" title="notation">goption</span><span class="id" title="notation">٠</span><span class="id" title="notation">None</span> <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"v"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"pop" "slot" <span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">default</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="d45ff0a340603c1982c001f7f10323de" class="idref" href="#d45ff0a340603c1982c001f7f10323de"><span class="id" title="definition">bag_1</span></a><a id="d45ff0a340603c1982c001f7f10323de" class="idref" href="#d45ff0a340603c1982c001f7f10323de"><span class="id" title="definition">٠</span></a><a id="d45ff0a340603c1982c001f7f10323de" class="idref" href="#d45ff0a340603c1982c001f7f10323de"><span class="id" title="definition">pop</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "data" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_saturn.bag_1__code.html#5b87d1646c5996b0415cfdb4263fd016"><span class="id" title="notation">bag_1</span></a><a class="idref" href="zoo_saturn.bag_1__code.html#5b87d1646c5996b0415cfdb4263fd016"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.bag_1__code.html#5b87d1646c5996b0415cfdb4263fd016"><span class="id" title="notation">data</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "i" <span class="id" title="notation">=</span> <span class="id" title="notation">𝗳𝗮𝗮</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">bag_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">front</span><span class="id" title="notation">]</span> <span class="id" title="notation">1</span> <span class="id" title="notation">𝗿𝗲𝗺</span> <span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">size</span> "data" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.bag_1__code.html#bb708485ec588f947fdb5fd9595268f5"><span class="id" title="definition">bag_1</span></a><a class="idref" href="zoo_saturn.bag_1__code.html#bb708485ec588f947fdb5fd9595268f5"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.bag_1__code.html#bb708485ec588f947fdb5fd9595268f5"><span class="id" title="definition">pop₁</span></a> (<span class="id" title="definition">array</span><span class="id" title="definition">٠</span><span class="id" title="definition">unsafe_get</span> "data" "i") <span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">default</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

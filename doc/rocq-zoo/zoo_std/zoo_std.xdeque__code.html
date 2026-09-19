@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_std.xdeque__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_std.xdeque__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="aaaa1e13a39f6035b9b8bc420f6035e3" class="idref" href="#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">&quot;</span></a>'xdeque٠prev'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.xdeque.node" 0<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="33c38c5771fb74f5bbf3edaa7ec18855" class="idref" href="#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">&quot;</span></a>'xdeque٠next'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.xdeque.node" 1<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="574bc05a664c819e5f53e2f3344cf3ec" class="idref" href="#574bc05a664c819e5f53e2f3344cf3ec"><span class="id" title="notation">&quot;</span></a>'xdeque٠data'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.xdeque.node" 2<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="122c45bd7d50f1197b1cb7829dcca642" class="idref" href="#122c45bd7d50f1197b1cb7829dcca642"><span class="id" title="definition">xdeque</span></a><a id="122c45bd7d50f1197b1cb7829dcca642" class="idref" href="#122c45bd7d50f1197b1cb7829dcca642"><span class="id" title="definition">٠</span></a><a id="122c45bd7d50f1197b1cb7829dcca642" class="idref" href="#122c45bd7d50f1197b1cb7829dcca642"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "t" <span class="id" title="notation">=</span> <span class="id" title="notation">{</span> <span class="id" title="notation">()</span><span class="id" title="notation">,</span> <span class="id" title="notation">()</span><span class="id" title="notation">,</span> <span class="id" title="notation">()</span> <span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t" <span class="id" title="notation">&lt;-{</span><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">prev</span></a><span class="id" title="notation">}</span> "t" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t" <span class="id" title="notation">&lt;-{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span> "t" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="84d0b92a18702a999f4fe9c754724018" class="idref" href="#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">xdeque</span></a><a id="84d0b92a18702a999f4fe9c754724018" class="idref" href="#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">٠</span></a><a id="84d0b92a18702a999f4fe9c754724018" class="idref" href="#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">is_empty</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">==</span> "t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="826be0485351dcec0288c8c9930aaf8d" class="idref" href="#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">xdeque</span></a><a id="826be0485351dcec0288c8c9930aaf8d" class="idref" href="#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">٠</span></a><a id="826be0485351dcec0288c8c9930aaf8d" class="idref" href="#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">link</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "node1" "node2" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"node1" <span class="id" title="notation">&lt;-{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span> "node2" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"node2" <span class="id" title="notation">&lt;-{</span><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">prev</span></a><span class="id" title="notation">}</span> "node1".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="628313b3d3235ea576530791003ba3d9" class="idref" href="#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">xdeque</span></a><a id="628313b3d3235ea576530791003ba3d9" class="idref" href="#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">٠</span></a><a id="628313b3d3235ea576530791003ba3d9" class="idref" href="#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">insert</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "prev" "node" "next" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">link</span></a> "prev" "node" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">link</span></a> "node" "next".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="c162c53118aca8d98ee5f694a1aa2a3a" class="idref" href="#c162c53118aca8d98ee5f694a1aa2a3a"><span class="id" title="definition">xdeque</span></a><a id="c162c53118aca8d98ee5f694a1aa2a3a" class="idref" href="#c162c53118aca8d98ee5f694a1aa2a3a"><span class="id" title="definition">٠</span></a><a id="c162c53118aca8d98ee5f694a1aa2a3a" class="idref" href="#c162c53118aca8d98ee5f694a1aa2a3a"><span class="id" title="definition">push_front</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "front" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">insert</span></a> "t" "front" "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="2aa3463737ac1ce1d6ccfeb56be98f22" class="idref" href="#2aa3463737ac1ce1d6ccfeb56be98f22"><span class="id" title="definition">xdeque</span></a><a id="2aa3463737ac1ce1d6ccfeb56be98f22" class="idref" href="#2aa3463737ac1ce1d6ccfeb56be98f22"><span class="id" title="definition">٠</span></a><a id="2aa3463737ac1ce1d6ccfeb56be98f22" class="idref" href="#2aa3463737ac1ce1d6ccfeb56be98f22"><span class="id" title="definition">push_back</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "back" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#628313b3d3235ea576530791003ba3d9"><span class="id" title="definition">insert</span></a> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">prev</span></a><span class="id" title="notation">}</span> "back" "t".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="ce0cdd2c599980c43ee7afdcc9c8ec9c" class="idref" href="#ce0cdd2c599980c43ee7afdcc9c8ec9c"><span class="id" title="definition">xdeque</span></a><a id="ce0cdd2c599980c43ee7afdcc9c8ec9c" class="idref" href="#ce0cdd2c599980c43ee7afdcc9c8ec9c"><span class="id" title="definition">٠</span></a><a id="ce0cdd2c599980c43ee7afdcc9c8ec9c" class="idref" href="#ce0cdd2c599980c43ee7afdcc9c8ec9c"><span class="id" title="definition">pop_front</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> <a class="idref" href="zoo_std.xdeque__code.html#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">is_empty</span></a> "t" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "old_front" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "front" <span class="id" title="notation">=</span> "old_front"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">link</span></a> "t" "front" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">Some</span><span class="id" title="notation">(</span> "old_front" <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="11d4ea054a7dcaba6bef15d03b65d422" class="idref" href="#11d4ea054a7dcaba6bef15d03b65d422"><span class="id" title="definition">xdeque</span></a><a id="11d4ea054a7dcaba6bef15d03b65d422" class="idref" href="#11d4ea054a7dcaba6bef15d03b65d422"><span class="id" title="definition">٠</span></a><a id="11d4ea054a7dcaba6bef15d03b65d422" class="idref" href="#11d4ea054a7dcaba6bef15d03b65d422"><span class="id" title="definition">pop_back</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> <a class="idref" href="zoo_std.xdeque__code.html#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#84d0b92a18702a999f4fe9c754724018"><span class="id" title="definition">is_empty</span></a> "t" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "old_back" <span class="id" title="notation">=</span> "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">prev</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "back" <span class="id" title="notation">=</span> "old_back"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">prev</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">link</span></a> "back" "t" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">Some</span><span class="id" title="notation">(</span> "old_back" <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="b68ee02b0e8413a79f19b20b6ae78da5" class="idref" href="#b68ee02b0e8413a79f19b20b6ae78da5"><span class="id" title="definition">xdeque</span></a><a id="b68ee02b0e8413a79f19b20b6ae78da5" class="idref" href="#b68ee02b0e8413a79f19b20b6ae78da5"><span class="id" title="definition">٠</span></a><a id="b68ee02b0e8413a79f19b20b6ae78da5" class="idref" href="#b68ee02b0e8413a79f19b20b6ae78da5"><span class="id" title="definition">remove</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "node" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "prev" <span class="id" title="notation">=</span> "node"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">prev</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "next" <span class="id" title="notation">=</span> "node"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#826be0485351dcec0288c8c9930aaf8d"><span class="id" title="definition">link</span></a> "prev" "next".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="4fce243e84cbf0a068dc7dfad67c648c" class="idref" href="#4fce243e84cbf0a068dc7dfad67c648c"><span class="id" title="definition">xdeque</span></a><a id="4fce243e84cbf0a068dc7dfad67c648c" class="idref" href="#4fce243e84cbf0a068dc7dfad67c648c"><span class="id" title="definition">٠</span></a><a id="4fce243e84cbf0a068dc7dfad67c648c" class="idref" href="#4fce243e84cbf0a068dc7dfad67c648c"><span class="id" title="definition">iter_aux</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "iter_aux" "fn" "t" "node" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> "node" <span class="id" title="notation">==</span> "t" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">()</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fn" "node" <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iter_aux" "fn" "t" "node"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="f83c888407a95c7796fd52d2a999b963" class="idref" href="#f83c888407a95c7796fd52d2a999b963"><span class="id" title="definition">xdeque</span></a><a id="f83c888407a95c7796fd52d2a999b963" class="idref" href="#f83c888407a95c7796fd52d2a999b963"><span class="id" title="definition">٠</span></a><a id="f83c888407a95c7796fd52d2a999b963" class="idref" href="#f83c888407a95c7796fd52d2a999b963"><span class="id" title="definition">iter</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "fn" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_std.xdeque__code.html#4fce243e84cbf0a068dc7dfad67c648c"><span class="id" title="definition">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#4fce243e84cbf0a068dc7dfad67c648c"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#4fce243e84cbf0a068dc7dfad67c648c"><span class="id" title="definition">iter_aux</span></a> "fn" "t" "t"<span class="id" title="notation">.{</span><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">xdeque</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_std.xdeque__code.html#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">next</span></a><span class="id" title="notation">}</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

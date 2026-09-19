@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>examples.future_fibonacci__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">examples.future_fibonacci__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_parabs.future</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_parabs.pool</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="41763a96b9876f7aec9191c7b1d8db98" class="idref" href="#41763a96b9876f7aec9191c7b1d8db98"><span class="id" title="definition">future_fibonacci</span></a><a id="41763a96b9876f7aec9191c7b1d8db98" class="idref" href="#41763a96b9876f7aec9191c7b1d8db98"><span class="id" title="definition">٠</span></a><a id="41763a96b9876f7aec9191c7b1d8db98" class="idref" href="#41763a96b9876f7aec9191c7b1d8db98"><span class="id" title="definition">main₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "main" "ctx" "n" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> "n" <span class="id" title="notation">≤</span> 1 <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"n"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "fut1" <span class="id" title="notation">=</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">future</span><span class="id" title="definition">٠</span><span class="id" title="definition">async</span> "ctx" (<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span> "main" "ctx" ("n" <span class="id" title="notation">-</span> 1))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "fut2" <span class="id" title="notation">=</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">future</span><span class="id" title="definition">٠</span><span class="id" title="definition">async</span> "ctx" (<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span> "main" "ctx" ("n" <span class="id" title="notation">-</span> 2))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">future</span><span class="id" title="definition">٠</span><span class="id" title="definition">wait</span> "ctx" "fut1" <span class="id" title="notation">+</span> <span class="id" title="definition">future</span><span class="id" title="definition">٠</span><span class="id" title="definition">wait</span> "ctx" "fut2"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="e4ab7ea3954c278d82f46b76e8fb4da0" class="idref" href="#e4ab7ea3954c278d82f46b76e8fb4da0"><span class="id" title="definition">future_fibonacci</span></a><a id="e4ab7ea3954c278d82f46b76e8fb4da0" class="idref" href="#e4ab7ea3954c278d82f46b76e8fb4da0"><span class="id" title="definition">٠</span></a><a id="e4ab7ea3954c278d82f46b76e8fb4da0" class="idref" href="#e4ab7ea3954c278d82f46b76e8fb4da0"><span class="id" title="definition">main</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "num_worker" "n" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">pool</span><span class="id" title="definition">٠</span><span class="id" title="definition">run</span> "num_worker" (<span class="id" title="notation">𝗳𝘂𝗻</span> "ctx" <span class="id" title="notation">-&gt;</span> <a class="idref" href="examples.future_fibonacci__code.html#41763a96b9876f7aec9191c7b1d8db98"><span class="id" title="definition">future_fibonacci</span></a><a class="idref" href="examples.future_fibonacci__code.html#41763a96b9876f7aec9191c7b1d8db98"><span class="id" title="definition">٠</span></a><a class="idref" href="examples.future_fibonacci__code.html#41763a96b9876f7aec9191c7b1d8db98"><span class="id" title="definition">main₁</span></a> "ctx" "n").<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

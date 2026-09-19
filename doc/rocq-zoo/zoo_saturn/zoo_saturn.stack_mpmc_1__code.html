@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_saturn.stack_mpmc_1__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_saturn.stack_mpmc_1__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">backoff.backoff</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.glist</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="1de655d8f886875e8ff2dc3cf56e5627" class="idref" href="#1de655d8f886875e8ff2dc3cf56e5627"><span class="id" title="definition">stack_mpmc_1</span></a><a id="1de655d8f886875e8ff2dc3cf56e5627" class="idref" href="#1de655d8f886875e8ff2dc3cf56e5627"><span class="id" title="definition">٠</span></a><a id="1de655d8f886875e8ff2dc3cf56e5627" class="idref" href="#1de655d8f886875e8ff2dc3cf56e5627"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗳</span> <span class="id" title="notation">§</span><span class="id" title="notation">glist</span><span class="id" title="notation">٠</span><span class="id" title="notation">Nil</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="059ed22b3c388022d35809f0ffc4cc80" class="idref" href="#059ed22b3c388022d35809f0ffc4cc80"><span class="id" title="definition">stack_mpmc_1</span></a><a id="059ed22b3c388022d35809f0ffc4cc80" class="idref" href="#059ed22b3c388022d35809f0ffc4cc80"><span class="id" title="definition">٠</span></a><a id="059ed22b3c388022d35809f0ffc4cc80" class="idref" href="#059ed22b3c388022d35809f0ffc4cc80"><span class="id" title="definition">push₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "push" "t" "v" "backoff" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "old" <span class="id" title="notation">=</span> <span class="id" title="notation">!</span>"t" <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗹𝗲𝘁</span> "new_" <span class="id" title="notation">=</span> <span class="id" title="notation">‘</span><span class="id" title="notation">glist</span><span class="id" title="notation">٠</span><span class="id" title="notation">Cons</span><span class="id" title="notation">[</span> "v"<span class="id" title="notation">,</span> "old" <span class="id" title="notation">]</span> <span class="id" title="notation">𝗶𝗻</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> <span class="id" title="notation">~</span> <span class="id" title="notation">𝗰𝗮𝘀</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span> "old" "new_" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"push" "t" "v" (<span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">once</span> "backoff")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="cbdcb74197c638755f7c6daf548b8473" class="idref" href="#cbdcb74197c638755f7c6daf548b8473"><span class="id" title="definition">stack_mpmc_1</span></a><a id="cbdcb74197c638755f7c6daf548b8473" class="idref" href="#cbdcb74197c638755f7c6daf548b8473"><span class="id" title="definition">٠</span></a><a id="cbdcb74197c638755f7c6daf548b8473" class="idref" href="#cbdcb74197c638755f7c6daf548b8473"><span class="id" title="definition">push</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.stack_mpmc_1__code.html#059ed22b3c388022d35809f0ffc4cc80"><span class="id" title="definition">stack_mpmc_1</span></a><a class="idref" href="zoo_saturn.stack_mpmc_1__code.html#059ed22b3c388022d35809f0ffc4cc80"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.stack_mpmc_1__code.html#059ed22b3c388022d35809f0ffc4cc80"><span class="id" title="definition">push₁</span></a> "t" "v" <span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">default</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="56fc5ef46f984c02358c25070bdf54fc" class="idref" href="#56fc5ef46f984c02358c25070bdf54fc"><span class="id" title="definition">stack_mpmc_1</span></a><a id="56fc5ef46f984c02358c25070bdf54fc" class="idref" href="#56fc5ef46f984c02358c25070bdf54fc"><span class="id" title="definition">٠</span></a><a id="56fc5ef46f984c02358c25070bdf54fc" class="idref" href="#56fc5ef46f984c02358c25070bdf54fc"><span class="id" title="definition">pop₁</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗰</span> "pop" "t" "backoff" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="notation">!</span>"t" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">glist</span><span class="id" title="notation">٠</span><span class="id" title="notation">Nil</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <span class="id" title="notation">glist</span><span class="id" title="notation">٠</span><span class="id" title="notation">Cons</span> "v" "new_" <span class="id" title="notation">𝗮𝘀</span> "old" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span> <span class="id" title="notation">𝗰𝗮𝘀</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span> "old" "new_" <span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">Some</span><span class="id" title="notation">(</span> "v" <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"pop" "t" (<span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">once</span> "backoff")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="41befeb1845584dadda976dc4c99ad6e" class="idref" href="#41befeb1845584dadda976dc4c99ad6e"><span class="id" title="definition">stack_mpmc_1</span></a><a id="41befeb1845584dadda976dc4c99ad6e" class="idref" href="#41befeb1845584dadda976dc4c99ad6e"><span class="id" title="definition">٠</span></a><a id="41befeb1845584dadda976dc4c99ad6e" class="idref" href="#41befeb1845584dadda976dc4c99ad6e"><span class="id" title="definition">pop</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.stack_mpmc_1__code.html#56fc5ef46f984c02358c25070bdf54fc"><span class="id" title="definition">stack_mpmc_1</span></a><a class="idref" href="zoo_saturn.stack_mpmc_1__code.html#56fc5ef46f984c02358c25070bdf54fc"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.stack_mpmc_1__code.html#56fc5ef46f984c02358c25070bdf54fc"><span class="id" title="definition">pop₁</span></a> "t" <span class="id" title="axiom">backoff</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">default</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="53fd8a20c8f087ed694a1960fb680b5c" class="idref" href="#53fd8a20c8f087ed694a1960fb680b5c"><span class="id" title="definition">stack_mpmc_1</span></a><a id="53fd8a20c8f087ed694a1960fb680b5c" class="idref" href="#53fd8a20c8f087ed694a1960fb680b5c"><span class="id" title="definition">٠</span></a><a id="53fd8a20c8f087ed694a1960fb680b5c" class="idref" href="#53fd8a20c8f087ed694a1960fb680b5c"><span class="id" title="definition">snapshot</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">!</span>"t".<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
