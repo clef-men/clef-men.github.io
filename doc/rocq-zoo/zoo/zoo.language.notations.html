@@ -582,6 +582,13 @@
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Notation</span> <a id="eda3ecd046be0faabc4426ef2d782058" class="idref" href="#eda3ecd046be0faabc4426ef2d782058"><span class="id" title="notation">&quot;</span></a>'𝘄𝗵𝗶𝗹𝗲' e0 '𝗱𝗼' e1 '𝗱𝗼𝗻𝗲'" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#While"><span class="id" title="constructor">While</span></a> <span class="id" title="var">e0</span>%<span class="id" title="var">E</span> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span><br/>
+)(<span class="id" title="var">e0</span>, <span class="id" title="var">e1</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' '𝘄𝗵𝗶𝗹𝗲'  '/  ' '[' e0 ']'  '/' '𝗱𝗼'  ']' '/  ' '[' e1 ']'  '/' '𝗱𝗼𝗻𝗲' ']'"<br/>
+) : <span class="id" title="var">expr_scope</span>.<br/>
+
+<br/>
 <span class="id" title="keyword">Notation</span> <a id="a2d224ba4a47634e07f303e86b90f44a" class="idref" href="#a2d224ba4a47634e07f303e86b90f44a"><span class="id" title="notation">&quot;</span></a>'𝗳𝗼𝗿' x = e1 '𝘁𝗼' e2 '𝗱𝗼' e3 '𝗱𝗼𝗻𝗲'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#For"><span class="id" title="constructor">For</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> <span class="id" title="var">e2</span>%<span class="id" title="var">E</span> (<a class="idref" href="zoo.language.syntax.html#Fun"><span class="id" title="abbreviation">Fun</span></a> <span class="id" title="var">x</span>%<span class="id" title="var">binder</span> <span class="id" title="var">e3</span>%<span class="id" title="var">E</span>)<br/>
 )(<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
@@ -942,7 +949,7 @@
 &nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a id="d54f13634a4fca1c59e6f5cf46bbc8cf" class="idref" href="#d54f13634a4fca1c59e6f5cf46bbc8cf"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' | br_1 | .. | br_n | ⎽ -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="4c2d6c065e3be2ef998a2c68076bd9d2" class="idref" href="#4c2d6c065e3be2ef998a2c68076bd9d2"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' | br_1 | .. | br_n |⎽ -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Match"><span class="id" title="constructor">Match</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e0</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a><br/>
@@ -951,9 +958,9 @@
 )(<span class="id" title="var">e0</span>, <span class="id" title="var">e1</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |  ⎽  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
+&nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |⎽  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a id="4384bf958037f25d4d61f864c242468d" class="idref" href="#4384bf958037f25d4d61f864c242468d"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' br_1 | .. | br_n | ⎽ -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="7bee309284d5248092257166e7c3505d" class="idref" href="#7bee309284d5248092257166e7c3505d"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' br_1 | .. | br_n |⎽ -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Match"><span class="id" title="constructor">Match</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e0</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a><br/>
@@ -964,7 +971,7 @@
 &nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a id="f8bda6e17d9af1e32e7a24af6f4f0cc0" class="idref" href="#f8bda6e17d9af1e32e7a24af6f4f0cc0"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' | br_1 | .. | br_n | ⎽ '𝗮𝘀' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="113dd5d401024b197196a01e9bfe35e4" class="idref" href="#113dd5d401024b197196a01e9bfe35e4"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' | br_1 | .. | br_n |⎽ '𝗮𝘀' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Match"><span class="id" title="constructor">Match</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e0</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">x</span>%<span class="id" title="var">string</span>)<br/>
@@ -974,9 +981,9 @@
 &nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
-&nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |  ⎽  '𝗮𝘀'  x  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
+&nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |⎽  '𝗮𝘀'  x  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a id="dd9b526fb85675900f518dfbdc00013b" class="idref" href="#dd9b526fb85675900f518dfbdc00013b"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' br_1 | .. | br_n | ⎽ 'as' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="275bf767ae788cbe73dc9b0e81235aac" class="idref" href="#275bf767ae788cbe73dc9b0e81235aac"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' br_1 | .. | br_n |⎽ 'as' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Match"><span class="id" title="constructor">Match</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e0</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">x</span>%<span class="id" title="var">string</span>)<br/>
@@ -988,7 +995,7 @@
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a id="d89af75ff8b2487377b668051e18304e" class="idref" href="#d89af75ff8b2487377b668051e18304e"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' | br_1 | .. | br_n | ⎽ '𝗮𝘀:' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="ffd0f2d886f2056f1a38f6fe0b5648ee" class="idref" href="#ffd0f2d886f2056f1a38f6fe0b5648ee"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' | br_1 | .. | br_n |⎽ '𝗮𝘀:' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Match"><span class="id" title="constructor">Match</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e0</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">x</span>%<span class="id" title="var">binder</span><br/>
@@ -998,9 +1005,9 @@
 &nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
-&nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |  ⎽  '𝗮𝘀:'  x  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
+&nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |⎽  '𝗮𝘀:'  x  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a id="fb419493f7e1d84da2e4f7a7ec3ba3e0" class="idref" href="#fb419493f7e1d84da2e4f7a7ec3ba3e0"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' br_1 | .. | br_n | ⎽ '𝗮𝘀:' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="260220343ae2a1a071882cf94ded242d" class="idref" href="#260220343ae2a1a071882cf94ded242d"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' br_1 | .. | br_n |⎽ '𝗮𝘀:' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Match"><span class="id" title="constructor">Match</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e0</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">x</span>%<span class="id" title="var">binder</span><br/>
