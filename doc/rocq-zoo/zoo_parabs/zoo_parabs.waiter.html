@@ -32,6 +32,9 @@
 <span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Type</span> <span class="id" title="var">v</span> <span class="id" title="var">t</span> <span class="id" title="var">mtx</span> <span class="id" title="var">cond</span> : <span class="id" title="inductive">val</span>.<br/>
 
 <br/>
+<span class="id" title="var">Zoo</span> <span class="id" title="var">global</span> :=<br/>
+&nbsp;&nbsp;{ <span class="id" title="var">mutex</span> : <span class="id" title="var">mutex</span><br/>
+&nbsp;&nbsp;}.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="352fa648db94ba72b2527bc954969c90" class="idref" href="#352fa648db94ba72b2527bc954969c90"><span class="id" title="section">waiter</span></a><a id="352fa648db94ba72b2527bc954969c90" class="idref" href="#352fa648db94ba72b2527bc954969c90"><span class="id" title="section">۰</span></a><a id="352fa648db94ba72b2527bc954969c90" class="idref" href="#352fa648db94ba72b2527bc954969c90"><span class="id" title="section">G</span></a>.<br/>
@@ -46,6 +49,13 @@
       &amp; H𝑡_flag
       )
     ".<br/>
+&nbsp;&nbsp;<span class="id" title="var">Please</span> <span class="id" title="keyword">Definition</span> <a id="f48c30c223bf6c3b6d6fdfac4cbf72d6" class="idref" href="#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">waiter</span></a><a id="f48c30c223bf6c3b6d6fdfac4cbf72d6" class="idref" href="#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">۰</span></a><a id="f48c30c223bf6c3b6d6fdfac4cbf72d6" class="idref" href="#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">inv</span></a> <a id="t:12" class="idref" href="#t:12"><span class="id" title="binder">t</span></a> : <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.base_logic.lib.iprop.html#iProp_solution.iProp"><span class="id" title="abbreviation">iProp</span></a> <a class="idref" href="zoo_parabs.waiter.html#4342a6840abb88c3ab78cda933bbd856"><span class="id" title="variable">Σ</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#6a949150dff4dc18cd2632b730bdfc23"><span class="id" title="notation">∃</span></a> <a id="829dff9a40942b50cf92cceb89d052c4" class="idref" href="#829dff9a40942b50cf92cceb89d052c4"><span class="id" title="binder">𝑡</span></a> <a id="mtx:14" class="idref" href="#mtx:14"><span class="id" title="binder">mtx</span></a> <a id="cond:15" class="idref" href="#cond:15"><span class="id" title="binder">cond</span></a><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#6a949150dff4dc18cd2632b730bdfc23"><span class="id" title="notation">,</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#08ba0c98aaa0db435a5f99ebae3ae8e7"><span class="id" title="notation">⌜</span></a><a class="idref" href="zoo_parabs.waiter.html#t:12"><span class="id" title="variable">t</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <span class="id" title="notation">#</span><a class="idref" href="zoo_parabs.waiter.html#829dff9a40942b50cf92cceb89d052c4"><span class="id" title="variable">𝑡</span></a><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#08ba0c98aaa0db435a5f99ebae3ae8e7"><span class="id" title="notation">⌝</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#17a7b93bfefac02a752836d54e5bc9da"><span class="id" title="notation">∗</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter.html#829dff9a40942b50cf92cceb89d052c4"><span class="id" title="variable">𝑡</span></a><span class="id" title="notation">.[</span><a class="idref" href="zoo_parabs.waiter__types.html#:zoo.language.notations.zoo_field::'mutex'"><span class="id" title="notation">mutex</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">↦</span><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.algebra.dfrac.html#2b6a4ab18fd63531f9ba8f19746c1a39"><span class="id" title="notation">□</span></a> <a class="idref" href="zoo_parabs.waiter.html#mtx:14"><span class="id" title="variable">mtx</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#17a7b93bfefac02a752836d54e5bc9da"><span class="id" title="notation">∗</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">mutex</span><span class="id" title="definition">۰</span><span class="id" title="definition">inv</span> <a class="idref" href="zoo_parabs.waiter.html#mtx:14"><span class="id" title="variable">mtx</span></a> (<a class="idref" href="zoo_parabs.waiter.html#2cdda073b10ecb47b48295c9eec1cff2"><span class="id" title="definition">inv</span></a><a class="idref" href="zoo_parabs.waiter.html#2cdda073b10ecb47b48295c9eec1cff2"><span class="id" title="definition">۰</span></a><a class="idref" href="zoo_parabs.waiter.html#2cdda073b10ecb47b48295c9eec1cff2"><span class="id" title="definition">inner</span></a> <a class="idref" href="zoo_parabs.waiter.html#829dff9a40942b50cf92cceb89d052c4"><span class="id" title="variable">𝑡</span></a>) <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#17a7b93bfefac02a752836d54e5bc9da"><span class="id" title="notation">∗</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter.html#829dff9a40942b50cf92cceb89d052c4"><span class="id" title="variable">𝑡</span></a><span class="id" title="notation">.[</span><a class="idref" href="zoo_parabs.waiter__types.html#:zoo.language.notations.zoo_field::'condition'"><span class="id" title="notation">condition</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">↦</span><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.algebra.dfrac.html#2b6a4ab18fd63531f9ba8f19746c1a39"><span class="id" title="notation">□</span></a> <a class="idref" href="zoo_parabs.waiter.html#cond:15"><span class="id" title="variable">cond</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#17a7b93bfefac02a752836d54e5bc9da"><span class="id" title="notation">∗</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">condition</span><span class="id" title="definition">۰</span><span class="id" title="definition">inv</span> <a class="idref" href="zoo_parabs.waiter.html#cond:15"><span class="id" title="variable">cond</span></a>.<br/>
 &nbsp;&nbsp;#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Instance</span> : <span class="id" title="class">CustomIpat</span> "inv" :=<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;" ( %𝑡
       &amp; %mtx
@@ -61,6 +71,9 @@
 <br/>
 &nbsp;&nbsp;#[<span class="id" title="var">global</span>] <span class="id" title="keyword">Instance</span> <a id="e35c30ad9ece7ece0023ff4e7083b0cf" class="idref" href="#e35c30ad9ece7ece0023ff4e7083b0cf"><span class="id" title="instance">waiter</span></a><a id="e35c30ad9ece7ece0023ff4e7083b0cf" class="idref" href="#e35c30ad9ece7ece0023ff4e7083b0cf"><span class="id" title="instance">۰</span></a><a id="e35c30ad9ece7ece0023ff4e7083b0cf" class="idref" href="#e35c30ad9ece7ece0023ff4e7083b0cf"><span class="id" title="instance">inv</span></a><a id="e35c30ad9ece7ece0023ff4e7083b0cf" class="idref" href="#e35c30ad9ece7ece0023ff4e7083b0cf"><span class="id" title="instance">ｰ</span></a><a id="e35c30ad9ece7ece0023ff4e7083b0cf" class="idref" href="#e35c30ad9ece7ece0023ff4e7083b0cf"><span class="id" title="instance">persistent</span></a> <a id="t:16" class="idref" href="#t:16"><span class="id" title="binder">t</span></a> :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.derived_connectives.html#Persistent"><span class="id" title="class">Persistent</span></a> (<a class="idref" href="zoo_parabs.waiter.html#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter.html#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">۰</span></a><a class="idref" href="zoo_parabs.waiter.html#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">inv</span></a> <a class="idref" href="zoo_parabs.waiter.html#t:16"><span class="id" title="variable">t</span></a>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">_</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="19a1bfef5b6875108c4fe81f80e72143" class="idref" href="#19a1bfef5b6875108c4fe81f80e72143"><span class="id" title="lemma">waiter</span></a><a id="19a1bfef5b6875108c4fe81f80e72143" class="idref" href="#19a1bfef5b6875108c4fe81f80e72143"><span class="id" title="lemma">٠</span></a><a id="19a1bfef5b6875108c4fe81f80e72143" class="idref" href="#19a1bfef5b6875108c4fe81f80e72143"><span class="id" title="lemma">create</span></a><a id="19a1bfef5b6875108c4fe81f80e72143" class="idref" href="#19a1bfef5b6875108c4fe81f80e72143"><span class="id" title="lemma">ｰ</span></a><a id="19a1bfef5b6875108c4fe81f80e72143" class="idref" href="#19a1bfef5b6875108c4fe81f80e72143"><span class="id" title="lemma">spec</span></a> :<br/>
@@ -73,6 +86,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">,</span> <span class="id" title="notation">RET</span> <a class="idref" href="zoo_parabs.waiter.html#t:17"><span class="id" title="variable">t</span></a><span class="id" title="notation">;</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_parabs.waiter.html#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">waiter</span></a><a class="idref" href="zoo_parabs.waiter.html#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">۰</span></a><a class="idref" href="zoo_parabs.waiter.html#f48c30c223bf6c3b6d6fdfac4cbf72d6"><span class="id" title="definition">inv</span></a> <a class="idref" href="zoo_parabs.waiter.html#t:17"><span class="id" title="variable">t</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">}}}</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iIntros</span> "%Φ _ HΦ".<br/>
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="keyword">rec</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">condition</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">create</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span> <span class="id" title="notation">with</span> "[//]"<span class="id" title="notation">)</span> <span class="id" title="keyword">as</span> "%cond #Hcond_inv".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">mutex</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">create</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">init</span> <span class="id" title="notation">with</span> "[//]"<span class="id" title="notation">)</span> <span class="id" title="keyword">as</span> "%mtx Hmtx_init".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="var">block</span> 𝑡 <span class="id" title="keyword">as</span> "H𝑡_mutex H𝑡_condition H𝑡_flag".<br/>
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iMod</span> <span class="id" title="notation">(</span><span class="id" title="lemma">mutex</span><span class="id" title="lemma">۰</span><span class="id" title="lemma">init</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">to</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">inv</span> (<a class="idref" href="zoo_parabs.waiter.html#2cdda073b10ecb47b48295c9eec1cff2"><span class="id" title="definition">inv</span></a><a class="idref" href="zoo_parabs.waiter.html#2cdda073b10ecb47b48295c9eec1cff2"><span class="id" title="definition">۰</span></a><a class="idref" href="zoo_parabs.waiter.html#2cdda073b10ecb47b48295c9eec1cff2"><span class="id" title="definition">inner</span></a> 𝑡) <span class="id" title="notation">with</span> "Hmtx_init [$H𝑡_flag]"<span class="id" title="notation">)</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="5c439b3ade2754fd899eee5d7abf7e7e" class="idref" href="#5c439b3ade2754fd899eee5d7abf7e7e"><span class="id" title="lemma">waiter</span></a><a id="5c439b3ade2754fd899eee5d7abf7e7e" class="idref" href="#5c439b3ade2754fd899eee5d7abf7e7e"><span class="id" title="lemma">٠</span></a><a id="5c439b3ade2754fd899eee5d7abf7e7e" class="idref" href="#5c439b3ade2754fd899eee5d7abf7e7e"><span class="id" title="lemma">notify</span></a><a id="5c439b3ade2754fd899eee5d7abf7e7e" class="idref" href="#5c439b3ade2754fd899eee5d7abf7e7e"><span class="id" title="lemma">ｰ</span></a><a id="5c439b3ade2754fd899eee5d7abf7e7e" class="idref" href="#5c439b3ade2754fd899eee5d7abf7e7e"><span class="id" title="lemma">spec</span></a> <a id="t:18" class="idref" href="#t:18"><span class="id" title="binder">t</span></a> :<br/>
@@ -85,6 +111,26 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">,</span> <span class="id" title="notation">RET</span> <span class="id" title="notation">#</span><a class="idref" href="zoo_parabs.waiter.html#b:19"><span class="id" title="variable">b</span></a><span class="id" title="notation">;</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#::bi_scope:'True'"><span class="id" title="notation">True</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">}}}</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iIntros</span> "%Φ (:inv) HΦ".<br/>
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="keyword">rec</span>. <span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">mutex</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">lock</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span> <span class="id" title="notation">with</span> "Hmtx_inv"<span class="id" title="notation">)</span> <span class="id" title="keyword">as</span> "(Hmtx_locked &amp; (:inv۰inner))".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">b</span>; <span class="id" title="var">wp</span>۰<span class="id" title="var">pures</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- <span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">mutex</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">unlock</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span> <span class="id" title="notation">with</span> "[$Hmtx_inv $Hmtx_locked $H𝑡_flag]"<span class="id" title="notation">)</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iSteps</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- <span class="id" title="var">wp</span>۰<span class="id" title="var">bind</span> (<span class="id" title="var">_</span> <span class="id" title="notation">&lt;-{</span><a class="idref" href="zoo_parabs.waiter__types.html#:zoo.language.notations.zoo_field::'flag'"><span class="id" title="notation">flag</span></a><span class="id" title="notation">}</span> <span class="id" title="var">_</span>)%<span class="id" title="var">E</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="var">store</span>. <span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">mutex</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">unlock</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span> <span class="id" title="notation">with</span> "[$Hmtx_inv $Hmtx_locked $H𝑡_flag]"<span class="id" title="notation">)</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="e2fa11ab3ec1a8bf233f99ffe13b52a5" class="idref" href="#e2fa11ab3ec1a8bf233f99ffe13b52a5"><span class="id" title="lemma">waiter</span></a><a id="e2fa11ab3ec1a8bf233f99ffe13b52a5" class="idref" href="#e2fa11ab3ec1a8bf233f99ffe13b52a5"><span class="id" title="lemma">٠</span></a><a id="e2fa11ab3ec1a8bf233f99ffe13b52a5" class="idref" href="#e2fa11ab3ec1a8bf233f99ffe13b52a5"><span class="id" title="lemma">prepare_wait</span></a><a id="e2fa11ab3ec1a8bf233f99ffe13b52a5" class="idref" href="#e2fa11ab3ec1a8bf233f99ffe13b52a5"><span class="id" title="lemma">ｰ</span></a><a id="e2fa11ab3ec1a8bf233f99ffe13b52a5" class="idref" href="#e2fa11ab3ec1a8bf233f99ffe13b52a5"><span class="id" title="lemma">spec</span></a> <a id="t:20" class="idref" href="#t:20"><span class="id" title="binder">t</span></a> :<br/>
@@ -96,6 +142,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">RET</span> <span class="id" title="notation">()</span><span class="id" title="notation">;</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#::bi_scope:'True'"><span class="id" title="notation">True</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">}}}</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iIntros</span> "%Φ (:inv) HΦ".<br/>
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="keyword">rec</span>. <span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">mutex</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">protect</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span> <span class="id" title="definition">itype</span><span class="id" title="definition">۰</span><span class="id" title="definition">unit</span> <span class="id" title="notation">with</span> "[$Hmtx_inv]"<span class="id" title="notation">)</span>. 1: <span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="df7abe35bcff76981424b39734efd5be" class="idref" href="#df7abe35bcff76981424b39734efd5be"><span class="id" title="lemma">waiter</span></a><a id="df7abe35bcff76981424b39734efd5be" class="idref" href="#df7abe35bcff76981424b39734efd5be"><span class="id" title="lemma">٠</span></a><a id="df7abe35bcff76981424b39734efd5be" class="idref" href="#df7abe35bcff76981424b39734efd5be"><span class="id" title="lemma">cancel_wait</span></a><a id="df7abe35bcff76981424b39734efd5be" class="idref" href="#df7abe35bcff76981424b39734efd5be"><span class="id" title="lemma">ｰ</span></a><a id="df7abe35bcff76981424b39734efd5be" class="idref" href="#df7abe35bcff76981424b39734efd5be"><span class="id" title="lemma">spec</span></a> <a id="t:21" class="idref" href="#t:21"><span class="id" title="binder">t</span></a> :<br/>
@@ -108,6 +162,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">,</span> <span class="id" title="notation">RET</span> <span class="id" title="notation">#</span><a class="idref" href="zoo_parabs.waiter.html#b:22"><span class="id" title="variable">b</span></a><span class="id" title="notation">;</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#::bi_scope:'True'"><span class="id" title="notation">True</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">}}}</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iIntros</span> "%Φ (:inv) HΦ".<br/>
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="keyword">rec</span>. <span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">mutex</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">protect</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span> <span class="id" title="definition">itype</span><span class="id" title="definition">۰</span><span class="id" title="definition">bool</span> <span class="id" title="notation">with</span> "[$Hmtx_inv]"<span class="id" title="notation">)</span>. 2: <span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="var">iIntros</span> "Hmtx_locked (:inv۰inner)".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">b</span>; <span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="4ff2356978019e9189535bef6d8f2073" class="idref" href="#4ff2356978019e9189535bef6d8f2073"><span class="id" title="lemma">waiter</span></a><a id="4ff2356978019e9189535bef6d8f2073" class="idref" href="#4ff2356978019e9189535bef6d8f2073"><span class="id" title="lemma">٠</span></a><a id="4ff2356978019e9189535bef6d8f2073" class="idref" href="#4ff2356978019e9189535bef6d8f2073"><span class="id" title="lemma">commit_wait</span></a><a id="4ff2356978019e9189535bef6d8f2073" class="idref" href="#4ff2356978019e9189535bef6d8f2073"><span class="id" title="lemma">ｰ</span></a><a id="4ff2356978019e9189535bef6d8f2073" class="idref" href="#4ff2356978019e9189535bef6d8f2073"><span class="id" title="lemma">spec</span></a> <a id="t:23" class="idref" href="#t:23"><span class="id" title="binder">t</span></a> :<br/>
@@ -119,12 +184,24 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">RET</span> <span class="id" title="notation">()</span><span class="id" title="notation">;</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#::bi_scope:'True'"><span class="id" title="notation">True</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">}}}</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iIntros</span> "%Φ (:inv) HΦ".<br/>
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="keyword">rec</span>. <span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">mutex</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">protect</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span> <span class="id" title="definition">itype</span><span class="id" title="definition">۰</span><span class="id" title="definition">unit</span> <span class="id" title="notation">with</span> "[$Hmtx_inv]"<span class="id" title="notation">)</span>. 2: <span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iIntros</span> "Hmtx_locked (:inv۰inner)".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">do</span> 2 <span class="id" title="var">wp</span>۰<span class="id" title="var">load</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">wp</span>۰<span class="id" title="tactic">apply</span> <span class="id" title="notation">(</span><span class="id" title="lemma">condition</span><span class="id" title="lemma">٠</span><span class="id" title="lemma">wait_until</span><span class="id" title="lemma">ｰ</span><span class="id" title="lemma">spec</span> (<span class="id" title="notation">λ</span> <span class="id" title="var">_</span><span class="id" title="notation">,</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#::bi_scope:'True'"><span class="id" title="notation">True</span></a>)%<span class="id" title="var">I</span> <span class="id" title="notation">with</span> "[$Hcond_inv $Hmtx_inv $Hmtx_locked $H𝑡_flag]"<span class="id" title="notation">)</span>. 1: <span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">iSteps</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="zoo_parabs.waiter.html#352fa648db94ba72b2527bc954969c90"><span class="id" title="section">waiter</span></a><a class="idref" href="zoo_parabs.waiter.html#352fa648db94ba72b2527bc954969c90"><span class="id" title="section">۰</span></a><a class="idref" href="zoo_parabs.waiter.html#352fa648db94ba72b2527bc954969c90"><span class="id" title="section">G</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Require</span> <a class="idref" href="zoo_parabs.waiter__opaque.html#"><span class="id" title="library">zoo_parabs.waiter__opaque</span></a>.<br/>
 
 <br/>
+<span class="id" title="var">Please</span> <span class="id" title="var">opacify</span>.<br/>
 </div>
 </div>
 

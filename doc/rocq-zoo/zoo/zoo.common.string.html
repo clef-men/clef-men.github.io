@@ -44,6 +44,9 @@
 #[<span class="id" title="var">global</span>] <span class="id" title="var">Program</span> <span class="id" title="keyword">Instance</span> <a id="db0d753bb868b9bdeb2deac4e2d82292" class="idref" href="#db0d753bb868b9bdeb2deac4e2d82292"><span class="id" title="instance">string</span></a><a id="db0d753bb868b9bdeb2deac4e2d82292" class="idref" href="#db0d753bb868b9bdeb2deac4e2d82292"><span class="id" title="instance">ｰ</span></a><a id="db0d753bb868b9bdeb2deac4e2d82292" class="idref" href="#db0d753bb868b9bdeb2deac4e2d82292"><span class="id" title="instance">beq</span></a> : <a class="idref" href="zoo.common.typeclasses.html#Beq"><span class="id" title="class">Beq</span></a> <span class="id" title="inductive">string</span> :=<br/>
 &nbsp;&nbsp;{|<a class="idref" href="zoo.common.typeclasses.html#beq"><span class="id" title="method">beq</span></a> := <span class="id" title="definition">String.eqb</span><br/>
 &nbsp;&nbsp;|}.<br/>
+<span class="id" title="keyword">Next</span> <span class="id" title="keyword">Obligation</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="lemma">String.eqb_eq</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
 </div>
 </div>
 
