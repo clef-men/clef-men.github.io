@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo_saturn.channel_sync_1__code</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo_saturn.channel_sync_1__code</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.domain</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="81be3786d59d5bb794e6520a75117123" class="idref" href="#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">&quot;</span></a>'channel_sync_1٠Null'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.channel_sync_1.state" <span class="id" title="constructor">Tag0</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="71ade7f0b9df7eb154ea236cead8e6c3" class="idref" href="#71ade7f0b9df7eb154ea236cead8e6c3"><span class="id" title="notation">&quot;</span></a>'channel_sync_1٠Sender_offer'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.channel_sync_1.state" <span class="id" title="constructor">Tag1</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="ca291696626feeab6a92fd543f343b31" class="idref" href="#ca291696626feeab6a92fd543f343b31"><span class="id" title="notation">&quot;</span></a>'channel_sync_1٠Sender_accept'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.channel_sync_1.state" <span class="id" title="constructor">Tag2</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="ed8b0a2e1eb666baec68407158f67a22" class="idref" href="#ed8b0a2e1eb666baec68407158f67a22"><span class="id" title="notation">&quot;</span></a>'channel_sync_1٠Receiver_offer'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.channel_sync_1.state" <span class="id" title="constructor">Tag3</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="9a18da9f666f5bc51b79a25d3310ac4c" class="idref" href="#9a18da9f666f5bc51b79a25d3310ac4c"><span class="id" title="notation">&quot;</span></a>'channel_sync_1٠Receiver_accept'" := (<br/>
+&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.channel_sync_1.state" <span class="id" title="constructor">Tag4</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="442da3bf454e3c2522029fa4c6d1faa6" class="idref" href="#442da3bf454e3c2522029fa4c6d1faa6"><span class="id" title="definition">channel_sync_1</span></a><a id="442da3bf454e3c2522029fa4c6d1faa6" class="idref" href="#442da3bf454e3c2522029fa4c6d1faa6"><span class="id" title="definition">٠</span></a><a id="442da3bf454e3c2522029fa4c6d1faa6" class="idref" href="#442da3bf454e3c2522029fa4c6d1faa6"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="notation">𝗳𝘂𝗻</span> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗿𝗲𝗳</span> <span class="id" title="notation">§</span><a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">Null</span></a>.<br/>
+
+<br/>
+#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Definition</span> <a id="__zoo_recs_0" class="idref" href="#__zoo_recs_0"><span class="id" title="definition">__zoo_recs_0</span></a> :=<br/>
+&nbsp;&nbsp;( <span class="id" title="notation">𝗿𝗲𝗰𝘀</span> "send" "t" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="notation">!</span>"t" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">Null</span></a> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"send_aux" "t" "v"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#ed8b0a2e1eb666baec68407158f67a22"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#ed8b0a2e1eb666baec68407158f67a22"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#ed8b0a2e1eb666baec68407158f67a22"><span class="id" title="notation">Receiver_offer</span></a> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗰𝗮𝘀</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Receiver_offer</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Sender_accept</span><span class="id" title="notation">[</span> "v" <span class="id" title="notation">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">false</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝘄𝗶𝘁𝗵</span> "send_aux" "t" "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗰𝗮𝘀</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Null</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Sender_offer</span><span class="id" title="notation">[</span> "v" <span class="id" title="notation">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="axiom">domain</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">yield</span> <span class="id" title="notation">()</span> <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="notation">𝘅𝗰𝗵𝗴</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span> <span class="id" title="notation">§</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Null</span> <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#71ade7f0b9df7eb154ea236cead8e6c3"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#71ade7f0b9df7eb154ea236cead8e6c3"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#71ade7f0b9df7eb154ea236cead8e6c3"><span class="id" title="notation">Sender_offer</span></a> <span class="id" title="notation">⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">false</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#9a18da9f666f5bc51b79a25d3310ac4c"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#9a18da9f666f5bc51b79a25d3310ac4c"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#9a18da9f666f5bc51b79a25d3310ac4c"><span class="id" title="notation">Receiver_accept</span></a> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">true</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗳𝗮𝗶𝗹</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"send" "t" "v"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;)%<span class="id" title="var">zoo_recs</span>.<br/>
+<span class="id" title="keyword">Definition</span> <a id="fb785f80956fa30e5b1898d04e014897" class="idref" href="#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">channel_sync_1</span></a><a id="fb785f80956fa30e5b1898d04e014897" class="idref" href="#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">٠</span></a><a id="fb785f80956fa30e5b1898d04e014897" class="idref" href="#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">send</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" title="constructor">ValRecs</span> 0 <a class="idref" href="zoo_saturn.channel_sync_1__code.html#__zoo_recs_0"><span class="id" title="definition">__zoo_recs_0</span></a>.<br/>
+<span class="id" title="keyword">Definition</span> <a id="2d6d780f8acd976cc31751368c4fa5e3" class="idref" href="#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">channel_sync_1</span></a><a id="2d6d780f8acd976cc31751368c4fa5e3" class="idref" href="#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">٠</span></a><a id="2d6d780f8acd976cc31751368c4fa5e3" class="idref" href="#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">send_aux</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" title="constructor">ValRecs</span> 1 <a class="idref" href="zoo_saturn.channel_sync_1__code.html#__zoo_recs_0"><span class="id" title="definition">__zoo_recs_0</span></a>.<br/>
+#[<span class="id" title="var">global</span>] <span class="id" title="keyword">Instance</span> :<br/>
+&nbsp;&nbsp;<span class="id" title="class">AsValRecs'</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">send</span></a> 0 <a class="idref" href="zoo_saturn.channel_sync_1__code.html#__zoo_recs_0"><span class="id" title="definition">__zoo_recs_0</span></a> <span class="id" title="notation">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">send</span></a> <span class="id" title="notation">;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">send_aux</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="notation">]</span>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">done</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+#[<span class="id" title="var">global</span>] <span class="id" title="keyword">Instance</span> :<br/>
+&nbsp;&nbsp;<span class="id" title="class">AsValRecs'</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">send_aux</span></a> 1 <a class="idref" href="zoo_saturn.channel_sync_1__code.html#__zoo_recs_0"><span class="id" title="definition">__zoo_recs_0</span></a> <span class="id" title="notation">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fb785f80956fa30e5b1898d04e014897"><span class="id" title="definition">send</span></a> <span class="id" title="notation">;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#2d6d780f8acd976cc31751368c4fa5e3"><span class="id" title="definition">send_aux</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="notation">]</span>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">done</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Definition</span> <a id="__zoo_recs_1" class="idref" href="#__zoo_recs_1"><span class="id" title="definition">__zoo_recs_1</span></a> :=<br/>
+&nbsp;&nbsp;( <span class="id" title="notation">𝗿𝗲𝗰𝘀</span> "recv" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="notation">!</span>"t" <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#81be3786d59d5bb794e6520a75117123"><span class="id" title="notation">Null</span></a> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"recv_aux" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#71ade7f0b9df7eb154ea236cead8e6c3"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#71ade7f0b9df7eb154ea236cead8e6c3"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#71ade7f0b9df7eb154ea236cead8e6c3"><span class="id" title="notation">Sender_offer</span></a> "v" <span class="id" title="notation">𝗮𝘀</span> "state" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗰𝗮𝘀</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span> "state" <span class="id" title="notation">§</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Receiver_accept</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">Some</span><span class="id" title="notation">(</span> "v" <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝘄𝗶𝘁𝗵</span> "recv_aux" "t" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗶𝗳</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗰𝗮𝘀</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Null</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Receiver_offer</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝘁𝗵𝗲𝗻</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="axiom">domain</span><span class="id" title="axiom">٠</span><span class="id" title="axiom">yield</span> <span class="id" title="notation">()</span> <span class="id" title="notation">⍮</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗺𝗮𝘁𝗰𝗵</span> <span class="id" title="notation">𝘅𝗰𝗵𝗴</span> "t"<span class="id" title="notation">.[</span><span class="id" title="notation">contents</span><span class="id" title="notation">]</span> <span class="id" title="notation">§</span><span class="id" title="notation">channel_sync_1</span><span class="id" title="notation">٠</span><span class="id" title="notation">Null</span> <span class="id" title="notation">𝘄𝗶𝘁𝗵</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#ed8b0a2e1eb666baec68407158f67a22"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#ed8b0a2e1eb666baec68407158f67a22"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#ed8b0a2e1eb666baec68407158f67a22"><span class="id" title="notation">Receiver_offer</span></a> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">§</span><span class="id" title="notation">None</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#ca291696626feeab6a92fd543f343b31"><span class="id" title="notation">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#ca291696626feeab6a92fd543f343b31"><span class="id" title="notation">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#ca291696626feeab6a92fd543f343b31"><span class="id" title="notation">Sender_accept</span></a> "v" <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">‘</span><span class="id" title="notation">Some</span><span class="id" title="notation">(</span> "v" <span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">|⎽</span> <span class="id" title="notation">-&gt;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗳𝗮𝗶𝗹</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">𝗲𝗻𝗱</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">𝗲𝗹𝘀𝗲</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"recv" "t"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span><br/>
+&nbsp;&nbsp;)%<span class="id" title="var">zoo_recs</span>.<br/>
+<span class="id" title="keyword">Definition</span> <a id="79517ad3b350fde05852b61ab3662672" class="idref" href="#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">channel_sync_1</span></a><a id="79517ad3b350fde05852b61ab3662672" class="idref" href="#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">٠</span></a><a id="79517ad3b350fde05852b61ab3662672" class="idref" href="#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">recv</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" title="constructor">ValRecs</span> 0 <a class="idref" href="zoo_saturn.channel_sync_1__code.html#__zoo_recs_1"><span class="id" title="definition">__zoo_recs_1</span></a>.<br/>
+<span class="id" title="keyword">Definition</span> <a id="fc02fca970db95b2da961a7637c78a0e" class="idref" href="#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">channel_sync_1</span></a><a id="fc02fca970db95b2da961a7637c78a0e" class="idref" href="#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">٠</span></a><a id="fc02fca970db95b2da961a7637c78a0e" class="idref" href="#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">recv_aux</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" title="constructor">ValRecs</span> 1 <a class="idref" href="zoo_saturn.channel_sync_1__code.html#__zoo_recs_1"><span class="id" title="definition">__zoo_recs_1</span></a>.<br/>
+#[<span class="id" title="var">global</span>] <span class="id" title="keyword">Instance</span> :<br/>
+&nbsp;&nbsp;<span class="id" title="class">AsValRecs'</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">recv</span></a> 0 <a class="idref" href="zoo_saturn.channel_sync_1__code.html#__zoo_recs_1"><span class="id" title="definition">__zoo_recs_1</span></a> <span class="id" title="notation">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">recv</span></a> <span class="id" title="notation">;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">recv_aux</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="notation">]</span>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">done</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+#[<span class="id" title="var">global</span>] <span class="id" title="keyword">Instance</span> :<br/>
+&nbsp;&nbsp;<span class="id" title="class">AsValRecs'</span> <a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">recv_aux</span></a> 1 <a class="idref" href="zoo_saturn.channel_sync_1__code.html#__zoo_recs_1"><span class="id" title="definition">__zoo_recs_1</span></a> <span class="id" title="notation">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#79517ad3b350fde05852b61ab3662672"><span class="id" title="definition">recv</span></a> <span class="id" title="notation">;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">channel_sync_1</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">٠</span></a><a class="idref" href="zoo_saturn.channel_sync_1__code.html#fc02fca970db95b2da961a7637c78a0e"><span class="id" title="definition">recv_aux</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="notation">]</span>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">done</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
