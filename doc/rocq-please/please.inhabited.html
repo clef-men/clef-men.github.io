@@ -24,8 +24,9 @@
 
 <br/>
 <span class="id" title="keyword">Ltac</span> <span class="id" title="var">solve_inhabited</span> :=<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">solve</span> [<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.base.html#populate"><span class="id" title="constructor">populate</span></a> <span class="id" title="var">_</span>);<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">first</span><br/>
+&nbsp;&nbsp;[ <span class="id" title="tactic">apply</span> <span class="id" title="var">_</span><br/>
+&nbsp;&nbsp;| <span class="id" title="tactic">refine</span> (<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.base.html#populate"><span class="id" title="constructor">populate</span></a> <span class="id" title="var">_</span>);<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">constructor</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.base.html#inhabitant"><span class="id" title="method">inhabitant</span></a><br/>
 &nbsp;&nbsp;].<br/>
 

@@ -76,6 +76,39 @@
 &nbsp;&nbsp;[ <span class="id" title="tactic">intros</span> <span class="id" title="var">pat1</span><br/>
 &nbsp;&nbsp;| <span class="id" title="tactic">intros</span> <span class="id" title="var">pat2</span><br/>
 &nbsp;&nbsp;].<br/>
+
+<br/>
+#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Ltac</span> <span class="id" title="var">refine_simpl</span> <span class="id" title="keyword">constr</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="keyword">constr</span> := <span class="id" title="tactic">eval</span> <span class="id" title="tactic">simpl</span> <span class="id" title="tactic">in</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;<span class="id" title="tactic">refine</span> <span class="id" title="keyword">constr</span>.<br/>
+<span class="id" title="keyword">Notation</span> <a id="ee236ab61c0fc3947d1d23d3d7f7836d" class="idref" href="#ee236ab61c0fc3947d1d23d3d7f7836d"><span class="id" title="notation">&quot;</span></a>'ltac۰simpl:' x" := (<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">ltac</span>:(<span class="id" title="var">refine_simpl</span> <span class="id" title="var">x</span>)<br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 2,<br/>
+&nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
+&nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
+).<br/>
+
+<br/>
+#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Ltac</span> <span class="id" title="var">refine_cbn</span> <span class="id" title="keyword">constr</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="keyword">constr</span> := <span class="id" title="tactic">eval</span> <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;<span class="id" title="tactic">refine</span> <span class="id" title="keyword">constr</span>.<br/>
+<span class="id" title="keyword">Notation</span> <a id="ba21ec9d36f08a2ef700df2203693e3a" class="idref" href="#ba21ec9d36f08a2ef700df2203693e3a"><span class="id" title="notation">&quot;</span></a>'ltac۰cbn:' x" := (<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">ltac</span>:(<span class="id" title="var">refine_cbn</span> <span class="id" title="var">x</span>)<br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 2,<br/>
+&nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
+&nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
+).<br/>
+
+<br/>
+#[<span class="id" title="var">local</span>] <span class="id" title="keyword">Ltac</span> <span class="id" title="var">refine_compute</span> <span class="id" title="keyword">constr</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">let</span> <span class="id" title="keyword">constr</span> := <span class="id" title="tactic">eval</span> <span class="id" title="keyword">vm_compute</span> <span class="id" title="tactic">in</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">in</span><br/>
+&nbsp;&nbsp;<span class="id" title="tactic">refine</span> <span class="id" title="keyword">constr</span>.<br/>
+<span class="id" title="keyword">Notation</span> <a id="919cbf8f654f0b15f8b363198f07b1ae" class="idref" href="#919cbf8f654f0b15f8b363198f07b1ae"><span class="id" title="notation">&quot;</span></a>'ltac۰compute:' x" := (<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">ltac</span>:(<span class="id" title="var">refine_compute</span> <span class="id" title="var">x</span>)<br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 2,<br/>
+&nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
+&nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
+).<br/>
 </div>
 </div>
 
