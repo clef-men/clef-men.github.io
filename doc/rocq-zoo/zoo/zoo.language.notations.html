@@ -34,7 +34,8 @@
 <span class="id" title="keyword">Coercion</span> <a class="idref" href="zoo.language.syntax.html#LitInt"><span class="id" title="constructor">LitInt</span></a> <a class="idref" href="zoo.language.syntax.html#LitInt"><span class="id" title="constructor">:</span></a> <a class="idref" href="zoo.language.syntax.html#LitInt"><span class="id" title="constructor">Z</span></a> <a class="idref" href="zoo.language.syntax.html#LitInt"><span class="id" title="constructor">&gt;-&gt;</span></a> <a class="idref" href="zoo.language.syntax.html#LitInt"><span class="id" title="constructor">literal</span></a>.<br/>
 <span class="id" title="keyword">Coercion</span> <a class="idref" href="zoo.language.syntax.html#LitString"><span class="id" title="constructor">LitString</span></a> <a class="idref" href="zoo.language.syntax.html#LitString"><span class="id" title="constructor">:</span></a> <a class="idref" href="zoo.language.syntax.html#LitString"><span class="id" title="constructor">string</span></a> <a class="idref" href="zoo.language.syntax.html#LitString"><span class="id" title="constructor">&gt;-&gt;</span></a> <a class="idref" href="zoo.language.syntax.html#LitString"><span class="id" title="constructor">literal</span></a>.<br/>
 <span class="id" title="keyword">Coercion</span> <a class="idref" href="zoo.language.syntax.html#LitLoc"><span class="id" title="constructor">LitLoc</span></a> <a class="idref" href="zoo.language.syntax.html#LitLoc"><span class="id" title="constructor">:</span></a> <a class="idref" href="zoo.language.syntax.html#LitLoc"><span class="id" title="constructor">location</span></a> <a class="idref" href="zoo.language.syntax.html#LitLoc"><span class="id" title="constructor">&gt;-&gt;</span></a> <a class="idref" href="zoo.language.syntax.html#LitLoc"><span class="id" title="constructor">literal</span></a>.<br/>
-<span class="id" title="keyword">Coercion</span> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">LitProph</span></a> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">:</span></a> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">prophet_id</span></a> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">&gt;-&gt;</span></a> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">literal</span></a>.<br/>
+<span class="id" title="keyword">Coercion</span> <a class="idref" href="zoo.language.syntax.html#LitBytes"><span class="id" title="constructor">LitBytes</span></a> <a class="idref" href="zoo.language.syntax.html#LitBytes"><span class="id" title="constructor">:</span></a> <a class="idref" href="zoo.language.syntax.html#LitBytes"><span class="id" title="constructor">bytes_location</span></a> <a class="idref" href="zoo.language.syntax.html#LitBytes"><span class="id" title="constructor">&gt;-&gt;</span></a> <a class="idref" href="zoo.language.syntax.html#LitBytes"><span class="id" title="constructor">literal</span></a>.<br/>
+<span class="id" title="keyword">Coercion</span> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">LitProph</span></a> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">:</span></a> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">prophet_identifier</span></a> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">&gt;-&gt;</span></a> <a class="idref" href="zoo.language.syntax.html#LitProph"><span class="id" title="constructor">literal</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Coercion</span> <a class="idref" href="zoo.language.syntax.html#Val"><span class="id" title="constructor">Val</span></a> <a class="idref" href="zoo.language.syntax.html#Val"><span class="id" title="constructor">:</span></a> <a class="idref" href="zoo.language.syntax.html#Val"><span class="id" title="constructor">val</span></a> <a class="idref" href="zoo.language.syntax.html#Val"><span class="id" title="constructor">&gt;-&gt;</span></a> <a class="idref" href="zoo.language.syntax.html#Val"><span class="id" title="constructor">expr</span></a>.<br/>
@@ -233,7 +234,7 @@
 &nbsp;&nbsp;<span class="id" title="var">format</span> "# x"<br/>
 ).<br/>
 <span class="id" title="keyword">Notation</span> <a id="2bed6976c71446df062629edee98f312" class="idref" href="#2bed6976c71446df062629edee98f312"><span class="id" title="notation">&quot;</span></a>#@{ X } x" := (<br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#ValLit"><span class="id" title="constructor">ValLit</span></a> <span class="id" title="var">x</span>%<span class="id" title="var">Z</span>%<span class="id" title="var">V</span>%<span class="id" title="var">stdpp</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#ValLit"><span class="id" title="constructor">ValLit</span></a> (<span class="id" title="var">x</span> : <span class="id" title="var">X</span>)%<span class="id" title="var">Z</span>%<span class="id" title="var">V</span>%<span class="id" title="var">stdpp</span><br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ).<br/>
@@ -369,6 +370,48 @@
 &nbsp;&nbsp;@<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.base.html#fmap"><span class="id" title="definition">fmap</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="zoo.language.location.html#location"><span class="id" title="record">location</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <a class="idref" href="zoo.language.notations.html#047d004a62cc215d629d9728828c34d1"><span class="id" title="notation">(#ˡ)</span></a> <span class="id" title="var">ls</span><br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "#*ˡ  ls"<br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="e324aa7b730c394524035d57fe63ca7b" class="idref" href="#e324aa7b730c394524035d57fe63ca7b"><span class="id" title="notation">&quot;</span></a>#ᴮ lᴮ" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#ValBytes"><span class="id" title="abbreviation">ValBytes</span></a> <span class="id" title="var">l</span>ᴮ%<span class="id" title="var">stdpp</span><br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8,<br/>
+&nbsp;&nbsp;<span class="id" title="var">format</span> "#ᴮ lᴮ"<br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="0028622f736a5f9dd7261a68b7052967" class="idref" href="#0028622f736a5f9dd7261a68b7052967"><span class="id" title="notation">&quot;</span></a>(#ᴮ)" := (<br/>
+&nbsp;&nbsp;<span class="id" title="notation">λ</span> <a id="015cd7f78c3ef5a0ec677735405b0adc" class="idref" href="#015cd7f78c3ef5a0ec677735405b0adc"><span class="id" title="binder">l</span></a><a id="015cd7f78c3ef5a0ec677735405b0adc" class="idref" href="#015cd7f78c3ef5a0ec677735405b0adc"><span class="id" title="binder">ᴮ</span></a><span class="id" title="notation">,</span> <a class="idref" href="zoo.language.syntax.html#ValBytes"><span class="id" title="abbreviation">ValBytes</span></a> <a class="idref" href="zoo.language.notations.html#015cd7f78c3ef5a0ec677735405b0adc"><span class="id" title="variable">l</span></a><a class="idref" href="zoo.language.notations.html#015cd7f78c3ef5a0ec677735405b0adc"><span class="id" title="variable">ᴮ</span></a><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="90c269360f26401c465d6273b22b95ef" class="idref" href="#90c269360f26401c465d6273b22b95ef"><span class="id" title="notation">&quot;</span></a>(#*ᴮ)" := (<br/>
+&nbsp;&nbsp;@<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.base.html#fmap"><span class="id" title="definition">fmap</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="zoo.language.location.html#location"><span class="id" title="record">location</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <a class="idref" href="zoo.language.notations.html#0028622f736a5f9dd7261a68b7052967"><span class="id" title="notation">(#ᴮ)</span></a><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="3757070c37b5a10121ed02da3ccea7e6" class="idref" href="#3757070c37b5a10121ed02da3ccea7e6"><span class="id" title="notation">&quot;</span></a>#*ᴮ lᴮs" := (<br/>
+&nbsp;&nbsp;@<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.base.html#fmap"><span class="id" title="definition">fmap</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="zoo.language.location.html#location"><span class="id" title="record">location</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <a class="idref" href="zoo.language.notations.html#0028622f736a5f9dd7261a68b7052967"><span class="id" title="notation">(#ᴮ)</span></a> <span class="id" title="var">l</span>ᴮ<span class="id" title="var">s</span><br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8,<br/>
+&nbsp;&nbsp;<span class="id" title="var">format</span> "#*ᴮ  lᴮs"<br/>
+).<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="ToVal" class="idref" href="#ToVal"><span class="id" title="inductive, record"><span id="ToVal" class="id">ToVal</span></span></a> <a id="X:12" class="idref" href="#X:12"><span class="id" title="binder">X</span></a> :=<br/>
+&nbsp;&nbsp;<a id="to_val" class="idref" href="#to_val"><span class="id" title="constructor, projection"><span id="to_val" class="id">to_val</span></span></a> : <a class="idref" href="zoo.language.notations.html#X:12"><span class="id" title="variable">X</span></a> <span class="id" title="notation">→</span> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="617e4d6864a4e60310ed1c935882da8f" class="idref" href="#617e4d6864a4e60310ed1c935882da8f"><span class="id" title="notation">&quot;</span></a>♯ x" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#to_val"><span class="id" title="definition">to_val</span></a> <span class="id" title="var">x</span><br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8,<br/>
+&nbsp;&nbsp;<span class="id" title="var">format</span> "♯ x"<br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="069de88026c24a2fff1dcfe1872c2687" class="idref" href="#069de88026c24a2fff1dcfe1872c2687"><span class="id" title="notation">&quot;</span></a>♯@{ X } x" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#to_val"><span class="id" title="definition">to_val</span></a> (<span class="id" title="var">X</span> := <span class="id" title="var">X</span>) <span class="id" title="var">x</span><br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8,<br/>
+&nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="5c90241ab0dedee78a47eb72b0b68618" class="idref" href="#5c90241ab0dedee78a47eb72b0b68618"><span class="id" title="notation">&quot;</span></a>(♯)" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#to_val"><span class="id" title="definition">to_val</span></a><br/>
+)(<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
+).<br/>
+<span class="id" title="keyword">Notation</span> <a id="ea3418ade6e196defd06912bdcf563d5" class="idref" href="#ea3418ade6e196defd06912bdcf563d5"><span class="id" title="notation">&quot;</span></a>(♯@{ X } )" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#to_val"><span class="id" title="definition">to_val</span></a> (<span class="id" title="var">X</span> := <span class="id" title="var">X</span>)<br/>
+)(<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ).<br/>
 
 <br/>
@@ -586,13 +629,27 @@
 &nbsp;&nbsp;<span class="id" title="keyword">no</span> <span class="id" title="keyword">associativity</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a id="a0d8af456e51e81d9aaeee78159d8ec7" class="idref" href="#a0d8af456e51e81d9aaeee78159d8ec7"><span class="id" title="notation">&quot;</span></a>e1 =ₛ e2" := (<br/>
-&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive2"><span class="id" title="constructor">Primitive2</span></a> <a class="idref" href="zoo.language.syntax.html#StringEqual"><span class="id" title="constructor">StringEqual</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> <span class="id" title="var">e2</span>%<span class="id" title="var">E</span><br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive2"><span class="id" title="constructor">Primitive2</span></a> <a class="idref" href="zoo.language.syntax.html#BytesEqual"><span class="id" title="constructor">BytesEqual</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> <span class="id" title="var">e2</span>%<span class="id" title="var">E</span><br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 70,<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">no</span> <span class="id" title="keyword">associativity</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
+) : <span class="id" title="var">expr_scope</span>.<br/>
+<span class="id" title="keyword">Notation</span> <a id="95a06e3674dfb6f75154733e33960730" class="idref" href="#95a06e3674dfb6f75154733e33960730"><span class="id" title="notation">&quot;</span></a>e1 =ᴮ e2" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive2"><span class="id" title="constructor">Primitive2</span></a> <a class="idref" href="zoo.language.syntax.html#BytesEqual"><span class="id" title="constructor">BytesEqual</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> <span class="id" title="var">e2</span>%<span class="id" title="var">E</span><br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 70,<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">no</span> <span class="id" title="keyword">associativity</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a id="7f3bdb43397e3036cfac1e1a5efdc78e" class="idref" href="#7f3bdb43397e3036cfac1e1a5efdc78e"><span class="id" title="notation">&quot;</span></a>e1 ≠ₛ e2" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive1"><span class="id" title="constructor">Primitive1</span></a> (<a class="idref" href="zoo.language.syntax.html#Unop"><span class="id" title="constructor">Unop</span></a> <a class="idref" href="zoo.language.syntax.html#UnopNeg"><span class="id" title="constructor">UnopNeg</span></a>) (<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive2"><span class="id" title="constructor">Primitive2</span></a> <a class="idref" href="zoo.language.syntax.html#StringEqual"><span class="id" title="constructor">StringEqual</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> <span class="id" title="var">e2</span>%<span class="id" title="var">E</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive2"><span class="id" title="constructor">Primitive2</span></a> <a class="idref" href="zoo.language.syntax.html#BytesEqual"><span class="id" title="constructor">BytesEqual</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> <span class="id" title="var">e2</span>%<span class="id" title="var">E</span><br/>
+&nbsp;&nbsp;)<br/>
+)(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 70,<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">no</span> <span class="id" title="keyword">associativity</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
+) : <span class="id" title="var">expr_scope</span>.<br/>
+<span class="id" title="keyword">Notation</span> <a id="66fbf6bce626ef8a6f61d6ad7b305a54" class="idref" href="#66fbf6bce626ef8a6f61d6ad7b305a54"><span class="id" title="notation">&quot;</span></a>e1 ≠ᴮ e2" := (<br/>
+&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive1"><span class="id" title="constructor">Primitive1</span></a> (<a class="idref" href="zoo.language.syntax.html#Unop"><span class="id" title="constructor">Unop</span></a> <a class="idref" href="zoo.language.syntax.html#UnopNeg"><span class="id" title="constructor">UnopNeg</span></a>) (<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive2"><span class="id" title="constructor">Primitive2</span></a> <a class="idref" href="zoo.language.syntax.html#BytesEqual"><span class="id" title="constructor">BytesEqual</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> <span class="id" title="var">e2</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 70,<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">no</span> <span class="id" title="keyword">associativity</span><br/>
