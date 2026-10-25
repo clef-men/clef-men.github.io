@@ -22,38 +22,23 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">backoff.backoff</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.program_logic.identifier</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.array</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="14fb8978a3df8275a48ac1542396c227" class="idref" href="#14fb8978a3df8275a48ac1542396c227"><span class="id" title="notation">&quot;</span></a>'ws_bdeque_1٠capacity'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.ws_bdeque_1.t" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="b6c4eb553c663413bcf456b39f6ef21a" class="idref" href="#b6c4eb553c663413bcf456b39f6ef21a"><span class="id" title="notation">&quot;</span></a>'ws_bdeque_1٠front'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.ws_bdeque_1.t" 1<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="71467d0a6cd026a1171b9bb1ce53d939" class="idref" href="#71467d0a6cd026a1171b9bb1ce53d939"><span class="id" title="notation">&quot;</span></a>'ws_bdeque_1٠front_cache'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.ws_bdeque_1.t" 2<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="90ccb5e6824231aac21cafaf1ec4868a" class="idref" href="#90ccb5e6824231aac21cafaf1ec4868a"><span class="id" title="notation">&quot;</span></a>'ws_bdeque_1٠back'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.ws_bdeque_1.t" 3<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="0dd9c911e7f09559278284ace84f89af" class="idref" href="#0dd9c911e7f09559278284ace84f89af"><span class="id" title="notation">&quot;</span></a>'ws_bdeque_1٠data'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.ws_bdeque_1.t" 4<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="4b4fb8a9224164e95c648c070990f0bb" class="idref" href="#4b4fb8a9224164e95c648c070990f0bb"><span class="id" title="notation">&quot;</span></a>'ws_bdeque_1٠proph'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.ws_bdeque_1.t" 5<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
+#[<span class="id" title="var">qualified</span>] <span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">t</span> := <span class="id" title="var">mutable</span><br/>
+&nbsp;&nbsp;{ <span class="id" title="var">capacity</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">front</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">front_cache</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">back</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">data</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">proph</span><br/>
+&nbsp;&nbsp;}.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="70a7bfd1600955f8a8fb755f4c2b744b" class="idref" href="#70a7bfd1600955f8a8fb755f4c2b744b"><span class="id" title="definition">ws_bdeque_1</span></a><a id="70a7bfd1600955f8a8fb755f4c2b744b" class="idref" href="#70a7bfd1600955f8a8fb755f4c2b744b"><span class="id" title="definition">٠</span></a><a id="70a7bfd1600955f8a8fb755f4c2b744b" class="idref" href="#70a7bfd1600955f8a8fb755f4c2b744b"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>

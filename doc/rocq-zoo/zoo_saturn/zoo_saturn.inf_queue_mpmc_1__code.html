@@ -22,8 +22,9 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">backoff.backoff</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.inf_array</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.int</span>.<br/>
@@ -31,18 +32,11 @@
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="992d794bd23b1a1fd9681a93f2b09d86" class="idref" href="#992d794bd23b1a1fd9681a93f2b09d86"><span class="id" title="notation">&quot;</span></a>'inf_queue_mpmc_1٠data'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_queue_mpmc_1.t" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="220f2ca73d97a50a9dffa992e7816073" class="idref" href="#220f2ca73d97a50a9dffa992e7816073"><span class="id" title="notation">&quot;</span></a>'inf_queue_mpmc_1٠front'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_queue_mpmc_1.t" 1<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="0b38de4034be2544e453f0ff8a933372" class="idref" href="#0b38de4034be2544e453f0ff8a933372"><span class="id" title="notation">&quot;</span></a>'inf_queue_mpmc_1٠back'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_queue_mpmc_1.t" 2<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
+#[<span class="id" title="var">qualified</span>] <span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">t</span> := <span class="id" title="var">mutable</span><br/>
+&nbsp;&nbsp;{ <span class="id" title="var">data</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">front</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">back</span><br/>
+&nbsp;&nbsp;}.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="2b18696d07c05b7ae03211d44a3d54b6" class="idref" href="#2b18696d07c05b7ae03211d44a3d54b6"><span class="id" title="definition">inf_queue_mpmc_1</span></a><a id="2b18696d07c05b7ae03211d44a3d54b6" class="idref" href="#2b18696d07c05b7ae03211d44a3d54b6"><span class="id" title="definition">٠</span></a><a id="2b18696d07c05b7ae03211d44a3d54b6" class="idref" href="#2b18696d07c05b7ae03211d44a3d54b6"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>

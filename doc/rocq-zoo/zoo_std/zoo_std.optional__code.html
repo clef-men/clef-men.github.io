@@ -22,23 +22,16 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="bbc63791cea415f59b016afa1ef9dcc8" class="idref" href="#bbc63791cea415f59b016afa1ef9dcc8"><span class="id" title="notation">&quot;</span></a>'optional٠Nothing'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.optional.t" <span class="id" title="constructor">Tag0</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="c1fb1a32c6ed44192bfaba22a02671ff" class="idref" href="#c1fb1a32c6ed44192bfaba22a02671ff"><span class="id" title="notation">&quot;</span></a>'optional٠Anything'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.optional.t" <span class="id" title="constructor">Tag1</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="5a98433610d459dbe28e7ca789e6dd81" class="idref" href="#5a98433610d459dbe28e7ca789e6dd81"><span class="id" title="notation">&quot;</span></a>'optional٠Something'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.optional.t" <span class="id" title="constructor">Tag2</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_tag</span><br/>
-).<br/>
+#[<span class="id" title="var">qualified</span>] <span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;| <span class="id" title="var">Nothing</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">Anything</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">Something</span> <span class="id" title="var">_</span>.<br/>
 </div>
 </div>
 

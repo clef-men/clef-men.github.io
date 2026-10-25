@@ -22,25 +22,19 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.condition.html#"><span class="id" title="library">zoo_std.condition</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.mutex.html#"><span class="id" title="library">zoo_std.mutex</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="5e104067cca1a4f6cdfa3e6907164d1f" class="idref" href="#5e104067cca1a4f6cdfa3e6907164d1f"><span class="id" title="notation">&quot;</span></a>'latch٠counter'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.latch.t" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="6fa1fbd5c5418aa944a4711dec09dbaf" class="idref" href="#6fa1fbd5c5418aa944a4711dec09dbaf"><span class="id" title="notation">&quot;</span></a>'latch٠mutex'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.latch.t" 1<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="73ad291276c9e2a4bcb4e093030d9a88" class="idref" href="#73ad291276c9e2a4bcb4e093030d9a88"><span class="id" title="notation">&quot;</span></a>'latch٠condition'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.latch.t" 2<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
+#[<span class="id" title="var">qualified</span>] <span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">t</span> := <span class="id" title="var">mutable</span><br/>
+&nbsp;&nbsp;{ <span class="id" title="var">counter</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">mutex</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">condition</span><br/>
+&nbsp;&nbsp;}.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="e35df17888f55a4a6fa786a72b61dbcc" class="idref" href="#e35df17888f55a4a6fa786a72b61dbcc"><span class="id" title="definition">latch</span></a><a id="e35df17888f55a4a6fa786a72b61dbcc" class="idref" href="#e35df17888f55a4a6fa786a72b61dbcc"><span class="id" title="definition">٠</span></a><a id="e35df17888f55a4a6fa786a72b61dbcc" class="idref" href="#e35df17888f55a4a6fa786a72b61dbcc"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>

@@ -22,30 +22,21 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">backoff.backoff</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.program_logic.identifier</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.inf_array</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="a2bb6670de471c75fab1e7bf0f372909" class="idref" href="#a2bb6670de471c75fab1e7bf0f372909"><span class="id" title="notation">&quot;</span></a>'inf_ws_deque_1٠front'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_ws_deque_1.t" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="449d8bbe511feed81e0063b4a122a32e" class="idref" href="#449d8bbe511feed81e0063b4a122a32e"><span class="id" title="notation">&quot;</span></a>'inf_ws_deque_1٠back'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_ws_deque_1.t" 1<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="0e2b2da7b67eca6985bd00d8f80be3d1" class="idref" href="#0e2b2da7b67eca6985bd00d8f80be3d1"><span class="id" title="notation">&quot;</span></a>'inf_ws_deque_1٠data'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_ws_deque_1.t" 2<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="fa9f138c9aad98f06175955d38f45e1b" class="idref" href="#fa9f138c9aad98f06175955d38f45e1b"><span class="id" title="notation">&quot;</span></a>'inf_ws_deque_1٠proph'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.inf_ws_deque_1.t" 3<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
+#[<span class="id" title="var">qualified</span>] <span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">t</span> := <span class="id" title="var">mutable</span><br/>
+&nbsp;&nbsp;{ <span class="id" title="var">front</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">back</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">data</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">proph</span><br/>
+&nbsp;&nbsp;}.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="b92b24e39a6f13500630c8d8041a7f79" class="idref" href="#b92b24e39a6f13500630c8d8041a7f79"><span class="id" title="definition">inf_ws_deque_1</span></a><a id="b92b24e39a6f13500630c8d8041a7f79" class="idref" href="#b92b24e39a6f13500630c8d8041a7f79"><span class="id" title="definition">٠</span></a><a id="b92b24e39a6f13500630c8d8041a7f79" class="idref" href="#b92b24e39a6f13500630c8d8041a7f79"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>

@@ -22,22 +22,19 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="zoo_saturn.exchanger_1.html#"><span class="id" title="library">zoo_saturn.exchanger_1</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <span class="id" title="library">zoo_std.array</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <span class="id" title="library">zoo_std.random</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_proj::'exchangers'" class="idref" href="#:zoo.language.notations.zoo_proj::'exchangers'"><span class="id" title="notation">&quot;</span></a>'exchangers'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.exchanger_2.t" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_proj</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_proj::'capacity_log'" class="idref" href="#:zoo.language.notations.zoo_proj::'capacity_log'"><span class="id" title="notation">&quot;</span></a>'capacity_log'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.exchanger_2.t" 1<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_proj</span><br/>
-).<br/>
+<span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">t</span> :=<br/>
+&nbsp;&nbsp;{ <span class="id" title="var">exchangers</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">capacity_log</span><br/>
+&nbsp;&nbsp;}.<br/>
 </div>
 </div>
 

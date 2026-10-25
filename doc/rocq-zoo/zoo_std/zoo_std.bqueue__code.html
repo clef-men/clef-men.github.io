@@ -22,28 +22,19 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo_std.array.html#"><span class="id" title="library">zoo_std.array</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="8ada552703aaf0f24220a5734a140aee" class="idref" href="#8ada552703aaf0f24220a5734a140aee"><span class="id" title="notation">&quot;</span></a>'bqueue٠capacity'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.bqueue.t" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="aec1a0f9b646675c577eacf045ac02c7" class="idref" href="#aec1a0f9b646675c577eacf045ac02c7"><span class="id" title="notation">&quot;</span></a>'bqueue٠data'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.bqueue.t" 1<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="3717a53d5a241c5d1bfd55e824ec41c9" class="idref" href="#3717a53d5a241c5d1bfd55e824ec41c9"><span class="id" title="notation">&quot;</span></a>'bqueue٠front'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.bqueue.t" 2<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="ad005c4c85dd4aba919470f66eef1d2b" class="idref" href="#ad005c4c85dd4aba919470f66eef1d2b"><span class="id" title="notation">&quot;</span></a>'bqueue٠back'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.bqueue.t" 3<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
+#[<span class="id" title="var">qualified</span>] <span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">t</span> := <span class="id" title="var">mutable</span><br/>
+&nbsp;&nbsp;{ <span class="id" title="var">capacity</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">data</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">front</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">back</span><br/>
+&nbsp;&nbsp;}.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="e91ed653b916b05617fceb5ff86fa71f" class="idref" href="#e91ed653b916b05617fceb5ff86fa71f"><span class="id" title="definition">bqueue</span></a><a id="e91ed653b916b05617fceb5ff86fa71f" class="idref" href="#e91ed653b916b05617fceb5ff86fa71f"><span class="id" title="definition">٠</span></a><a id="e91ed653b916b05617fceb5ff86fa71f" class="idref" href="#e91ed653b916b05617fceb5ff86fa71f"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>

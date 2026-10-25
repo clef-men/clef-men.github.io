@@ -22,23 +22,17 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="aaaa1e13a39f6035b9b8bc420f6035e3" class="idref" href="#aaaa1e13a39f6035b9b8bc420f6035e3"><span class="id" title="notation">&quot;</span></a>'xdeque٠prev'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.xdeque.node" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="33c38c5771fb74f5bbf3edaa7ec18855" class="idref" href="#33c38c5771fb74f5bbf3edaa7ec18855"><span class="id" title="notation">&quot;</span></a>'xdeque٠next'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.xdeque.node" 1<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="574bc05a664c819e5f53e2f3344cf3ec" class="idref" href="#574bc05a664c819e5f53e2f3344cf3ec"><span class="id" title="notation">&quot;</span></a>'xdeque٠data'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_std.xdeque.node" 2<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
+#[<span class="id" title="var">qualified</span>] <span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">node</span> := <span class="id" title="var">mutable</span><br/>
+&nbsp;&nbsp;{ <span class="id" title="var">prev</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">next</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">data</span><br/>
+&nbsp;&nbsp;}.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="122c45bd7d50f1197b1cb7829dcca642" class="idref" href="#122c45bd7d50f1197b1cb7829dcca642"><span class="id" title="definition">xdeque</span></a><a id="122c45bd7d50f1197b1cb7829dcca642" class="idref" href="#122c45bd7d50f1197b1cb7829dcca642"><span class="id" title="definition">٠</span></a><a id="122c45bd7d50f1197b1cb7829dcca642" class="idref" href="#122c45bd7d50f1197b1cb7829dcca642"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>

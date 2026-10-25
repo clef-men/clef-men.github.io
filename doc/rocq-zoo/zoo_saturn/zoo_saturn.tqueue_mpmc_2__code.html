@@ -22,29 +22,20 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.prelude</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.plugin</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.notations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.language.typeclasses</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.atomic_array</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo_std.optional</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">zoo.options</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="74d7f98091c0947ba2e1cc34388dc00a" class="idref" href="#74d7f98091c0947ba2e1cc34388dc00a"><span class="id" title="notation">&quot;</span></a>'tqueue_mpmc_2٠capacity'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.tqueue_mpmc_2.t" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="24dcdc579a6ab5ce530f0202b0931415" class="idref" href="#24dcdc579a6ab5ce530f0202b0931415"><span class="id" title="notation">&quot;</span></a>'tqueue_mpmc_2٠data'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.tqueue_mpmc_2.t" 1<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="3011753bb6f05fd4603ee94e87387dea" class="idref" href="#3011753bb6f05fd4603ee94e87387dea"><span class="id" title="notation">&quot;</span></a>'tqueue_mpmc_2٠front'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.tqueue_mpmc_2.t" 2<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
-<span class="id" title="keyword">Notation</span> <a id="f5eb53e86d8c1a9fdf881dfe6029419b" class="idref" href="#f5eb53e86d8c1a9fdf881dfe6029419b"><span class="id" title="notation">&quot;</span></a>'tqueue_mpmc_2٠back'" := (<br/>
-&nbsp;&nbsp;<span class="id" title="definition">in_type</span> "zoo_saturn.tqueue_mpmc_2.t" 3<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
-).<br/>
+#[<span class="id" title="var">qualified</span>] <span class="id" title="var">Zoo</span> <span class="id" title="keyword">type</span> <span class="id" title="var">t</span> := <span class="id" title="var">mutable</span><br/>
+&nbsp;&nbsp;{ <span class="id" title="var">capacity</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">data</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">front</span><br/>
+&nbsp;&nbsp;; <span class="id" title="var">back</span><br/>
+&nbsp;&nbsp;}.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="0d596712a5e5704396823dd3bfd2a5e4" class="idref" href="#0d596712a5e5704396823dd3bfd2a5e4"><span class="id" title="definition">tqueue_mpmc_2</span></a><a id="0d596712a5e5704396823dd3bfd2a5e4" class="idref" href="#0d596712a5e5704396823dd3bfd2a5e4"><span class="id" title="definition">٠</span></a><a id="0d596712a5e5704396823dd3bfd2a5e4" class="idref" href="#0d596712a5e5704396823dd3bfd2a5e4"><span class="id" title="definition">create</span></a> : <span class="id" title="inductive">val</span> :=<br/>
