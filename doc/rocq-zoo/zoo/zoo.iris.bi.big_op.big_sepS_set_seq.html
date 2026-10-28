@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo.iris.bi.big_op.big_sepS_set_seq</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo.iris.bi.big_op.big_sepS_set_seq</h1>
+
+<div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.prelude.html#"><span class="id" title="library">zoo.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="zoo.iris.bi.big_op.base.html#"><span class="id" title="library">zoo.iris.bi.big_op.base</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.iris.diaframe.html#"><span class="id" title="library">zoo.iris.diaframe</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.options.html#"><span class="id" title="library">zoo.options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a id="bi" class="idref" href="#bi"><span class="id" title="section">bi</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> {<a id="bi.PROP" class="idref" href="#bi.PROP"><span class="id" title="variable">PROP</span></a> : <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#bi"><span class="id" title="record">bi</span></a>}.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Type</span> <span class="id" title="var">Φ</span> : <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> <span class="id" title="notation">→</span> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#bi.PROP"><span class="id" title="variable">PROP</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="f3c30b6f6f81241ead115fa9c9aa0578" class="idref" href="#f3c30b6f6f81241ead115fa9c9aa0578"><span class="id" title="lemma">big_sepS</span></a><a id="f3c30b6f6f81241ead115fa9c9aa0578" class="idref" href="#f3c30b6f6f81241ead115fa9c9aa0578"><span class="id" title="lemma">ｰ</span></a><a id="f3c30b6f6f81241ead115fa9c9aa0578" class="idref" href="#f3c30b6f6f81241ead115fa9c9aa0578"><span class="id" title="lemma">set_seq</span></a><a id="f3c30b6f6f81241ead115fa9c9aa0578" class="idref" href="#f3c30b6f6f81241ead115fa9c9aa0578"><span class="id" title="lemma">ｰ</span></a><a id="f3c30b6f6f81241ead115fa9c9aa0578" class="idref" href="#f3c30b6f6f81241ead115fa9c9aa0578"><span class="id" title="lemma">to</span></a><a id="f3c30b6f6f81241ead115fa9c9aa0578" class="idref" href="#f3c30b6f6f81241ead115fa9c9aa0578"><span class="id" title="lemma">ｰ</span></a><a id="f3c30b6f6f81241ead115fa9c9aa0578" class="idref" href="#f3c30b6f6f81241ead115fa9c9aa0578"><span class="id" title="lemma">big_sepL</span></a> <a id="7a2ac54b3c1387e41c565d7f78953187" class="idref" href="#7a2ac54b3c1387e41c565d7f78953187"><span class="id" title="binder">Φ</span></a> <a id="i:3" class="idref" href="#i:3"><span class="id" title="binder">i</span></a> <a id="n:4" class="idref" href="#n:4"><span class="id" title="binder">n</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#e55eb026c3f0434cd18ddc04e5d7c1ac"><span class="id" title="notation">(</span></a><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#e72b64b59f7c5fd654ece5947ba4181d"><span class="id" title="notation">[∗</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#e72b64b59f7c5fd654ece5947ba4181d"><span class="id" title="notation">set</span></a><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#e72b64b59f7c5fd654ece5947ba4181d"><span class="id" title="notation">]</span></a> <a id="k:5" class="idref" href="#k:5"><span class="id" title="binder"><span id="k:6" class="id">k</span></span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#e72b64b59f7c5fd654ece5947ba4181d"><span class="id" title="notation">∈</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.sets.html#set_seq"><span class="id" title="definition">set_seq</span></a> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#i:3"><span class="id" title="variable">i</span></a> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#n:4"><span class="id" title="variable">n</span></a><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#e72b64b59f7c5fd654ece5947ba4181d"><span class="id" title="notation">,</span></a> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#7a2ac54b3c1387e41c565d7f78953187"><span class="id" title="variable">Φ</span></a> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#k:5"><span class="id" title="variable">k</span></a><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#e55eb026c3f0434cd18ddc04e5d7c1ac"><span class="id" title="notation">)</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.interface.html#e55eb026c3f0434cd18ddc04e5d7c1ac"><span class="id" title="notation">⊢</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">[∗</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">list</span></a><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">]</span></a> <a id="k:7" class="idref" href="#k:7"><span class="id" title="binder"><span id="k:8" class="id">k</span></span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">∈</span></a> <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Lists.ListDef.html#seq"><span class="id" title="definition">seq</span></a> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#i:3"><span class="id" title="variable">i</span></a> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#n:4"><span class="id" title="variable">n</span></a><a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#88a237193263423c6f71923f692f12af"><span class="id" title="notation">,</span></a> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#7a2ac54b3c1387e41c565d7f78953187"><span class="id" title="variable">Φ</span></a> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#k:7"><span class="id" title="variable">k</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> -<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.sets.html#list_to_set_seq"><span class="id" title="lemma">list_to_set_seq</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/iris//iris.bi.big_op.html#big_sepS_list_to_set"><span class="id" title="lemma">big_sepS_list_to_set</span></a> //. 1: <span class="id" title="tactic">apply</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.list_numbers.html#list.NoDup_seq"><span class="id" title="lemma">NoDup_seq</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="zoo.iris.bi.big_op.big_sepS_set_seq.html#bi"><span class="id" title="section">bi</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

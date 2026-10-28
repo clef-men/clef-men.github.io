@@ -43,15 +43,15 @@
 <span class="id" title="keyword">Coercion</span> <a class="idref" href="zoo.language.syntax.html#Apply"><span class="id" title="constructor">Apply</span></a> <a class="idref" href="zoo.language.syntax.html#Apply"><span class="id" title="constructor">:</span></a> <a class="idref" href="zoo.language.syntax.html#Apply"><span class="id" title="constructor">expr</span></a> <a class="idref" href="zoo.language.syntax.html#Apply"><span class="id" title="constructor">&gt;-&gt;</span></a> <a class="idref" href="zoo.language.syntax.html#Apply"><span class="id" title="constructor">Funclass</span></a>.<br/>
 
 <br/>
-<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo_rec</span>.<br/>
-<span class="id" title="keyword">Declare Scope</span> <span class="id" title="var">zoo_recs_scope</span>.<br/>
-<span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">zoo_recs_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">zoo_recs</span>.<br/>
+<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo</span>۰<span class="id" title="keyword">rec</span>.<br/>
+<span class="id" title="keyword">Declare Scope</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">recs</span>.<br/>
+<span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">recs</span> <span class="id" title="keyword">with</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">recs</span>.<br/>
 
 <br/>
-<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo_field</span>.<br/>
-<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo_constructor</span>.<br/>
-<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo_projection</span>.<br/>
-<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo_branch</span>.<br/>
+<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span>.<br/>
+<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>.<br/>
+<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span>.<br/>
+<span class="id" title="var">Declare</span> <span class="id" title="var">Custom</span> <span class="id" title="var">Entry</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Number Notation</span><br/>
@@ -138,87 +138,87 @@
 ) : <span class="id" title="var">val_scope</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'0'" class="idref" href="#:zoo.language.notations.zoo_field::'0'"><span class="id" title="notation">&quot;</span></a>0" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="d48b4a84772899cf21b785d190b2feef" class="idref" href="#d48b4a84772899cf21b785d190b2feef"><span class="id" title="notation">&quot;</span></a>0" :=<br/>
 &nbsp;&nbsp;0<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'1'" class="idref" href="#:zoo.language.notations.zoo_field::'1'"><span class="id" title="notation">&quot;</span></a>1" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="7c370c4aa20125cd77fdea2e86ee0d40" class="idref" href="#7c370c4aa20125cd77fdea2e86ee0d40"><span class="id" title="notation">&quot;</span></a>1" :=<br/>
 &nbsp;&nbsp;1<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'2'" class="idref" href="#:zoo.language.notations.zoo_field::'2'"><span class="id" title="notation">&quot;</span></a>2" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="1bd0c415769d848076fa45b24a54d4a3" class="idref" href="#1bd0c415769d848076fa45b24a54d4a3"><span class="id" title="notation">&quot;</span></a>2" :=<br/>
 &nbsp;&nbsp;2<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'3'" class="idref" href="#:zoo.language.notations.zoo_field::'3'"><span class="id" title="notation">&quot;</span></a>3" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="effb0e0e2480ee263e7322786707ae37" class="idref" href="#effb0e0e2480ee263e7322786707ae37"><span class="id" title="notation">&quot;</span></a>3" :=<br/>
 &nbsp;&nbsp;3<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'4'" class="idref" href="#:zoo.language.notations.zoo_field::'4'"><span class="id" title="notation">&quot;</span></a>4" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="5482b872cb74b7b9ba7ee1cbc62cc55a" class="idref" href="#5482b872cb74b7b9ba7ee1cbc62cc55a"><span class="id" title="notation">&quot;</span></a>4" :=<br/>
 &nbsp;&nbsp;4<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'5'" class="idref" href="#:zoo.language.notations.zoo_field::'5'"><span class="id" title="notation">&quot;</span></a>5" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="87415688779bb3c0fc643d2474223dc2" class="idref" href="#87415688779bb3c0fc643d2474223dc2"><span class="id" title="notation">&quot;</span></a>5" :=<br/>
 &nbsp;&nbsp;5<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'6'" class="idref" href="#:zoo.language.notations.zoo_field::'6'"><span class="id" title="notation">&quot;</span></a>6" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="7e7017f8c450837939334e5dd8530def" class="idref" href="#7e7017f8c450837939334e5dd8530def"><span class="id" title="notation">&quot;</span></a>6" :=<br/>
 &nbsp;&nbsp;6<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'7'" class="idref" href="#:zoo.language.notations.zoo_field::'7'"><span class="id" title="notation">&quot;</span></a>7" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="420cecefbb0f00780d50000e530e00a7" class="idref" href="#420cecefbb0f00780d50000e530e00a7"><span class="id" title="notation">&quot;</span></a>7" :=<br/>
 &nbsp;&nbsp;7<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'8'" class="idref" href="#:zoo.language.notations.zoo_field::'8'"><span class="id" title="notation">&quot;</span></a>8" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="03dc981c191344a2f7bb2e5e162ec228" class="idref" href="#03dc981c191344a2f7bb2e5e162ec228"><span class="id" title="notation">&quot;</span></a>8" :=<br/>
 &nbsp;&nbsp;8<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'9'" class="idref" href="#:zoo.language.notations.zoo_field::'9'"><span class="id" title="notation">&quot;</span></a>9" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="74557cfc764f0fe4e7dad994fbfc027c" class="idref" href="#74557cfc764f0fe4e7dad994fbfc027c"><span class="id" title="notation">&quot;</span></a>9" :=<br/>
 &nbsp;&nbsp;9<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'0'" class="idref" href="#:zoo.language.notations.zoo_projection::'0'"><span class="id" title="notation">&quot;</span></a>0" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="cf07c6e2727ce3d3e79a7f8223b7e266" class="idref" href="#cf07c6e2727ce3d3e79a7f8223b7e266"><span class="id" title="notation">&quot;</span></a>0" :=<br/>
 &nbsp;&nbsp;0<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'1'" class="idref" href="#:zoo.language.notations.zoo_projection::'1'"><span class="id" title="notation">&quot;</span></a>1" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="602ec93662fd85333bdbd7c61a91a451" class="idref" href="#602ec93662fd85333bdbd7c61a91a451"><span class="id" title="notation">&quot;</span></a>1" :=<br/>
 &nbsp;&nbsp;1<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'2'" class="idref" href="#:zoo.language.notations.zoo_projection::'2'"><span class="id" title="notation">&quot;</span></a>2" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="43789cc87e8d43f286af009e723d7727" class="idref" href="#43789cc87e8d43f286af009e723d7727"><span class="id" title="notation">&quot;</span></a>2" :=<br/>
 &nbsp;&nbsp;2<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'3'" class="idref" href="#:zoo.language.notations.zoo_projection::'3'"><span class="id" title="notation">&quot;</span></a>3" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="e722441f3d37d04ad5d0691ecd321b80" class="idref" href="#e722441f3d37d04ad5d0691ecd321b80"><span class="id" title="notation">&quot;</span></a>3" :=<br/>
 &nbsp;&nbsp;3<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'4'" class="idref" href="#:zoo.language.notations.zoo_projection::'4'"><span class="id" title="notation">&quot;</span></a>4" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="ddb5be31f83ee9dba726e63501aa8e55" class="idref" href="#ddb5be31f83ee9dba726e63501aa8e55"><span class="id" title="notation">&quot;</span></a>4" :=<br/>
 &nbsp;&nbsp;4<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'5'" class="idref" href="#:zoo.language.notations.zoo_projection::'5'"><span class="id" title="notation">&quot;</span></a>5" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="1a0e9ca86fa5066fb7d24d23cd1cbb29" class="idref" href="#1a0e9ca86fa5066fb7d24d23cd1cbb29"><span class="id" title="notation">&quot;</span></a>5" :=<br/>
 &nbsp;&nbsp;5<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'6'" class="idref" href="#:zoo.language.notations.zoo_projection::'6'"><span class="id" title="notation">&quot;</span></a>6" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="9ddf981fd419ac744c1259366fcbaa98" class="idref" href="#9ddf981fd419ac744c1259366fcbaa98"><span class="id" title="notation">&quot;</span></a>6" :=<br/>
 &nbsp;&nbsp;6<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'7'" class="idref" href="#:zoo.language.notations.zoo_projection::'7'"><span class="id" title="notation">&quot;</span></a>7" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="8541c1c0aa8142aa95872c341d3b8264" class="idref" href="#8541c1c0aa8142aa95872c341d3b8264"><span class="id" title="notation">&quot;</span></a>7" :=<br/>
 &nbsp;&nbsp;7<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'8'" class="idref" href="#:zoo.language.notations.zoo_projection::'8'"><span class="id" title="notation">&quot;</span></a>8" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="fd5a4672cd43d9672e730ef8d6b757b3" class="idref" href="#fd5a4672cd43d9672e730ef8d6b757b3"><span class="id" title="notation">&quot;</span></a>8" :=<br/>
 &nbsp;&nbsp;8<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_projection::'9'" class="idref" href="#:zoo.language.notations.zoo_projection::'9'"><span class="id" title="notation">&quot;</span></a>9" :=<br/>
+<span class="id" title="keyword">Notation</span> <a id="41be0f0d0eebfff258c93c2fd31c59ee" class="idref" href="#41be0f0d0eebfff258c93c2fd31c59ee"><span class="id" title="notation">&quot;</span></a>9" :=<br/>
 &nbsp;&nbsp;9<br/>
-( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span><br/>
+( <span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span><br/>
 ).<br/>
 
 <br/>
@@ -409,21 +409,21 @@
 ).<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_rec::x_x_'-&gt;'_x" class="idref" href="#:zoo.language.notations.zoo_rec::x_x_'-&gt;'_x"><span class="id" title="notation">&quot;</span></a>f x -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="e39c1903401c7ca7462614f893f28664" class="idref" href="#e39c1903401c7ca7462614f893f28664"><span class="id" title="notation">&quot;</span></a>f x -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> (<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#prod"><span class="id" title="inductive">prod</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a>) <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a> <span class="id" title="var">f</span>%<span class="id" title="var">binder</span> <span class="id" title="var">x</span>%<span class="id" title="var">binder</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_rec</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="keyword">rec</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">f</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "f  x  -&gt;  '/  ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_rec::x_x_x_'..'_x_'-&gt;'_x" class="idref" href="#:zoo.language.notations.zoo_rec::x_x_x_'..'_x_'-&gt;'_x"><span class="id" title="notation">&quot;</span></a>f x0 x1 .. xn -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="8db3f8a0e1cd1d01b358fb6edda151c2" class="idref" href="#8db3f8a0e1cd1d01b358fb6edda151c2"><span class="id" title="notation">&quot;</span></a>f x0 x1 .. xn -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> (<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#prod"><span class="id" title="inductive">prod</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a>) <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#binder"><span class="id" title="inductive">binder</span></a> <span class="id" title="var">f</span>%<span class="id" title="var">binder</span> <span class="id" title="var">x0</span>%<span class="id" title="var">binder</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.syntax.html#Fun"><span class="id" title="abbreviation">Fun</span></a> <span class="id" title="var">x1</span>%<span class="id" title="var">binder</span> .. (<a class="idref" href="zoo.language.syntax.html#Fun"><span class="id" title="abbreviation">Fun</span></a> <span class="id" title="var">xn</span>%<span class="id" title="var">binder</span> <span class="id" title="var">e</span>%<span class="id" title="var">E</span>) ..)<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_rec</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="keyword">rec</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">f</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x0</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x1</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
@@ -431,13 +431,13 @@
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "f  x0  x1  ..  xn  -&gt;  '/  ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id="86917b8719fbbbada72518ac2b666479" class="idref" href="#86917b8719fbbbada72518ac2b666479"><span class="id" title="notation">&quot;</span></a>'𝗿𝗲𝗰𝘀' rec_1 '𝘄𝗶𝘁𝗵' .. '𝘄𝗶𝘁𝗵' rec_n" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="888a4d7880a56436b9bec13c25df3997" class="idref" href="#888a4d7880a56436b9bec13c25df3997"><span class="id" title="notation">&quot;</span></a>'𝗿𝗲𝗰𝘀' rec_1 '𝘄𝗶𝘁𝗵' .. '𝘄𝗶𝘁𝗵' rec_n" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#recursive"><span class="id" title="abbreviation">recursive</span></a> <span class="id" title="var">rec_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#recursive"><span class="id" title="abbreviation">recursive</span></a> <span class="id" title="var">rec_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#recursive"><span class="id" title="abbreviation">recursive</span></a>)) ..)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">rec_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_rec</span>,<br/>
-&nbsp;&nbsp;<span class="id" title="var">rec_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_rec</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">rec_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="keyword">rec</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">rec_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="keyword">rec</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' 𝗿𝗲𝗰𝘀  rec_1 '/' '𝘄𝗶𝘁𝗵'  .. '/' '𝘄𝗶𝘁𝗵'  rec_n ']'"<br/>
-) : <span class="id" title="var">zoo_recs_scope</span>.<br/>
+) : <span class="id" title="var">zoo</span>۰<span class="id" title="var">recs</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Notation</span> <a id="21ba3cf72e6a51086cdf266dcedb6677" class="idref" href="#21ba3cf72e6a51086cdf266dcedb6677"><span class="id" title="notation">&quot;</span></a>'𝗿𝗲𝗰' f x -&gt; e" := (<br/>
@@ -718,8 +718,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Fail"><span class="id" title="abbreviation">Fail</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)) ..))<br/>
 )(<span class="id" title="var">e</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' '𝗺𝗮𝘁𝗰𝗵'  '/  ' '[' e ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' '𝗲𝗻𝗱' ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a id="e5182f8f14bcd81b614a6760923c4114" class="idref" href="#e5182f8f14bcd81b614a6760923c4114"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e '𝘄𝗶𝘁𝗵' br_1 | .. | br_n '𝗲𝗻𝗱'" := (<br/>
@@ -729,8 +729,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Fail"><span class="id" title="abbreviation">Fail</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)) ..))<br/>
 )(<span class="id" title="var">e</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a id="4c2d6c065e3be2ef998a2c68076bd9d2" class="idref" href="#4c2d6c065e3be2ef998a2c68076bd9d2"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' | br_1 | .. | br_n |⎽ -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
@@ -740,8 +740,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e1</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)) ..))<br/>
 )(<span class="id" title="var">e0</span>, <span class="id" title="var">e1</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |⎽  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a id="7bee309284d5248092257166e7c3505d" class="idref" href="#7bee309284d5248092257166e7c3505d"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' br_1 | .. | br_n |⎽ -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
@@ -751,8 +751,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e1</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)) ..))<br/>
 )(<span class="id" title="var">e0</span>, <span class="id" title="var">e1</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a id="113dd5d401024b197196a01e9bfe35e4" class="idref" href="#113dd5d401024b197196a01e9bfe35e4"><span class="id" title="notation">&quot;</span></a>'𝗺𝗮𝘁𝗰𝗵' e0 '𝘄𝗶𝘁𝗵' | br_1 | .. | br_n |⎽ '𝗮𝘀' x -&gt; e1 '𝗲𝗻𝗱'" := (<br/>
@@ -762,8 +762,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e1</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)) ..))<br/>
 )(<span class="id" title="var">e0</span>, <span class="id" title="var">e1</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |⎽  '𝗮𝘀'  x  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -774,8 +774,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e1</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)) ..))<br/>
 )(<span class="id" title="var">e0</span>, <span class="id" title="var">e1</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -786,8 +786,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e1</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)) ..))<br/>
 )(<span class="id" title="var">e0</span>, <span class="id" title="var">e1</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' 𝗺𝗮𝘁𝗰𝗵  '/  ' '[' e0 ']'  '/' '𝘄𝗶𝘁𝗵'  ']' '/' |  br_1  '/' |  ..  '/' |  br_n  '/' |⎽  '𝗮𝘀:'  x  -&gt;  '/    ' '[' e1 ']'  '/' '𝗲𝗻𝗱' ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -798,8 +798,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e1</span>%<span class="id" title="var">E</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_1</span> (.. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a> <span class="id" title="var">br_n</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)) ..))<br/>
 )(<span class="id" title="var">e0</span>, <span class="id" title="var">e1</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_1</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">br_n</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">parsing</span><br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -822,7 +822,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#branch"><span class="id" title="abbreviation">branch</span></a>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x1</span>, <span class="id" title="var">xn</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e1</span>, <span class="id" title="var">e2</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[v' '[hv' '𝗹𝗲𝘁'  ‘ tag  x1  ..  xn  =  '/  ' '[' e1 ']'  '/' '𝗶𝗻'  ']' '/' e2 ']'"<br/>
@@ -866,7 +866,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a> <span class="id" title="var">en</span>%<span class="id" title="var">E</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a>)) ..)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e1</span>, <span class="id" title="var">en</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ‘ tag {  '/  ' '[' e1 ']' '/' ,  .. '/' ,  '[' en ']'  '/' } ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -875,7 +875,7 @@
 <span class="id" title="keyword">Notation</span> <a id="a16208c5fcf8ab7c81aae244ff31dc3b" class="idref" href="#a16208c5fcf8ab7c81aae244ff31dc3b"><span class="id" title="notation">&quot;</span></a>§ tag" := (<br/>
 &nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 2,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "§ tag"<br/>
 ) : <span class="id" title="var">stdpp_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a id="4b58797801c0403491cfc1d96db60c56" class="idref" href="#4b58797801c0403491cfc1d96db60c56"><span class="id" title="notation">&quot;</span></a>§ tag" := (<br/>
@@ -886,7 +886,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>)<br/>
 &nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 2,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "§ tag"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a id="7e806bccd8a0c4c9a2e979d7873c2baa" class="idref" href="#7e806bccd8a0c4c9a2e979d7873c2baa"><span class="id" title="notation">&quot;</span></a>§ tag" := (<br/>
@@ -895,7 +895,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 2,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "§ tag"<br/>
 ) : <span class="id" title="var">val_scope</span>.<br/>
 
@@ -906,7 +906,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a> <span class="id" title="var">en</span>%<span class="id" title="var">E</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a>)) ..)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e1</span>, <span class="id" title="var">en</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ‘ tag (  '/  ' '[' e1 ']' '/' ,  .. '/' ,  '[' en ']'  '/' ) ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -918,7 +918,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">v1</span>%<span class="id" title="var">V</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">vn</span>%<span class="id" title="var">V</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>)) ..)<br/>
 &nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">v1</span>, <span class="id" title="var">vn</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ’ tag (  '/  ' '[' v1 ']' '/' ,  .. '/' ,  '[' vn ']'  '/' ) ']'"<br/>
 ): <span class="id" title="var">expr_scope</span>.<br/>
@@ -928,7 +928,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">v1</span>%<span class="id" title="var">V</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">vn</span>%<span class="id" title="var">V</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>)) ..)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">v1</span>, <span class="id" title="var">vn</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ‘ tag (  '/  ' '[' v1 ']' '/' ,  .. '/' ,  '[' vn ']'  '/' ) ']'"<br/>
 ): <span class="id" title="var">val_scope</span>.<br/>
@@ -940,7 +940,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a> <span class="id" title="var">en</span>%<span class="id" title="var">E</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a>)) ..)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e1</span>, <span class="id" title="var">en</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ‘ tag [  '/  ' '[' e1 ']' '/' ,  .. '/' ,  '[' en ']'  '/' ] ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -952,7 +952,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">v1</span>%<span class="id" title="var">V</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">vn</span>%<span class="id" title="var">V</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>)) ..)<br/>
 &nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">v1</span>, <span class="id" title="var">vn</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ’ tag [  '/  ' '[' v1 ']' '/' ,  .. '/' ,  '[' vn ']'  '/' ] ']'"<br/>
 ): <span class="id" title="var">expr_scope</span>.<br/>
@@ -962,7 +962,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">v1</span>%<span class="id" title="var">V</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">vn</span>%<span class="id" title="var">V</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>)) ..)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">v1</span>, <span class="id" title="var">vn</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ‘ tag [  '/  ' '[' v1 ']' '/' ,  .. '/' ,  '[' vn ']'  '/' ] ']'"<br/>
 ): <span class="id" title="var">val_scope</span>.<br/>
@@ -974,7 +974,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a> <span class="id" title="var">en</span>%<span class="id" title="var">E</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a>)) ..)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e1</span>, <span class="id" title="var">en</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ‘ tag @[  '/  ' '[' e1 ']' '/' ,  .. '/' ,  '[' en ']'  '/' ] ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -986,7 +986,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">v1</span>%<span class="id" title="var">V</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">vn</span>%<span class="id" title="var">V</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>)) ..)<br/>
 &nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">bid</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">v1</span>, <span class="id" title="var">vn</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ’ tag @ bid [  '/  ' '[' v1 ']' '/' ,  .. '/' ,  '[' vn ']'  '/' ] ']'"<br/>
@@ -997,7 +997,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">v1</span>%<span class="id" title="var">V</span> .. (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a> <span class="id" title="var">vn</span>%<span class="id" title="var">V</span> (@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> <a class="idref" href="zoo.language.syntax.html#val"><span class="id" title="inductive">val</span></a>)) ..)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">bid</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">v1</span>, <span class="id" title="var">vn</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' ‘ tag @ bid [  '/  ' '[' v1 ']' '/' ,  .. '/' ,  '[' vn ']'  '/' ] ']'"<br/>
@@ -1036,7 +1036,7 @@
 : <span class="id" title="var">val_scope</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id="2830aed5f3f4b2c3f15cc8ad0e30e4ac" class="idref" href="#2830aed5f3f4b2c3f15cc8ad0e30e4ac"><span class="id" title="notation">&quot;</span></a>[ ] -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="2a1b8d282d3de34b1fa82094695044ff" class="idref" href="#2a1b8d282d3de34b1fa82094695044ff"><span class="id" title="notation">&quot;</span></a>[ ] -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "list" "[]" <a class="idref" href="zoo.language.tag.html#Tag0"><span class="id" title="constructor">Tag0</span></a>)<br/>
@@ -1044,11 +1044,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "[ ]  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id="68165c76027b8d4a54c247a4423801a6" class="idref" href="#68165c76027b8d4a54c247a4423801a6"><span class="id" title="notation">&quot;</span></a>[ ] '𝗮𝘀' x -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="fe279f14dea0ac99449dbd181777b52d" class="idref" href="#fe279f14dea0ac99449dbd181777b52d"><span class="id" title="notation">&quot;</span></a>[ ] '𝗮𝘀' x -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "list" "[]" <a class="idref" href="zoo.language.tag.html#Tag0"><span class="id" title="constructor">Tag0</span></a>)<br/>
@@ -1056,12 +1056,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">x</span>%<span class="id" title="var">string</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "[ ]  '𝗮𝘀'  x  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_branch::x_'::'_x_'-&gt;'_x" class="idref" href="#:zoo.language.notations.zoo_branch::x_'::'_x_'-&gt;'_x"><span class="id" title="notation">&quot;</span></a>x1 :: x2 -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="790e1e29e5ce23599da8eb8885b9c40e" class="idref" href="#790e1e29e5ce23599da8eb8885b9c40e"><span class="id" title="notation">&quot;</span></a>x1 :: x2 -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "list" "(::)" <a class="idref" href="zoo.language.tag.html#Tag0"><span class="id" title="constructor">Tag0</span></a>)<br/>
@@ -1069,13 +1069,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x1</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x2</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "x1  ::  x2  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id="829a686eb67b7edc3046424e909dfb3e" class="idref" href="#829a686eb67b7edc3046424e909dfb3e"><span class="id" title="notation">&quot;</span></a>x1 :: x2 '𝗮𝘀' y -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="588a1fcfed303be3e4d484ca480158bd" class="idref" href="#588a1fcfed303be3e4d484ca480158bd"><span class="id" title="notation">&quot;</span></a>x1 :: x2 '𝗮𝘀' y -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "list" "(::)" <a class="idref" href="zoo.language.tag.html#Tag0"><span class="id" title="constructor">Tag0</span></a>)<br/>
@@ -1083,14 +1083,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">y</span>%<span class="id" title="var">string</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x1</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x2</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">y</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "x1  ::  x2  '𝗮𝘀'  y  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_branch::x_'-&gt;'_x" class="idref" href="#:zoo.language.notations.zoo_branch::x_'-&gt;'_x"><span class="id" title="notation">&quot;</span></a>tag -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="199584fdba01c29da7ed75277d2452ce" class="idref" href="#199584fdba01c29da7ed75277d2452ce"><span class="id" title="notation">&quot;</span></a>tag -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
@@ -1098,12 +1098,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "tag  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id="f44c9d5f89920ea6ae6bf2bb8779f221" class="idref" href="#f44c9d5f89920ea6ae6bf2bb8779f221"><span class="id" title="notation">&quot;</span></a>tag '𝗮𝘀' x -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="3af696318dda597e8621078b0b7bff3d" class="idref" href="#3af696318dda597e8621078b0b7bff3d"><span class="id" title="notation">&quot;</span></a>tag '𝗮𝘀' x -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
@@ -1111,13 +1111,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">x</span>%<span class="id" title="var">string</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "tag  '𝗮𝘀'  x  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id="d5de6dda64fa872939e352d43b0a2d58" class="idref" href="#d5de6dda64fa872939e352d43b0a2d58"><span class="id" title="notation">&quot;</span></a>tag '𝗮𝘀:' x -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="992a9d5dc97e247f95e65aaa6457ffc3" class="idref" href="#992a9d5dc97e247f95e65aaa6457ffc3"><span class="id" title="notation">&quot;</span></a>tag '𝗮𝘀:' x -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
@@ -1125,13 +1125,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">x</span>%<span class="id" title="var">binder</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "tag  '𝗮𝘀:'  x  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_branch::x_x_'..'_x_'-&gt;'_x" class="idref" href="#:zoo.language.notations.zoo_branch::x_x_'..'_x_'-&gt;'_x"><span class="id" title="notation">&quot;</span></a>tag x1 .. xn -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="3db9f583d959c861ea741028b06ae337" class="idref" href="#3db9f583d959c861ea741028b06ae337"><span class="id" title="notation">&quot;</span></a>tag x1 .. xn -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
@@ -1139,14 +1139,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BAnon"><span class="id" title="constructor">BAnon</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x1</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">xn</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "tag  x1  ..  xn  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id="85ada897f79716bd8ff9ea71f689445c" class="idref" href="#85ada897f79716bd8ff9ea71f689445c"><span class="id" title="notation">&quot;</span></a>tag x1 .. xn '𝗮𝘀' y -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="604f0afc8eda747e33aa2ef83a857c2c" class="idref" href="#604f0afc8eda747e33aa2ef83a857c2c"><span class="id" title="notation">&quot;</span></a>tag x1 .. xn '𝗮𝘀' y -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
@@ -1154,15 +1154,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp//stdpp.binders.html#BNamed"><span class="id" title="constructor">BNamed</span></a> <span class="id" title="var">y</span>%<span class="id" title="var">string</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x1</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">xn</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">y</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">e</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "tag  x1  ..  xn  '𝗮𝘀'  y  -&gt;  '/    ' '[' e ']'"<br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id="3da3c55720a03b9bbc36e29fd4ad9d77" class="idref" href="#3da3c55720a03b9bbc36e29fd4ad9d77"><span class="id" title="notation">&quot;</span></a>tag x1 .. xn '𝗮𝘀:' y -&gt; e" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="78411d8f791d6827f64cef688f7f9042" class="idref" href="#78411d8f791d6827f64cef688f7f9042"><span class="id" title="notation">&quot;</span></a>tag x1 .. xn '𝗮𝘀:' y -&gt; e" := (<br/>
 &nbsp;&nbsp;@<a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Datatypes.html#pair"><span class="id" title="constructor">pair</span></a> <a class="idref" href="zoo.language.syntax.html#pattern"><span class="id" title="record">pattern</span></a> <a class="idref" href="zoo.language.syntax.html#expr"><span class="id" title="inductive">expr</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( <a class="idref" href="zoo.language.syntax.html#Build_pattern"><span class="id" title="constructor">Build_pattern</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">tag</span><br/>
@@ -1170,8 +1170,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">y</span>%<span class="id" title="var">binder</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">e</span>%<span class="id" title="var">E</span><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
-&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span>,<br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">branch</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200,<br/>
+&nbsp;&nbsp;<span class="id" title="var">tag</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">x1</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">xn</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
 &nbsp;&nbsp;<span class="id" title="var">y</span> <span class="id" title="keyword">constr</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
@@ -1183,7 +1183,7 @@
 <span class="id" title="keyword">Notation</span> <a id="81f03c5c93a92e79a33b48907d6555ed" class="idref" href="#81f03c5c93a92e79a33b48907d6555ed"><span class="id" title="notation">&quot;</span></a>e .{ fld }" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive2"><span class="id" title="constructor">Primitive2</span></a> <a class="idref" href="zoo.language.syntax.html#Load"><span class="id" title="constructor">Load</span></a> <span class="id" title="var">e</span>%<span class="id" title="var">E</span> (<a class="idref" href="zoo.language.syntax.html#Val"><span class="id" title="constructor">Val</span></a> (<a class="idref" href="zoo.language.syntax.html#ValNat"><span class="id" title="abbreviation">ValNat</span></a> <span class="id" title="var">fld</span>))<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
-&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "e .{ fld }"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -1192,7 +1192,7 @@
 <span class="id" title="keyword">Notation</span> <a id="::expr_scope:x_'.&lt;'_x_'&gt;'" class="idref" href="#::expr_scope:x_'.&lt;'_x_'&gt;'"><span class="id" title="notation">&quot;</span></a>e .&lt; proj &gt;" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive2"><span class="id" title="constructor">Primitive2</span></a> <a class="idref" href="zoo.language.syntax.html#Load"><span class="id" title="constructor">Load</span></a> <span class="id" title="var">e</span>%<span class="id" title="var">E</span> (<a class="idref" href="zoo.language.syntax.html#Val"><span class="id" title="constructor">Val</span></a> (<a class="idref" href="zoo.language.syntax.html#ValNat"><span class="id" title="abbreviation">ValNat</span></a> <span class="id" title="var">proj</span>))<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
-&nbsp;&nbsp;<span class="id" title="var">proj</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_projection</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">proj</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="var">projection</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "e .&lt; proj &gt;"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 
@@ -1200,7 +1200,7 @@
 <span class="id" title="keyword">Notation</span> <a id="8c267e1b2b60da36079eedcf0e5e9549" class="idref" href="#8c267e1b2b60da36079eedcf0e5e9549"><span class="id" title="notation">&quot;</span></a>e1 &lt;-{ fld } e2" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Primitive3"><span class="id" title="constructor">Primitive3</span></a> <a class="idref" href="zoo.language.syntax.html#Store"><span class="id" title="constructor">Store</span></a> <span class="id" title="var">e1</span>%<span class="id" title="var">E</span> (<a class="idref" href="zoo.language.syntax.html#Val"><span class="id" title="constructor">Val</span></a> (<a class="idref" href="zoo.language.syntax.html#ValNat"><span class="id" title="abbreviation">ValNat</span></a> <span class="id" title="var">fld</span>)) <span class="id" title="var">e2</span>%<span class="id" title="var">E</span><br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 80,<br/>
-&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "'[hv' '[hv' '[' e1 ']'  '/  ' &lt;-{ fld }  ']' '/  ' '[' e2 ']' ']'"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 
@@ -1208,7 +1208,7 @@
 <span class="id" title="keyword">Notation</span> <a id="ad69825d2b0107d013bed1ae427d2995" class="idref" href="#ad69825d2b0107d013bed1ae427d2995"><span class="id" title="notation">&quot;</span></a>l .[ fld ]" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.location.html#934b68bf7e32753ac958f54ae8accc49"><span class="id" title="definition">location</span></a><a class="idref" href="zoo.language.location.html#934b68bf7e32753ac958f54ae8accc49"><span class="id" title="definition">۰</span></a><a class="idref" href="zoo.language.location.html#934b68bf7e32753ac958f54ae8accc49"><span class="id" title="definition">add</span></a> <span class="id" title="var">l</span> (<span class="id" title="definition">Z.of_nat</span> <span class="id" title="var">fld</span>)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
-&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "l .[ fld ]"<br/>
 ) : <span class="id" title="var">stdpp_scope</span>.<br/>
@@ -1224,7 +1224,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
-&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">only</span> <span class="id" title="var">printing</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "v .[ fld ]"<br/>
@@ -1239,7 +1239,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
-&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "e .[ fld ]"<br/>
 ) : <span class="id" title="var">expr_scope</span>.<br/>
@@ -1253,15 +1253,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;)<br/>
 )(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 1,<br/>
-&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">fld</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>,<br/>
 &nbsp;&nbsp;<span class="id" title="var">format</span> "v .[ fld ]"<br/>
 ) : <span class="id" title="var">val_scope</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_field::'contents'" class="idref" href="#:zoo.language.notations.zoo_field::'contents'"><span class="id" title="notation">&quot;</span></a>'contents'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="b3a77a3829f1a1718fa60b2299136b63" class="idref" href="#b3a77a3829f1a1718fa60b2299136b63"><span class="id" title="notation">&quot;</span></a>'contents'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "ref" "contents" 0<br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_field</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">field</span><br/>
 ).<br/>
 <span class="id" title="keyword">Notation</span> <a id="a898bc11bfe07cbea265a280042f4191" class="idref" href="#a898bc11bfe07cbea265a280042f4191"><span class="id" title="notation">&quot;</span></a>'𝗿𝗲𝗳' e" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.syntax.html#Block"><span class="id" title="constructor">Block</span></a><br/>
@@ -1283,13 +1283,13 @@
 ) : <span class="id" title="var">expr_scope</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_constructor::'None'" class="idref" href="#:zoo.language.notations.zoo_constructor::'None'"><span class="id" title="notation">&quot;</span></a>'None'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="88902a34cc7b1ae4c156e98082d117f2" class="idref" href="#88902a34cc7b1ae4c156e98082d117f2"><span class="id" title="notation">&quot;</span></a>'None'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "option" "None" <a class="idref" href="zoo.language.tag.html#Tag0"><span class="id" title="constructor">Tag0</span></a><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span><br/>
 ).<br/>
-<span class="id" title="keyword">Notation</span> <a id=":zoo.language.notations.zoo_constructor::'Some'" class="idref" href="#:zoo.language.notations.zoo_constructor::'Some'"><span class="id" title="notation">&quot;</span></a>'Some'" := (<br/>
+<span class="id" title="keyword">Notation</span> <a id="bac961b3d65ff7c0d85dde9ac270065c" class="idref" href="#bac961b3d65ff7c0d85dde9ac270065c"><span class="id" title="notation">&quot;</span></a>'Some'" := (<br/>
 &nbsp;&nbsp;<a class="idref" href="zoo.language.notations.html#in_type"><span class="id" title="definition">in_type</span></a> "option" "Some" <a class="idref" href="zoo.language.tag.html#Tag0"><span class="id" title="constructor">Tag0</span></a><br/>
-)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo_constructor</span><br/>
+)(<span class="id" title="tactic">in</span> <span class="id" title="var">custom</span> <span class="id" title="var">zoo</span>۰<span class="id" title="tactic">constructor</span><br/>
 ).<br/>
 
 <br/>
