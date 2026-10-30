@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>zoo.common.gmap</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">zoo.common.gmap</h1>
+
+<div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.gmap.html#"><span class="id" title="library">stdpp.gmap</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.prelude.html#"><span class="id" title="library">zoo.prelude</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="zoo.common.fin_maps.html#"><span class="id" title="library">zoo.common.fin_maps</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.common.list.html#"><span class="id" title="library">zoo.common.list</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="zoo.options.html#"><span class="id" title="library">zoo.options</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a id="gset_to_gmap" class="idref" href="#gset_to_gmap"><span class="id" title="section">gset_to_gmap</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> `{<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.countable.html#Countable"><span class="id" title="class">Countable</span></a> <span class="id" title="var">K</span>}.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> {<a id="gset_to_gmap.A" class="idref" href="#gset_to_gmap.A"><span class="id" title="variable">A</span></a> : <span class="id" title="keyword">Type</span>}.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Type</span> <span class="id" title="var">s</span> : <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.gmap.html#gset"><span class="id" title="definition">gset</span></a> <a class="idref" href="zoo.common.gmap.html#gset_to_gmap.K"><span class="id" title="variable">K</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Type</span> <span class="id" title="var">x</span> : <a class="idref" href="zoo.common.gmap.html#gset_to_gmap.A"><span class="id" title="variable">A</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="50cce71c6d621e5ad79a553d6e3c89d1" class="idref" href="#50cce71c6d621e5ad79a553d6e3c89d1"><span class="id" title="lemma">size</span></a><a id="50cce71c6d621e5ad79a553d6e3c89d1" class="idref" href="#50cce71c6d621e5ad79a553d6e3c89d1"><span class="id" title="lemma">ｰ</span></a><a id="50cce71c6d621e5ad79a553d6e3c89d1" class="idref" href="#50cce71c6d621e5ad79a553d6e3c89d1"><span class="id" title="lemma">gset_to_gmap</span></a> <a id="x:5" class="idref" href="#x:5"><span class="id" title="binder">x</span></a> <a id="s:6" class="idref" href="#s:6"><span class="id" title="binder">s</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.base.html#size"><span class="id" title="definition">size</span></a> (<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.gmap.html#gset_to_gmap"><span class="id" title="definition">gset_to_gmap</span></a> <a class="idref" href="zoo.common.gmap.html#x:5"><span class="id" title="variable">x</span></a> <a class="idref" href="zoo.common.gmap.html#s:6"><span class="id" title="variable">s</span></a>) <a class="idref" href="http://rocq-prover.org/doc/V9.2/corelib//Corelib.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.base.html#size"><span class="id" title="definition">size</span></a> <a class="idref" href="zoo.common.gmap.html#s:6"><span class="id" title="variable">s</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.gmap.html#gset_to_gmap_set_to_map"><span class="id" title="lemma">gset_to_gmap_set_to_map</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.fin_maps.html#map_size_list_to_map"><span class="id" title="lemma">map_size_list_to_map</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="tactic">apply</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.list_monad.html#list.NoDup_fmap_fst"><span class="id" title="lemma">NoDup_fmap_fst</span></a>. 1: <span class="id" title="var">set_solver</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.list_monad.html#list.NoDup_fmap"><span class="id" title="lemma">NoDup_fmap</span></a>. 1: <span class="id" title="tactic">congruence</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.base.html#NoDup_elements"><span class="id" title="method">NoDup_elements</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">simp_length</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a id="fc078fd2e8278dc1e1f47e91696db8f6" class="idref" href="#fc078fd2e8278dc1e1f47e91696db8f6"><span class="id" title="lemma">map_Forall</span></a><a id="fc078fd2e8278dc1e1f47e91696db8f6" class="idref" href="#fc078fd2e8278dc1e1f47e91696db8f6"><span class="id" title="lemma">ｰ</span></a><a id="fc078fd2e8278dc1e1f47e91696db8f6" class="idref" href="#fc078fd2e8278dc1e1f47e91696db8f6"><span class="id" title="lemma">gset_to_gmap</span></a> <a id="fdec980c0c12fcda13871e6dfa825fff" class="idref" href="#fdec980c0c12fcda13871e6dfa825fff"><span class="id" title="binder">ϕ</span></a> <a id="x:8" class="idref" href="#x:8"><span class="id" title="binder">x</span></a> <a id="s:9" class="idref" href="#s:9"><span class="id" title="binder">s</span></a> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.fin_maps.html#map_Forall"><span class="id" title="definition">map_Forall</span></a> <a class="idref" href="zoo.common.gmap.html#fdec980c0c12fcda13871e6dfa825fff"><span class="id" title="variable">ϕ</span></a> (<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.gmap.html#gset_to_gmap"><span class="id" title="definition">gset_to_gmap</span></a> <a class="idref" href="zoo.common.gmap.html#x:8"><span class="id" title="variable">x</span></a> <a class="idref" href="zoo.common.gmap.html#s:9"><span class="id" title="variable">s</span></a>) <span class="id" title="notation">↔</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.sets.html#set_Forall"><span class="id" title="definition">set_Forall</span></a> (<span class="id" title="notation">λ</span> <a id="k:10" class="idref" href="#k:10"><span class="id" title="binder">k</span></a><span class="id" title="notation">,</span> <a class="idref" href="zoo.common.gmap.html#fdec980c0c12fcda13871e6dfa825fff"><span class="id" title="variable">ϕ</span></a> <a class="idref" href="zoo.common.gmap.html#k:10"><span class="id" title="variable">k</span></a> <a class="idref" href="zoo.common.gmap.html#x:8"><span class="id" title="variable">x</span></a>) <a class="idref" href="zoo.common.gmap.html#s:9"><span class="id" title="variable">s</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.fin_maps.html#map_Forall_to_list"><span class="id" title="lemma">map_Forall_to_list</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.fin_sets.html#set_Forall_elements"><span class="id" title="lemma">set_Forall_elements</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.gmap.html#map_to_list_gset_to_gmap"><span class="id" title="lemma">map_to_list_gset_to_gmap</span></a> <a class="idref" href="https://plv.mpi-sws.org/rocqdoc/stdpp/stdpp.list_monad.html#list.Forall_fmap"><span class="id" title="lemma">Forall_fmap</span></a> //.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="zoo.common.gmap.html#gset_to_gmap"><span class="id" title="section">gset_to_gmap</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://rocq-prover.org/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
